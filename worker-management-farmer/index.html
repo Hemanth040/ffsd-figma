@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Worker Management - FarmOps</title>
     <link rel="stylesheet" href="../common/global.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../css/worker-management-farmer.css">
 </head>
 <body>
     <div id="navbar-container" data-navbar data-user-name="John Farmer" data-user-initial="J" data-active-page="Workers"></div>
@@ -72,161 +72,113 @@
             <div class="workers-grid" id="workersGrid">
                 <div class="worker-card">
                     <div class="worker-header">
-                        <div class="worker-avatar">R</div>
-                        <div class="worker-status active"></div>
-                    </div>
-                    <div class="worker-info">
-                        <h3>Ramu</h3>
-                        <p class="worker-role">Farm Worker</p>
-                    </div>
-                    <div class="worker-stats">
-                        <div class="stat">
-                            <span class="stat-value">95%</span>
-                            <span class="stat-label">Attendance</span>
+                        <div class="worker-avatar">
+                            <span class="initials">R</span>
                         </div>
-                        <div class="stat">
-                            <span class="stat-value">8</span>
-                            <span class="stat-label">Years</span>
+                        <div class="worker-info">
+                            <h3 class="worker-name">Ramu</h3>
+                            <p class="worker-role">Farm Worker</p>
+                            <span class="worker-status active">Active</span>
+                        </div>
+                    </div>
+                    <div class="worker-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Attendance</span>
+                            <span class="detail-value">95%</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Experience</span>
+                            <span class="detail-value">8 Years</span>
                         </div>
                     </div>
                     <div class="worker-actions">
-                        <button class="action-btn" title="View Details">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-                                <circle cx="12" cy="12" r="3"/>
-                            </svg>
-                        </button>
-                        <button class="action-btn" title="Edit">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
-                                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
-                            </svg>
-                        </button>
-                        <button class="action-btn" title="Message">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-                            </svg>
-                        </button>
+                        <button class="btn-action" title="View Details">View</button>
+                        <button class="btn-action" title="Edit">Edit</button>
+                        <button class="btn-action primary" title="Message">Message</button>
                     </div>
                 </div>
 
                 <div class="worker-card">
                     <div class="worker-header">
-                        <div class="worker-avatar">L</div>
-                        <div class="worker-status active"></div>
-                    </div>
-                    <div class="worker-info">
-                        <h3>Lakshman</h3>
-                        <p class="worker-role">Supervisor</p>
-                    </div>
-                    <div class="worker-stats">
-                        <div class="stat">
-                            <span class="stat-value">98%</span>
-                            <span class="stat-label">Attendance</span>
+                        <div class="worker-avatar">
+                            <span class="initials">L</span>
                         </div>
-                        <div class="stat">
-                            <span class="stat-value">12</span>
-                            <span class="stat-label">Years</span>
+                        <div class="worker-info">
+                            <h3 class="worker-name">Lakshman</h3>
+                            <p class="worker-role">Supervisor</p>
+                            <span class="worker-status active">Active</span>
+                        </div>
+                    </div>
+                    <div class="worker-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Attendance</span>
+                            <span class="detail-value">98%</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Experience</span>
+                            <span class="detail-value">12 Years</span>
                         </div>
                     </div>
                     <div class="worker-actions">
-                        <button class="action-btn" title="View Details">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-                                <circle cx="12" cy="12" r="3"/>
-                            </svg>
-                        </button>
-                        <button class="action-btn" title="Edit">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
-                                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
-                            </svg>
-                        </button>
-                        <button class="action-btn" title="Message">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-                            </svg>
-                        </button>
+                        <button class="btn-action" title="View Details">View</button>
+                        <button class="btn-action" title="Edit">Edit</button>
+                        <button class="btn-action primary" title="Message">Message</button>
                     </div>
                 </div>
 
                 <div class="worker-card">
                     <div class="worker-header">
-                        <div class="worker-avatar">K</div>
-                        <div class="worker-status active"></div>
-                    </div>
-                    <div class="worker-info">
-                        <h3>Krishna</h3>
-                        <p class="worker-role">Farm Worker</p>
-                    </div>
-                    <div class="worker-stats">
-                        <div class="stat">
-                            <span class="stat-value">88%</span>
-                            <span class="stat-label">Attendance</span>
+                        <div class="worker-avatar">
+                            <span class="initials">K</span>
                         </div>
-                        <div class="stat">
-                            <span class="stat-value">5</span>
-                            <span class="stat-label">Years</span>
+                        <div class="worker-info">
+                            <h3 class="worker-name">Krishna</h3>
+                            <p class="worker-role">Farm Worker</p>
+                            <span class="worker-status active">Active</span>
+                        </div>
+                    </div>
+                    <div class="worker-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Attendance</span>
+                            <span class="detail-value">88%</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Experience</span>
+                            <span class="detail-value">5 Years</span>
                         </div>
                     </div>
                     <div class="worker-actions">
-                        <button class="action-btn" title="View Details">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-                                <circle cx="12" cy="12" r="3"/>
-                            </svg>
-                        </button>
-                        <button class="action-btn" title="Edit">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
-                                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
-                            </svg>
-                        </button>
-                        <button class="action-btn" title="Message">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-                            </svg>
-                        </button>
+                        <button class="btn-action" title="View Details">View</button>
+                        <button class="btn-action" title="Edit">Edit</button>
+                        <button class="btn-action primary" title="Message">Message</button>
                     </div>
                 </div>
 
                 <div class="worker-card">
                     <div class="worker-header">
-                        <div class="worker-avatar">S</div>
-                        <div class="worker-status active"></div>
-                    </div>
-                    <div class="worker-info">
-                        <h3>Sita</h3>
-                        <p class="worker-role">Farm Worker</p>
-                    </div>
-                    <div class="worker-stats">
-                        <div class="stat">
-                            <span class="stat-value">92%</span>
-                            <span class="stat-label">Attendance</span>
+                        <div class="worker-avatar">
+                            <span class="initials">S</span>
                         </div>
-                        <div class="stat">
-                            <span class="stat-value">3</span>
-                            <span class="stat-label">Years</span>
+                        <div class="worker-info">
+                            <h3 class="worker-name">Sita</h3>
+                            <p class="worker-role">Farm Worker</p>
+                            <span class="worker-status active">Active</span>
+                        </div>
+                    </div>
+                    <div class="worker-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Attendance</span>
+                            <span class="detail-value">92%</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Experience</span>
+                            <span class="detail-value">3 Years</span>
                         </div>
                     </div>
                     <div class="worker-actions">
-                        <button class="action-btn" title="View Details">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-                                <circle cx="12" cy="12" r="3"/>
-                            </svg>
-                        </button>
-                        <button class="action-btn" title="Edit">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
-                                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
-                            </svg>
-                        </button>
-                        <button class="action-btn" title="Message">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-                            </svg>
-                        </button>
+                        <button class="btn-action" title="View Details">View</button>
+                        <button class="btn-action" title="Edit">Edit</button>
+                        <button class="btn-action primary" title="Message">Message</button>
                     </div>
                 </div>
 
