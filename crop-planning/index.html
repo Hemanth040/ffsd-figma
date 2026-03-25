@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Planning - FarmOps</title>
+    <link rel="stylesheet" href="../common/global.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="navbar-container" data-navbar data-user-name="John Farmer" data-user-initial="J" data-active-page="Crops"></div>
+    
+    <main class="main-content">
+        <div class="page-header">
+            <div class="page-header-content">
+                <div>
+                    <h1 class="page-title">Crop Planning</h1>
+                    <p class="page-subtitle">Plan and manage your seasonal crops</p>
+                </div>
+                <button class="btn btn-primary" id="addCropBtn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    Add New Crop
+                </button>
+            </div>
+        </div>
+
+        <div class="crop-planning-container">
+            <div class="crops-grid" id="cropsGrid">
+                <div class="crop-card">
+                    <div class="crop-header">
+                        <div class="crop-icon">🌾</div>
+                        <div class="crop-info">
+                            <h3>Wheat</h3>
+                            <p class="crop-season">Rabi Season</p>
+                        </div>
+                        <span class="badge badge-success">Active</span>
+                    </div>
+                    <div class="crop-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Planting Date</span>
+                            <span class="detail-value">Nov 15, 2025</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Expected Harvest</span>
+                            <span class="detail-value">Apr 20, 2026</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Area</span>
+                            <span class="detail-value">5 acres</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Status</span>
+                            <span class="detail-value text-success">Growing</span>
+                        </div>
+                    </div>
+                    <div class="crop-progress">
+                        <div class="progress-label">
+                            <span>Growth Progress</span>
+                            <span>65%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 65%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="crop-card">
+                    <div class="crop-header">
+                        <div class="crop-icon">🌽</div>
+                        <div class="crop-info">
+                            <h3>Corn</h3>
+                            <p class="crop-season">Kharif Season</p>
+                        </div>
+                        <span class="badge badge-info">Planned</span>
+                    </div>
+                    <div class="crop-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Planting Date</span>
+                            <span class="detail-value">Jun 1, 2026</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Expected Harvest</span>
+                            <span class="detail-value">Sep 30, 2026</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Area</span>
+                            <span class="detail-value">3 acres</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Status</span>
+                            <span class="detail-value text-muted">Not Started</span>
+                        </div>
+                    </div>
+                    <div class="crop-progress">
+                        <div class="progress-label">
+                            <span>Preparation</span>
+                            <span>20%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 20%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="crop-card">
+                    <div class="crop-header">
+                        <div class="crop-icon">🍚</div>
+                        <div class="crop-info">
+                            <h3>Rice</h3>
+                            <p class="crop-season">Kharif Season</p>
+                        </div>
+                        <span class="badge badge-warning">Pending</span>
+                    </div>
+                    <div class="crop-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Planting Date</span>
+                            <span class="detail-value">Jul 15, 2026</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Expected Harvest</span>
+                            <span class="detail-value">Nov 1, 2026</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Area</span>
+                            <span class="detail-value">4 acres</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Status</span>
+                            <span class="detail-value text-muted">Not Started</span>
+                        </div>
+                    </div>
+                    <div class="crop-progress">
+                        <div class="progress-label">
+                            <span>Preparation</span>
+                            <span>0%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="crop-card">
+                    <div class="crop-header">
+                        <div class="crop-icon">🥬</div>
+                        <div class="crop-info">
+                            <h3>Vegetables</h3>
+                            <p class="crop-season">Year-round</p>
+                        </div>
+                        <span class="badge badge-success">Active</span>
+                    </div>
+                    <div class="crop-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Planting Date</span>
+                            <span class="detail-value">Jan 10, 2026</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Expected Harvest</span>
+                            <span class="detail-value">Continuous</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Area</span>
+                            <span class="detail-value">1 acre</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Status</span>
+                            <span class="detail-value text-success">Harvesting</span>
+                        </div>
+                    </div>
+                    <div class="crop-progress">
+                        <div class="progress-label">
+                            <span>Growth Progress</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 90%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="planning-summary card">
+                <div class="card-header">
+                    <h2 class="card-title">Season Summary</h2>
+                </div>
+                <div class="summary-grid">
+                    <div class="summary-item">
+                        <div class="summary-icon">📅</div>
+                        <div class="summary-content">
+                            <span class="summary-value">4</span>
+                            <span class="summary-label">Total Crops</span>
+                        </div>
+                    </div>
+                    <div class="summary-item">
+                        <div class="summary-icon">🌱</div>
+                        <div class="summary-content">
+                            <span class="summary-value">2</span>
+                            <span class="summary-label">Active</span>
+                        </div>
+                    </div>
+                    <div class="summary-item">
+                        <div class="summary-icon">📊</div>
+                        <div class="summary-content">
+                            <span class="summary-value">13</span>
+                            <span class="summary-label">Acres</span>
+                        </div>
+                    </div>
+                    <div class="summary-item">
+                        <div class="summary-icon">💰</div>
+                        <div class="summary-content">
+                            <span class="summary-value">₹2.5L</span>
+                            <span class="summary-label">Est. Revenue</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 FarmOps. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../common/navbar.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

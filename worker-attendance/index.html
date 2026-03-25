@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worker Attendance - FarmOps</title>
+    <link rel="stylesheet" href="../common/global.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="navbar-container" data-navbar data-user-name="John Farmer" data-user-initial="J" data-active-page="Workers"></div>
+    
+    <main class="main-content">
+        <div class="page-header">
+            <div class="page-header-content">
+                <div>
+                    <h1 class="page-title">Worker Attendance</h1>
+                    <p class="page-subtitle">Track and manage worker attendance records</p>
+                </div>
+                <button class="btn btn-primary" id="markAttendanceBtn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                        <polyline points="22 4 12 14.01 9 11.01"/>
+                    </svg>
+                    Mark Attendance
+                </button>
+            </div>
+        </div>
+
+        <div class="attendance-container">
+            <div class="attendance-summary card">
+                <h2 class="section-title">Attendance Summary - This Month</h2>
+                <div class="summary-stats">
+                    <div class="stat-item">
+                        <div class="stat-icon present">✓</div>
+                        <div class="stat-info">
+                            <span class="stat-value">156</span>
+                            <span class="stat-label">Total Present</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon absent">✗</div>
+                        <div class="stat-info">
+                            <span class="stat-value">12</span>
+                            <span class="stat-label">Total Absent</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon late">↻</div>
+                        <div class="stat-info">
+                            <span class="stat-value">8</span>
+                            <span class="stat-label">Late Arrivals</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon leave">◷</div>
+                        <div class="stat-info">
+                            <span class="stat-value">24</span>
+                            <span class="stat-label">Leave Days</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="attendance-records card">
+                <div class="card-header">
+                    <h2 class="card-title">Today's Attendance</h2>
+                    <div class="date-display">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/>
+                            <line x1="8" y1="2" x2="8" y2="6"/>
+                            <line x1="3" y1="10" x2="21" y2="10"/>
+                        </svg>
+                        <span>March 25, 2026</span>
+                    </div>
+                </div>
+                <div class="workers-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Worker Name</th>
+                                <th>Role</th>
+                                <th>Check In</th>
+                                <th>Check Out</th>
+                                <th>Hours</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="worker-info">
+                                        <div class="worker-avatar">R</div>
+                                        <span>Ramu</span>
+                                    </div>
+                                </td>
+                                <td>Farm Worker</td>
+                                <td>06:30 AM</td>
+                                <td>05:00 PM</td>
+                                <td>8.5 hrs</td>
+                                <td><span class="badge badge-success">Present</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="worker-info">
+                                        <div class="worker-avatar">L</div>
+                                        <span>Lakshman</span>
+                                    </div>
+                                </td>
+                                <td>Supervisor</td>
+                                <td>06:00 AM</td>
+                                <td>06:00 PM</td>
+                                <td>10 hrs</td>
+                                <td><span class="badge badge-success">Present</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="worker-info">
+                                        <div class="worker-avatar">K</div>
+                                        <span>Krishna</span>
+                                    </div>
+                                </td>
+                                <td>Farm Worker</td>
+                                <td>07:15 AM</td>
+                                <td>04:30 PM</td>
+                                <td>8 hrs</td>
+                                <td><span class="badge badge-warning">Late</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="worker-info">
+                                        <div class="worker-avatar">B</div>
+                                        <span>Bhim</span>
+                                    </div>
+                                </td>
+                                <td>Farm Worker</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td><span class="badge badge-danger">Absent</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="worker-info">
+                                        <div class="worker-avatar">S</div>
+                                        <span>Sita</span>
+                                    </div>
+                                </td>
+                                <td>Farm Worker</td>
+                                <td>06:30 AM</td>
+                                <td>05:00 PM</td>
+                                <td>8.5 hrs</td>
+                                <td><span class="badge badge-success">Present</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="leave-requests card">
+                <div class="card-header">
+                    <h2 class="card-title">Leave Requests</h2>
+                    <button class="btn btn-secondary">View All</button>
+                </div>
+                <div class="leave-list">
+                    <div class="leave-item">
+                        <div class="leave-worker">
+                            <div class="worker-avatar">A</div>
+                            <div>
+                                <span class="worker-name">Anil</span>
+                                <span class="leave-type">Sick Leave</span>
+                            </div>
+                        </div>
+                        <div class="leave-dates">
+                            <span>Mar 24 - Mar 25</span>
+                        </div>
+                        <div class="leave-actions">
+                            <button class="btn-approve">Approve</button>
+                            <button class="btn-reject">Reject</button>
+                        </div>
+                    </div>
+                    <div class="leave-item">
+                        <div class="leave-worker">
+                            <div class="worker-avatar">M</div>
+                            <div>
+                                <span class="worker-name">Madhu</span>
+                                <span class="leave-type">Casual Leave</span>
+                            </div>
+                        </div>
+                        <div class="leave-dates">
+                            <span>Mar 28</span>
+                        </div>
+                        <div class="leave-actions">
+                            <button class="btn-approve">Approve</button>
+                            <button class="btn-reject">Reject</button>
+                        </div>
+                    </div>
+                    <div class="leave-item">
+                        <div class="leave-worker">
+                            <div class="worker-avatar">P</div>
+                            <div>
+                                <span class="worker-name">Praveen</span>
+                                <span class="leave-type">Emergency</span>
+                            </div>
+                        </div>
+                        <div class="leave-dates">
+                            <span>Mar 26</span>
+                        </div>
+                        <div class="leave-actions">
+                            <button class="btn-approve">Approve</button>
+                            <button class="btn-reject">Reject</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 FarmOps. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../common/navbar.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

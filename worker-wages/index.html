@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worker Wages - FarmOps</title>
+    <link rel="stylesheet" href="../common/global.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="navbar-container" data-navbar data-user-name="John Worker" data-user-initial="J" data-active-page=""></div>
+    
+    <main class="main-content">
+        <div class="wages-page">
+            <div class="page-header-custom">
+                <div class="header-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="1" x2="12" y2="23"/>
+                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                    </svg>
+                </div>
+                <h1>Wages Page</h1>
+            </div>
+
+            <div class="wages-container">
+                <div class="current-month-status">
+                    <h2>Current Month Status</h2>
+                    <div class="status-content">
+                        <div class="status-item">
+                            <span class="status-label">Days Worked</span>
+                            <span class="status-value">22</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-label">Total Hours</span>
+                            <span class="status-value">176 hrs</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-label">Pending Payment</span>
+                            <span class="status-value highlight">₹12,500</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="payment-history">
+                    <h3>Payment History</h3>
+                    <div class="payment-list">
+                        <div class="payment-item">
+                            <div class="payment-info">
+                                <span class="payment-month">February 2026</span>
+                                <span class="payment-date">Paid on Feb 28</span>
+                            </div>
+                            <div class="payment-amount">₹11,200</div>
+                        </div>
+                        <div class="payment-item">
+                            <div class="payment-info">
+                                <span class="payment-month">January 2026</span>
+                                <span class="payment-date">Paid on Jan 31</span>
+                            </div>
+                            <div class="payment-amount">₹10,800</div>
+                        </div>
+                        <div class="payment-item">
+                            <div class="payment-info">
+                                <span class="payment-month">December 2025</span>
+                                <span class="payment-date">Paid on Dec 31</span>
+                            </div>
+                            <div class="payment-amount">₹12,000</div>
+                        </div>
+                        <div class="payment-item">
+                            <div class="payment-info">
+                                <span class="payment-month">November 2025</span>
+                                <span class="payment-date">Paid on Nov 30</span>
+                            </div>
+                            <div class="payment-amount">₹11,500</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bottom-sections">
+                    <div class="earnings-summary">
+                        <h3>Earnings Summary</h3>
+                        <div class="earnings-list">
+                            <div class="earning-item">
+                                <span>Base Wage</span>
+                                <span>₹10,000</span>
+                            </div>
+                            <div class="earning-item">
+                                <span>Overtime (16 hrs)</span>
+                                <span>₹1,600</span>
+                            </div>
+                            <div class="earning-item">
+                                <span>Bonus</span>
+                                <span>₹900</span>
+                            </div>
+                            <div class="earning-item total">
+                                <span>Total This Month</span>
+                                <span>₹12,500</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="performance-tracking">
+                        <h3>Performance Tracking</h3>
+                        <div class="performance-list">
+                            <div class="performance-item">
+                                <span class="perf-label">Attendance</span>
+                                <div class="perf-bar">
+                                    <div class="perf-fill" style="width: 95%"></div>
+                                </div>
+                                <span class="perf-value">95%</span>
+                            </div>
+                            <div class="performance-item">
+                                <span class="perf-label">Task Completion</span>
+                                <div class="perf-bar">
+                                    <div class="perf-fill" style="width: 88%"></div>
+                                </div>
+                                <span class="perf-value">88%</span>
+                            </div>
+                            <div class="performance-item">
+                                <span class="perf-label">Quality</span>
+                                <div class="perf-bar">
+                                    <div class="perf-fill" style="width: 92%"></div>
+                                </div>
+                                <span class="perf-value">92%</span>
+                            </div>
+                            <div class="performance-item">
+                                <span class="perf-label">Punctuality</span>
+                                <div class="perf-bar">
+                                    <div class="perf-fill" style="width: 90%"></div>
+                                </div>
+                                <span class="perf-value">90%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 FarmOps. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../common/navbar.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
