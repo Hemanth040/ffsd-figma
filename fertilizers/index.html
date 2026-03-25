@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Guides - Fertilizers</title>
+    <link rel="stylesheet" href="../common/global.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="main-header">
+            <button class="back-button">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+            </button>
+            <div class="header-content">
+                <svg class="header-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#15803D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <h1 class="page-title">Farm Guides</h1>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <nav class="navigation-tabs">
+                <button class="tab-button">Diseases</button>
+                <button class="tab-button">Pesticides</button>
+                <button class="tab-button active">Fertilizers</button>
+                <button class="tab-button">Weeds</button>
+            </nav>
+
+            <div class="search-bar">
+                <div class="search-input-container">
+                    <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <circle cx="11" cy="11" r="8" stroke="#9CA3AF" stroke-width="2"/>
+                        <path d="M21 21l-4.35-4.35" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <input type="text" class="search-input" placeholder="Search fertilizers by name, nutrient, or crop...">
+                </div>
+            </div>
+
+            <section class="content-section">
+                <div class="section-header">
+                    <div class="section-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#15803D" stroke-width="2">
+                            <path d="M12 2v20M2 12h20" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h2 class="section-title">Fertilizer Guide & Application Methods</h2>
+                </div>
+
+                <div class="filter-section">
+                    <p class="filter-label">Filter by type:</p>
+                    <div class="filter-buttons">
+                        <button class="filter-button active" data-filter="all">All</button>
+                        <button class="filter-button nitrogen" data-filter="nitrogen">Nitrogen</button>
+                        <button class="filter-button phosphorus" data-filter="phosphorus">Phosphorus</button>
+                        <button class="filter-button potassium" data-filter="potassium">Potassium</button>
+                        <button class="filter-button complex" data-filter="complex">Complex</button>
+                        <button class="filter-button micronutrient" data-filter="micronutrient">Micronutrient</button>
+                        <button class="filter-button organic" data-filter="organic">Organic</button>
+                    </div>
+                </div>
+
+                <div class="fertilizer-categories">
+                    <div class="category-card" data-category="nitrogen">
+                        <div class="category-header nitrogen">
+                            <span class="category-icon">🌱</span>
+                            <h3 class="category-title">NITROGEN</h3>
+                        </div>
+                        <div class="fertilizer-list">
+                            <article class="fertilizer-item">
+                                <div class="fertilizer-header">
+                                    <div class="fertilizer-name-row">
+                                        <h4 class="fertilizer-name">Urea</h4>
+                                        <span class="nutrient-tag nitrogen-tag">Nitrogen</span>
+                                    </div>
+                                    <p class="fertilizer-formula">Formula: CO(NH₂)₂</p>
+                                </div>
+                                <div class="nutrients-info">
+                                    <span class="nutrients-label">Nutrients: 46% N</span>
+                                </div>
+                                <div class="fertilizer-details">
+                                    <div class="detail-row">
+                                        <span class="detail-label">Purpose:</span>
+                                        <span class="detail-text">Promotes vegetative growth, leaf development, and protein synthesis</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">Suitable Crops:</span>
+                                        <span class="detail-text">All crops - Wheat, Rice, Maize, Vegetables</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">Application Method:</span>
+                                        <span class="detail-text">Broadcasting, Top dressing, Basal application</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">Dosage:</span>
+                                        <span class="detail-text">50-75 kg/acre (125-187 kg/ha)</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">Application Timing:</span>
+                                        <span class="detail-text">Split application - Basal + Top dressing</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">Suitable Soil:</span>
+                                        <span class="detail-text">All soil types</span>
+                                    </div>
+                                </div>
+                                <button class="guide-button">Application Guide</button>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="category-card" data-category="phosphorus">
+                        <div class="category-header phosphorus">
+                            <span class="category-icon">🌿</span>
+                            <h3 class="category-title">PHOSPHORUS</h3>
+                        </div>
+                        <div class="fertilizer-list">
+                            <article class="fertilizer-item">
+                                <div class="fertilizer-header">
+                                    <div class="fertilizer-name-row">
+                                        <h4 class="fertilizer-name">DAP (Diammonium Phosphate)</h4>
+                                        <span class="nutrient-tag phosphorus-tag">Phosphorus</span>
+                                    </div>
+                                    <p class="fertilizer-formula">Formula: (NH₄)₂HPO₄</p>
+                                </div>
+                                <div class="nutrients-info">
+                                    <span class="nutrients-label">Nutrients: 18% N, 46% P₂O₅</span>
+                                </div>
+                                <div class="fertilizer-details">
+                                    <div class="detail-row">
+                                        <span class="detail-label">Purpose:</span>
+                                        <span class="detail-text">Root development, flowering, seed formation, and energy transfer</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">Suitable Crops:</span>
+                                        <span class="detail-text">Cereals, Pulses, Oilseeds, Vegetables</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">Application Method:</span>
+                                        <span class="detail-text">Basal application, Banding, Drilling</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">Dosage:</span>
+                                        <span class="detail-text">40-50 kg/acre (100-125 kg/ha)</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">Application Timing:</span>
+                                        <span class="detail-text">At sowing or transplanting</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">Suitable Soil:</span>
+                                        <span class="detail-text">Alkaline to neutral soils</span>
+                                    </div>
+                                </div>
+                                <button class="guide-button">Application Guide</button>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="category-card" data-category="potassium">
+                        <div class="category-header potassium">
+                            <span class="category-icon">🍂</span>
+                            <h3 class="category-title">POTASSIUM</h3>
+                        </div>
+                        <div class="fertilizer-list">
+                            <article class="fertilizer-item">
+                                <div class="fertilizer-header">
+                                    <div class="fertilizer-name-row">
+                                        <h4 class="fertilizer-name">MOP (Muriate of Potash)</h4>
+                                        <span class="nutrient-tag potassium-tag">Potassium</span>
+                                    </div>
+                                    <p class="fertilizer-formula">Formula: KCl</p>
+                                </div>
+                                <div class="nutrients-info">
+                                    <span class="nutrients-label">Nutrients: 60% K₂O</span>
+                                </div>
+                                <div class="fertilizer-details">
+                                    <div class="detail-row">
+                                        <span class="detail-label">Purpose:</span>
+                                        <span class="detail-text">Water regulation, enzyme activation, disease resistance, and crop quality</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">Suitable Crops:</span>
+                                        <span class="detail-text">All crops - Cotton, Sugarcane, Tobacco, Fruits</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">Application Method:</span>
+                                        <span class="detail-text">Basal application, Split application</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">Dosage:</span>
+                                        <span class="detail-text">25-40 kg/acre (62-100 kg/ha)</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">Application Timing:</span>
+                                        <span class="detail-text">At planting or split during growth</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">Suitable Soil:</span>
+                                        <span class="detail-text">All soil types, especially light sandy soils</span>
+                                    </div>
+                                </div>
+                                <button class="guide-button">Application Guide</button>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="category-card" data-category="complex">
+                        <div class="category-header complex">
+                            <span class="category-icon">⚗️</span>
+                            <h3 class="category-title">COMPLEX FERTILIZERS</h3>
+                        </div>
+                        <div class="fertilizer-list">
+                            <article class="fertilizer-item">
+                                <div class="fertilizer-header">
+                                    <div class="fertilizer-name-row">
+                                        <h4 class="fertilizer-name">NPK 10-26-26</h4>
+                                        <span class="nutrient-tag complex-tag">Complex</span>
+                                    </div>
+                                    <p class="fertilizer-formula">N-P₂O₅-K₂O</p>
+                                </div>
+                                <div class="nutrients-info">
+                                    <span class="nutrients-label">Nutrients: 10% N, 26% P₂O₅, 26% K₂O</span>
+                                </div>
+                                <div class="fertilizer-details">
+                                    <div class="detail-row">
+                                        <span class="detail-label">Purpose:</span>
+                                        <span class="detail-text">Balanced nutrition for vegetative and reproductive growth</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">Suitable Crops:</span>
+                                        <span class="detail-text">Pulses, Oilseeds, Fruits, Vegetables</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">Application Method:</span>
+                                        <span class="detail-text">Basal application, Drilling</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">Dosage:</span>
+                                        <span class="detail-text">50-100 kg/acre (125-250 kg/ha)</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">Application Timing:</span>
+                                        <span class="detail-text">At sowing or transplanting</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">Suitable Soil:</span>
+                                        <span class="detail-text">All soil types</span>
+                                    </div>
+                                </div>
+                                <button class="guide-button">Application Guide</button>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="category-card" data-category="micronutrient">
+                        <div class="category-header micronutrient">
+                            <span class="category-icon">🔬</span>
+                            <h3 class="category-title">MICRONUTRIENTS</h3>
+                        </div>
+                        <div class="fertilizer-list">
+                            <article class="fertilizer-item">
+                                <div class="fertilizer-header">
+                                    <div class="fertilizer-name-row">
+                                        <h4 class="fertilizer-name">Zinc Sulphate</h4>
+                                        <span class="nutrient-tag micronutrient-tag">Micronutrient</span>
+                                    </div>
+                                    <p class="fertilizer-formula">Formula: ZnSO₄.7H₂O</p>
+                                </div>
+                                <div class="nutrients-info">
+                                    <span class="nutrients-label">Nutrients: 21% Zn, 11% S</span>
+                                </div>
+                                <div class="fertilizer-details">
+                                    <div class="detail-row">
+                                        <span class="detail-label">Purpose:</span>
+                                        <span class="detail-text">Prevents zinc deficiency, improves enzyme function and growth</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">Suitable Crops:</span>
+                                        <span class="detail-text">Rice, Wheat, Cotton, Citrus, Fruits</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">Application Method:</span>
+                                        <span class="detail-text">Soil application, Foliar spray, Seed treatment</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">Dosage:</span>
+                                        <span class="detail-text">10-25 kg/acre (25-62 kg/ha)</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">Application Timing:</span>
+                                        <span class="detail-text">At planting or as foliar spray</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">Suitable Soil:</span>
+                                        <span class="detail-text">Calcareous and sandy soils</span>
+                                    </div>
+                                </div>
+                                <button class="guide-button">Application Guide</button>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="category-card" data-category="organic">
+                        <div class="category-header organic">
+                            <span class="category-icon">🌾</span>
+                            <h3 class="category-title">ORGANIC FERTILIZERS</h3>
+                        </div>
+                        <div class="fertilizer-list">
+                            <article class="fertilizer-item">
+                                <div class="fertilizer-header">
+                                    <div class="fertilizer-name-row">
+                                        <h4 class="fertilizer-name">Vermicompost</h4>
+                                        <span class="nutrient-tag organic-tag">Organic</span>
+                                    </div>
+                                    <p class="fertilizer-formula">Organic matter</p>
+                                </div>
+                                <div class="nutrients-info">
+                                    <span class="nutrients-label">Nutrients: 1-3% N, 0.5-1% P, 0.5-1% K</span>
+                                </div>
+                                <div class="fertilizer-details">
+                                    <div class="detail-row">
+                                        <span class="detail-label">Purpose:</span>
+                                        <span class="detail-text">Improves soil structure, water retention, and microbial activity</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">Suitable Crops:</span>
+                                        <span class="detail-text">All crops - Vegetables, Fruits, Flowers</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">Application Method:</span>
+                                        <span class="detail-text">Soil application, Mixing with potting mix</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">Dosage:</span>
+                                        <span class="detail-text">2-5 tons/acre (5-12.5 tons/ha)</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">Application Timing:</span>
+                                        <span class="detail-text">At planting or before sowing</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">Suitable Soil:</span>
+                                        <span class="detail-text">All soil types</span>
+                                    </div>
+                                </div>
+                                <button class="guide-button">Application Guide</button>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

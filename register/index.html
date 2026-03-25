@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Farm Operations Platform</title>
+    <link rel="stylesheet" href="../common/global.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="register-container">
+        <div class="register-card">
+            <div class="card-header">
+                <div class="logo">
+                    <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
+                        <rect width="56" height="56" rx="12" fill="#DCFCE7"/>
+                        <path d="M28 12L12 22l16 10 16-10-16-10zM12 34l16 10 16-10M12 28l16 10 16-10" stroke="#008236" stroke-width="2.67" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h1 class="card-title">Create Account</h1>
+            </div>
+
+            <div class="card-content">
+                <form class="register-form" id="registerForm">
+                    <div class="form-group">
+                        <label for="userType" class="form-label">Register as</label>
+                        <div class="select-wrapper">
+                            <select id="userType" class="form-select">
+                                <option value="" disabled selected>Select role</option>
+                                <option value="farmer">Farmer</option>
+                                <option value="supervisor">Supervisor</option>
+                                <option value="worker">Worker</option>
+                            </select>
+                            <svg class="select-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" id="name" class="form-input" placeholder="Enter your name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" class="form-input" placeholder="Enter your email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" id="phone" class="form-input" placeholder="Enter your phone number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" id="password" class="form-input" placeholder="Create a password">
+                    </div>
+
+                    <button type="submit" class="register-button">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

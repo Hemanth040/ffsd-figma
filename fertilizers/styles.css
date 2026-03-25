@@ -1,0 +1,482 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nimbus Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: linear-gradient(135deg, #F0FDF4 0%, #F0F9FF 100%);
+    min-height: 100vh;
+    padding: 16px 24px;
+}
+
+.container {
+    max-width: 1301px;
+    margin: 0 auto;
+}
+
+.main-header {
+    display: flex;
+    align-items: center;
+    padding: 16px 24px;
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    margin-bottom: 24px;
+}
+
+.back-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 9999px;
+    transition: background-color 0.2s;
+}
+
+.back-button:hover {
+    background: #F3F4F6;
+}
+
+.back-button svg {
+    color: #4B5563;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-left: 16px;
+}
+
+.header-icon {
+    flex-shrink: 0;
+}
+
+.page-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111827;
+    line-height: 1.4em;
+}
+
+.main-content {
+    max-width: 1152px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px;
+}
+
+.navigation-tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(229, 231, 235, 0.5);
+    border-radius: 16px;
+    padding: 6px;
+    gap: 4px;
+}
+
+.tab-button {
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #4B5563;
+    background: transparent;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.tab-button:hover {
+    color: #111827;
+}
+
+.tab-button.active {
+    background: #FFFFFF;
+    color: #111827;
+    font-weight: 600;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+}
+
+.search-bar {
+    width: 100%;
+}
+
+.search-input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.search-input {
+    width: 100%;
+    padding: 15px 16px 14px 48px;
+    font-size: 16px;
+    color: #111827;
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.05);
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.search-input::placeholder {
+    color: #9CA3AF;
+}
+
+.search-input:focus {
+    border-color: #15803D;
+}
+
+.content-section {
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 16px;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 24px;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.section-icon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #111827;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+}
+
+.filter-section {
+    padding: 16px 24px;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.filter-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #9CA3AF;
+    margin-bottom: 12px;
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.filter-button {
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #374151;
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.filter-button:hover {
+    border-color: #D1D5DB;
+    background: #F9FAFB;
+}
+
+.filter-button.active {
+    color: #FFFFFF;
+    border-color: transparent;
+}
+
+.filter-button.nitrogen.active {
+    background: #86EFAC;
+    color: #14532D;
+}
+
+.filter-button.phosphorus.active {
+    background: #FDE68A;
+    color: #78350F;
+}
+
+.filter-button.potassium.active {
+    background: #FECACA;
+    color: #7F1D1D;
+}
+
+.filter-button.complex.active {
+    background: #C4B5FD;
+    color: #5B21B6;
+}
+
+.filter-button.micronutrient.active {
+    background: #7DD3FC;
+    color: #0C4A6E;
+}
+
+.filter-button.organic.active {
+    background: #BBF7D0;
+    color: #166534;
+}
+
+.fertilizer-categories {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.category-card {
+    border: 1px solid #E5E7EB;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.category-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+}
+
+.category-header.nitrogen {
+    background: #DCFCE7;
+}
+
+.category-header.phosphorus {
+    background: #FEF9C3;
+}
+
+.category-header.potassium {
+    background: #FEE2E2;
+}
+
+.category-header.complex {
+    background: #EDE9FE;
+}
+
+.category-header.micronutrient {
+    background: #E0F2FE;
+}
+
+.category-header.organic {
+    background: #D1FAE5;
+}
+
+.category-icon {
+    font-size: 20px;
+}
+
+.category-title {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #111827;
+}
+
+.fertilizer-list {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.fertilizer-item {
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.fertilizer-header {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.fertilizer-name-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.fertilizer-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.nutrient-tag {
+    padding: 4px 10px;
+    font-size: 11px;
+    font-weight: 600;
+    border-radius: 9999px;
+    white-space: nowrap;
+}
+
+.nitrogen-tag {
+    background: #DCFCE7;
+    color: #14532D;
+}
+
+.phosphorus-tag {
+    background: #FEF9C3;
+    color: #78350F;
+}
+
+.potassium-tag {
+    background: #FEE2E2;
+    color: #7F1D1D;
+}
+
+.complex-tag {
+    background: #EDE9FE;
+    color: #5B21B6;
+}
+
+.micronutrient-tag {
+    background: #E0F2FE;
+    color: #0C4A6E;
+}
+
+.organic-tag {
+    background: #D1FAE5;
+    color: #166534;
+}
+
+.fertilizer-formula {
+    font-size: 13px;
+    color: #9CA3AF;
+}
+
+.nutrients-info {
+    padding: 8px 12px;
+    background: #F9FAFB;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+}
+
+.nutrients-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #111827;
+}
+
+.fertilizer-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.detail-row {
+    display: flex;
+    gap: 12px;
+}
+
+.detail-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #111827;
+    min-width: 140px;
+}
+
+.detail-text {
+    font-size: 13px;
+    color: #6B7280;
+    flex: 1;
+}
+
+.guide-button {
+    align-self: flex-start;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.guide-button:hover {
+    background: #F9FAFB;
+    border-color: #D1D5DB;
+}
+
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-content {
+        padding-left: 0;
+        padding-top: 12px;
+    }
+
+    .navigation-tabs {
+        flex-wrap: wrap;
+    }
+
+    .tab-button {
+        flex: 1;
+        text-align: center;
+        min-width: 80px;
+    }
+
+    .filter-buttons {
+        justify-content: flex-start;
+    }
+
+    .filter-button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .fertilizer-name-row {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .detail-row {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .detail-label {
+        min-width: auto;
+    }
+}

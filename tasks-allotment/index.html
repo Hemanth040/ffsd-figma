@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks Allotment and Management - Farm Operations</title>
+    <link rel="stylesheet" href="../common/global.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="tasks-container">
+        <header class="page-header">
+            <div class="header-left">
+                <button class="back-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                </button>
+                <h1>Tasks Allotment and Management</h1>
+            </div>
+            <button class="create-task-btn" id="createTaskBtn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="12" y1="5" x2="12" y2="19"/>
+                    <line x1="5" y1="12" x2="19" y2="12"/>
+                </svg>
+                Create Task
+            </button>
+        </header>
+
+        <main class="tasks-content">
+            <div class="task-modal" id="taskModal">
+                <div class="modal-overlay"></div>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="close-btn" id="closeModal">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="18" y1="6" x2="6" y2="18"/>
+                                <line x1="6" y1="6" x2="18" y2="18"/>
+                            </svg>
+                        </button>
+                        <div class="modal-title">
+                            <h2>Create New Task</h2>
+                            <p>Add task details and assign workers</p>
+                        </div>
+                    </div>
+
+                    <form class="task-form" id="taskForm">
+                        <div class="form-section">
+                            <h3>Basic Information</h3>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="taskTitle">Task Title *</label>
+                                    <input type="text" id="taskTitle" class="form-input" placeholder="e.g., Plow Field A" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="shortDesc">Short Description *</label>
+                                    <input type="text" id="shortDesc" class="form-input" placeholder="e.g., Prepare field for wheat sowing" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="status">Status</label>
+                                    <div class="select-wrapper">
+                                        <select id="status" class="form-select">
+                                            <option value="pending">Pending</option>
+                                            <option value="in-progress">In Progress</option>
+                                            <option value="completed">Completed</option>
+                                        </select>
+                                        <svg class="select-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M6 9l6 6 6-6"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="priority">Priority</label>
+                                    <div class="select-wrapper">
+                                        <select id="priority" class="form-select">
+                                            <option value="low">Low</option>
+                                            <option value="medium">Medium</option>
+                                            <option value="high">High</option>
+                                        </select>
+                                        <svg class="select-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M6 9l6 6 6-6"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Task Details</h3>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="deadline">Deadline</label>
+                                    <input type="date" id="deadline" class="form-input">
+                                </div>
+                                <div class="form-group">
+                                    <label for="assignee">Assign To</label>
+                                    <div class="select-wrapper">
+                                        <select id="assignee" class="form-select">
+                                            <option value="">Select worker</option>
+                                            <option value="ramu">Ramu - Lead Worker</option>
+                                            <option value="suraj">Suraj - Field Worker</option>
+                                            <option value="mohan">Mohan - Equipment Operator</option>
+                                        </select>
+                                        <svg class="select-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M6 9l6 6 6-6"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="form-group full-width">
+                                    <label for="equipment">Equipment Required</label>
+                                    <input type="text" id="equipment" class="form-input" placeholder="e.g., Tractor, Plough">
+                                </div>
+                                <div class="form-group full-width">
+                                    <label for="location">Location</label>
+                                    <input type="text" id="location" class="form-input" placeholder="e.g., Field A, Section 1">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" class="cancel-btn" id="cancelBtn">Cancel</button>
+                            <button type="submit" class="submit-btn">Create Task</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="tasks-list">
+                <div class="task-card">
+                    <div class="task-header">
+                        <div class="task-info">
+                            <h3>Plow Field A - Wheat Preparation</h3>
+                            <p>Prepare field for wheat sowing using disc plough</p>
+                        </div>
+                        <div class="task-badges">
+                            <span class="badge high">High</span>
+                            <span class="badge in-progress">In Progress</span>
+                        </div>
+                    </div>
+                    <div class="task-meta">
+                        <span class="meta-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                            Due: Tomorrow, 6:00 PM
+                        </span>
+                        <span class="meta-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                            Assigned to: Ramu
+                        </span>
+                        <span class="meta-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            Field A, Section 2
+                        </span>
+                    </div>
+                    <div class="task-actions">
+                        <button class="action-btn edit">Edit</button>
+                        <button class="action-btn delete">Delete</button>
+                    </div>
+                </div>
+
+                <div class="task-card">
+                    <div class="task-header">
+                        <div class="task-info">
+                            <h3>Irrigation System Check</h3>
+                            <p>Inspect drip irrigation system in Field B</p>
+                        </div>
+                        <div class="task-badges">
+                            <span class="badge medium">Medium</span>
+                            <span class="badge pending">Pending</span>
+                        </div>
+                    </div>
+                    <div class="task-meta">
+                        <span class="meta-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                            Due: March 28, 2024
+                        </span>
+                        <span class="meta-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                            Assigned to: Suraj
+                        </span>
+                        <span class="meta-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            Field B, Section 1
+                        </span>
+                    </div>
+                    <div class="task-actions">
+                        <button class="action-btn edit">Edit</button>
+                        <button class="action-btn delete">Delete</button>
+                    </div>
+                </div>
+
+                <div class="task-card">
+                    <div class="task-header">
+                        <div class="task-info">
+                            <h3>Fertilizer Application</h3>
+                            <p>Apply urea fertilizer to wheat crop</p>
+                        </div>
+                        <div class="task-badges">
+                            <span class="badge high">High</span>
+                            <span class="badge completed">Completed</span>
+                        </div>
+                    </div>
+                    <div class="task-meta">
+                        <span class="meta-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                            Due: March 20, 2024
+                        </span>
+                        <span class="meta-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                            Assigned to: Mohan
+                        </span>
+                        <span class="meta-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            Field C, Section 1
+                        </span>
+                    </div>
+                    <div class="task-actions">
+                        <button class="action-btn edit">Edit</button>
+                        <button class="action-btn delete">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Guides - Disease Guide</title>
+    <link rel="stylesheet" href="../common/global.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="main-header">
+            <button class="back-button">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+            </button>
+            <div class="header-content">
+                <svg class="header-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#15803D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <h1 class="page-title">Farm Guides</h1>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <nav class="navigation-tabs">
+                <button class="tab-button active">Diseases</button>
+                <button class="tab-button">Pesticides</button>
+                <button class="tab-button">Fertilizers</button>
+                <button class="tab-button">Weeds</button>
+            </nav>
+
+            <div class="search-bar">
+                <div class="search-input-container">
+                    <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <circle cx="11" cy="11" r="8" stroke="#9CA3AF" stroke-width="2"/>
+                        <path d="M21 21l-4.35-4.35" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <input type="text" class="search-input" placeholder="Search diseases...">
+                </div>
+            </div>
+
+            <section class="content-section">
+                <div class="section-header">
+                    <div class="alert-badge">
+                        <span class="alert-icon">!</span>
+                    </div>
+                    <h2 class="section-title">Disease & Treatment Guide</h2>
+                </div>
+
+                <div class="disease-cards">
+                    <article class="disease-card">
+                        <div class="disease-image" style="background-color: #E8F5E9;">
+                            <img src="../../../src/assets/images/leaf-rust.jpg" alt="Leaf Rust" onerror="this.style.display='none'">
+                        </div>
+                        <div class="disease-details">
+                            <div class="disease-header">
+                                <h3 class="disease-name">Leaf Rust</h3>
+                                <span class="crop-tag">Wheat</span>
+                            </div>
+                            <div class="disease-info">
+                                <div class="info-block">
+                                    <h4 class="info-title">Symptoms:</h4>
+                                    <p class="info-text">Orange-brown pustules on leaves</p>
+                                </div>
+                                <div class="info-block">
+                                    <h4 class="info-title">Treatment:</h4>
+                                    <p class="info-text">Apply fungicide, remove infected plants</p>
+                                </div>
+                            </div>
+                            <div class="action-buttons">
+                                <button class="action-button">View Full Guide</button>
+                                <button class="action-button">Find Products</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="disease-card">
+                        <div class="disease-image" style="background-color: #E3F2FD;">
+                            <img src="../../../src/assets/images/bacterial-blight.jpg" alt="Bacterial Blight" onerror="this.style.display='none'">
+                        </div>
+                        <div class="disease-details">
+                            <div class="disease-header">
+                                <h3 class="disease-name">Bacterial Blight</h3>
+                                <span class="crop-tag">Rice</span>
+                            </div>
+                            <div class="disease-info">
+                                <div class="info-block">
+                                    <h4 class="info-title">Symptoms:</h4>
+                                    <p class="info-text">Water-soaked lesions on leaves</p>
+                                </div>
+                                <div class="info-block">
+                                    <h4 class="info-title">Treatment:</h4>
+                                    <p class="info-text">Use resistant varieties, copper-based spray</p>
+                                </div>
+                            </div>
+                            <div class="action-buttons">
+                                <button class="action-button">View Full Guide</button>
+                                <button class="action-button">Find Products</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="disease-card">
+                        <div class="disease-image" style="background-color: #FFF3E0;">
+                            <img src="../../../src/assets/images/corn-smut.jpg" alt="Corn Smut" onerror="this.style.display='none'">
+                        </div>
+                        <div class="disease-details">
+                            <div class="disease-header">
+                                <h3 class="disease-name">Corn Smut</h3>
+                                <span class="crop-tag">Corn</span>
+                            </div>
+                            <div class="disease-info">
+                                <div class="info-block">
+                                    <h4 class="info-title">Symptoms:</h4>
+                                    <p class="info-text">Gray-black galls on ears and stalks</p>
+                                </div>
+                                <div class="info-block">
+                                    <h4 class="info-title">Treatment:</h4>
+                                    <p class="info-text">Remove infected plants, crop rotation</p>
+                                </div>
+                            </div>
+                            <div class="action-buttons">
+                                <button class="action-button">View Full Guide</button>
+                                <button class="action-button">Find Products</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

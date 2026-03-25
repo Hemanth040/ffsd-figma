@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Login - Farm Operations Platform</title>
+    <link rel="stylesheet" href="../common/global.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="card-header">
+                <div class="logo">
+                    <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
+                        <rect width="56" height="56" rx="12" fill="#DCFCE7"/>
+                        <path d="M28 12L12 22l16 10 16-10-16-10zM12 34l16 10 16-10M12 28l16 10 16-10" stroke="#008236" stroke-width="2.67" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h1 class="card-title">Farm Operations Platform</h1>
+                <p class="card-subtitle">Sign in as Farmer</p>
+            </div>
+
+            <div class="card-content">
+                <form class="login-form" id="loginForm">
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email or Phone</label>
+                        <input type="text" id="email" class="form-input" placeholder="Enter your email or phone">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" id="password" class="form-input" placeholder="Enter your password">
+                    </div>
+
+                    <button type="submit" class="login-button">Login</button>
+                </form>
+
+                <div class="form-footer">
+                    <span class="footer-text">Don't have an account?</span>
+                    <a href="../register/index.html" class="register-link">Register</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

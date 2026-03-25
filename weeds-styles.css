@@ -1,0 +1,358 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #f5f5f5;
+    min-height: 100vh;
+}
+
+.weeds-guide {
+    max-width: 1112px;
+    margin: 0 auto;
+    background: #ffffff;
+    min-height: 100vh;
+}
+
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 24px;
+    border-bottom: 0.8px solid rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    max-width: 1064px;
+}
+
+.back-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 9999px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0A0A0A;
+    transition: background 0.2s;
+}
+
+.back-btn:hover {
+    background: #f5f5f5;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header-icon {
+    color: #0A0A0A;
+}
+
+.header-content h1 {
+    font-family: 'Nimbus Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #0A0A0A;
+}
+
+.main-content {
+    padding: 24px;
+}
+
+.nav-tabs {
+    display: flex;
+    gap: 8px;
+    padding: 8px;
+    background: #AC5TLN;
+    border-radius: 16px;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 12px;
+    font-family: 'Nimbus Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    background: transparent;
+    color: #4B5563;
+    transition: all 0.2s;
+}
+
+.tab-btn:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.tab-btn.active {
+    background: #ffffff;
+    color: #0A0A0A;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar {
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 12px 16px 12px 44px;
+    border: 0.8px solid rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.search-bar input:focus {
+    border-color: #2E7D32;
+}
+
+.search-bar input::placeholder {
+    color: #4A5565;
+}
+
+.search-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #4A5565;
+}
+
+.content-section {
+    background: #ffffff;
+    border: 0.8px solid rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.info-banner {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    border-bottom: 0.8px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 24px;
+}
+
+.info-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #FFF5EB;
+    color: #FF6B35;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.info-banner h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #0A0A0A;
+}
+
+.weeds-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.weed-card {
+    display: flex;
+    border: 0.8px solid rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    overflow: hidden;
+    background: #ffffff;
+    transition: box-shadow 0.2s;
+}
+
+.weed-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.weed-image {
+    width: 200px;
+    min-height: 280px;
+    background: linear-gradient(135deg, #22C55E 0%, #16A34A 100%);
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.weed-image.purple {
+    background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);
+}
+
+.weed-image.yellow {
+    background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+}
+
+.crop-label {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+}
+
+.weed-details {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.weed-header {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.weed-header h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #0A0A0A;
+}
+
+.scientific-name {
+    font-size: 14px;
+    color: #4A5565;
+    font-style: italic;
+}
+
+.crop-tag {
+    display: inline-block;
+    padding: 4px 12px;
+    background: #ECEEF2;
+    border: 0.8px solid rgba(0, 0, 0, 0.1);
+    border-radius: 9999px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #4B5563;
+    margin-top: 8px;
+    width: fit-content;
+}
+
+.weed-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.info-section h4 {
+    font-size: 14px;
+    font-weight: 500;
+    color: #0A0A0A;
+    margin-bottom: 4px;
+}
+
+.info-section p {
+    font-size: 14px;
+    color: #4B5563;
+    line-height: 1.5;
+}
+
+.threat-badges {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.badge {
+    padding: 4px 8px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    border: 0.8px solid rgba(0, 0, 0, 0);
+}
+
+.badge.threat {
+    background: #FEE2E2;
+    color: #DC2626;
+}
+
+.badge.competition {
+    background: #FEF3C7;
+    color: #D97706;
+}
+
+.card-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.action-btn {
+    padding: 8px 16px;
+    border: 0.8px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    color: #0A0A0A;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.action-btn:hover {
+    background: #f5f5f5;
+}
+
+.action-btn.primary {
+    background: #2E7D32;
+    border-color: #2E7D32;
+    color: #ffffff;
+}
+
+.action-btn.primary:hover {
+    background: #256327;
+}
+
+@media (max-width: 768px) {
+    .weed-card {
+        flex-direction: column;
+    }
+
+    .weed-image {
+        width: 100%;
+        min-height: 120px;
+    }
+
+    .nav-tabs {
+        flex-wrap: wrap;
+    }
+
+    .tab-btn {
+        flex: 1 1 calc(50% - 4px);
+    }
+}

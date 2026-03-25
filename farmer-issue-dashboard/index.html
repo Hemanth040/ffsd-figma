@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issues Management - Farm Operations Platform</title>
+    <link rel="stylesheet" href="../common/global.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header class="main-header">
+            <button class="back-button">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+            </button>
+            <div class="header-content">
+                <svg class="header-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#15803D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <h1 class="page-title">Issues Management</h1>
+            </div>
+        </header>
+
+        <div class="stats-container">
+            <div class="stat-card open-issues">
+                <div class="stat-content">
+                    <span class="stat-label">Open Issues</span>
+                    <span class="stat-value">2</span>
+                </div>
+            </div>
+            <div class="stat-card in-progress">
+                <div class="stat-content">
+                    <span class="stat-label">In Progress</span>
+                    <span class="stat-value">1</span>
+                </div>
+            </div>
+            <div class="stat-card resolved">
+                <div class="stat-content">
+                    <span class="stat-label">Resolved</span>
+                    <span class="stat-value">1</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="issues-section">
+            <div class="section-header">
+                <h2 class="section-title">All Issues</h2>
+            </div>
+
+            <div class="issues-list">
+                <div class="issue-card open">
+                    <div class="issue-content">
+                        <div class="issue-header">
+                            <h3 class="issue-title">Tractor Engine Problem</h3>
+                            <div class="issue-meta">
+                                <span class="issue-reporter">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                        <circle cx="12" cy="7" r="4"/>
+                                    </svg>
+                                    Vikram Reddy
+                                </span>
+                                <span class="issue-date">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                    2026-03-03
+                                </span>
+                            </div>
+                        </div>
+                        <div class="issue-badges">
+                            <span class="status-badge open">open</span>
+                            <span class="priority-badge high">high</span>
+                            <span class="category-badge">equipment</span>
+                        </div>
+                    </div>
+                    <div class="issue-actions">
+                        <button class="action-btn outline">View Details</button>
+                        <button class="action-btn filled">Update Status</button>
+                    </div>
+                </div>
+
+                <div class="issue-card in-progress">
+                    <div class="issue-content">
+                        <div class="issue-header">
+                            <h3 class="issue-title">Irrigation Pipe Leak</h3>
+                            <div class="issue-meta">
+                                <span class="issue-reporter">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                        <circle cx="12" cy="7" r="4"/>
+                                    </svg>
+                                    Priya Singh
+                                </span>
+                                <span class="issue-date">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                    2026-03-02
+                                </span>
+                            </div>
+                        </div>
+                        <div class="issue-badges">
+                            <span class="status-badge in-progress">in-progress</span>
+                            <span class="priority-badge medium">medium</span>
+                            <span class="category-badge">infrastructure</span>
+                        </div>
+                    </div>
+                    <div class="issue-actions">
+                        <button class="action-btn outline">View Details</button>
+                        <button class="action-btn filled">Update Status</button>
+                    </div>
+                </div>
+
+                <div class="issue-card resolved">
+                    <div class="issue-content">
+                        <div class="issue-header">
+                            <h3 class="issue-title">Low Water Pressure</h3>
+                            <div class="issue-meta">
+                                <span class="issue-reporter">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                        <circle cx="12" cy="7" r="4"/>
+                                    </svg>
+                                    Rajesh Kumar
+                                </span>
+                                <span class="issue-date">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                    2026-03-01
+                                </span>
+                            </div>
+                        </div>
+                        <div class="issue-badges">
+                            <span class="status-badge resolved">resolved</span>
+                            <span class="priority-badge low">low</span>
+                            <span class="category-badge">water</span>
+                        </div>
+                    </div>
+                    <div class="issue-actions">
+                        <button class="action-btn outline">View Details</button>
+                    </div>
+                </div>
+
+                <div class="issue-card open">
+                    <div class="issue-content">
+                        <div class="issue-header">
+                            <h3 class="issue-title">Fertilizer Quality Concern</h3>
+                            <div class="issue-meta">
+                                <span class="issue-reporter">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                        <circle cx="12" cy="7" r="4"/>
+                                    </svg>
+                                    Amit Patel
+                                </span>
+                                <span class="issue-date">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                    2026-02-28
+                                </span>
+                            </div>
+                        </div>
+                        <div class="issue-badges">
+                            <span class="status-badge open">open</span>
+                            <span class="priority-badge medium">medium</span>
+                            <span class="category-badge">resources</span>
+                        </div>
+                    </div>
+                    <div class="issue-actions">
+                        <button class="action-btn outline">View Details</button>
+                        <button class="action-btn filled">Update Status</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

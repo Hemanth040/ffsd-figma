@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weeds Guide - Farm Guides</title>
+    <link rel="stylesheet" href="../common/global.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nimbus+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="weeds-guide">
+        <header class="main-header">
+            <div class="header-container">
+                <button class="back-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                </button>
+                <div class="header-content">
+                    <svg class="header-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                    <h1>Farm Guides</h1>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <nav class="nav-tabs">
+                <button class="tab-btn" data-tab="diseases">Diseases</button>
+                <button class="tab-btn" data-tab="pesticides">Pesticides</button>
+                <button class="tab-btn" data-tab="fertilizers">Fertilizers</button>
+                <button class="tab-btn active" data-tab="weeds">Weeds</button>
+            </nav>
+
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search weeds...">
+                <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"/>
+                    <path d="M21 21l-4.35-4.35"/>
+                </svg>
+            </div>
+
+            <div class="content-section">
+                <div class="info-banner">
+                    <span class="info-icon">!</span>
+                    <h2>Weed Identification & Control Guide</h2>
+                </div>
+
+                <div class="weeds-container" id="weedsContainer">
+                    <div class="weed-card" data-crop="wheat">
+                        <div class="weed-image">
+                            <div class="crop-label">WHEAT</div>
+                        </div>
+                        <div class="weed-details">
+                            <div class="weed-header">
+                                <h3>Phalaris Minor</h3>
+                                <p class="scientific-name">Little Seed Canary Grass</p>
+                                <span class="crop-tag">Wheat</span>
+                            </div>
+                            <div class="weed-info">
+                                <div class="info-section">
+                                    <h4>Characteristics:</h4>
+                                    <p>Grass weed with narrow leaves, purple-tinged stems, and spike-like panicles</p>
+                                </div>
+                                <div class="info-section">
+                                    <h4>Control Methods:</h4>
+                                    <p>Pre-emergence herbicides, hand weeding, crop rotation</p>
+                                </div>
+                                <div class="info-section">
+                                    <h4>Critical Control Stage:</h4>
+                                    <p>Early growth stage (2-4 weeks after sowing)</p>
+                                </div>
+                            </div>
+                            <div class="threat-badges">
+                                <span class="badge threat">Threat: High</span>
+                                <span class="badge competition">Competition: Severe</span>
+                            </div>
+                            <div class="card-actions">
+                                <button class="action-btn">View Full Guide</button>
+                                <button class="action-btn primary">Find Herbicides</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="weed-card" data-crop="multiple">
+                        <div class="weed-image purple">
+                            <div class="crop-label">MULTIPLE CROPS</div>
+                        </div>
+                        <div class="weed-details">
+                            <div class="weed-header">
+                                <h3>Cyperus rotundus</h3>
+                                <p class="scientific-name">Purple Nutsedge</p>
+                                <span class="crop-tag">Multiple Crops</span>
+                            </div>
+                            <div class="weed-info">
+                                <div class="info-section">
+                                    <h4>Characteristics:</h4>
+                                    <p>Perennial sedge with triangular stems, dark green leaves, and underground tubers</p>
+                                </div>
+                                <div class="info-section">
+                                    <h4>Control Methods:</h4>
+                                    <p>Post-emergence herbicides, mulching, soil solarization</p>
+                                </div>
+                                <div class="info-section">
+                                    <h4>Critical Control Stage:</h4>
+                                    <p>Before tuber formation (4-6 weeks after emergence)</p>
+                                </div>
+                            </div>
+                            <div class="threat-badges">
+                                <span class="badge threat">Threat: High</span>
+                                <span class="badge competition">Competition: Severe</span>
+                            </div>
+                            <div class="card-actions">
+                                <button class="action-btn">View Full Guide</button>
+                                <button class="action-btn primary">Find Herbicides</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="weed-card" data-crop="rice">
+                        <div class="weed-image yellow">
+                            <div class="crop-label">RICE</div>
+                        </div>
+                        <div class="weed-details">
+                            <div class="weed-header">
+                                <h3>Echinochloa crus-galli</h3>
+                                <p class="scientific-name">Barnyardgrass</p>
+                                <span class="crop-tag">Rice</span>
+                            </div>
+                            <div class="weed-info">
+                                <div class="info-section">
+                                    <h4>Characteristics:</h4>
+                                    <p>Tall grass with flat leaves, purple-tinged stems, and spreading panicles</p>
+                                </div>
+                                <div class="info-section">
+                                    <h4>Control Methods:</h4>
+                                    <p>Pre-emergence herbicides, water management, hand weeding</p>
+                                </div>
+                                <div class="info-section">
+                                    <h4>Critical Control Stage:</h4>
+                                    <p>Early vegetative stage (2-3 weeks after transplanting)</p>
+                                </div>
+                            </div>
+                            <div class="threat-badges">
+                                <span class="badge threat">Threat: High</span>
+                                <span class="badge competition">Competition: Severe</span>
+                            </div>
+                            <div class="card-actions">
+                                <button class="action-btn">View Full Guide</button>
+                                <button class="action-btn primary">Find Herbicides</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

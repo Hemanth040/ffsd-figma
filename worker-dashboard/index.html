@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worker Dashboard - Farm Operations</title>
+    <link rel="stylesheet" href="../common/global.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard">
+        <header class="dashboard-header">
+            <div class="user-info">
+                <div class="avatar">RP</div>
+                <div class="user-details">
+                    <h1>Welcome back, Ramu!</h1>
+                    <p>Lead Worker • Field A, West Section</p>
+                </div>
+            </div>
+            <button class="checkout-btn">Check Out</button>
+        </header>
+
+        <div class="dashboard-content">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <p class="stat-label">Tasks Completed</p>
+                    <p class="stat-value">47</p>
+                    <p class="stat-subtitle">This month</p>
+                </div>
+                <div class="stat-card">
+                    <p class="stat-label">Attendance</p>
+                    <p class="stat-value">96%</p>
+                    <p class="stat-subtitle">This month</p>
+                </div>
+                <div class="stat-card">
+                    <p class="stat-label">Hours This Week</p>
+                    <p class="stat-value">32</p>
+                    <p class="stat-subtitle">Out of 40</p>
+                </div>
+            </div>
+
+            <div class="tasks-section">
+                <div class="section-header">
+                    <h2>Today's Tasks</h2>
+                    <div class="task-counts">
+                        <span class="count-badge active">1 Active</span>
+                        <span class="count-badge">2 Total</span>
+                    </div>
+                </div>
+
+                <div class="task-list">
+                    <div class="task-card in-progress">
+                        <div class="task-header">
+                            <h3>Plow Field A</h3>
+                            <div class="task-badges">
+                                <span class="badge high">high</span>
+                                <span class="badge in-progress">in-progress</span>
+                            </div>
+                        </div>
+                        <div class="task-meta">
+                            <span class="meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path d="M12 6v6l4 2"/>
+                                </svg>
+                                Deadline: 6:00 PM Today
+                            </span>
+                            <span class="meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path d="M12 6v6l4 2"/>
+                                </svg>
+                                4h 30m remaining
+                            </span>
+                            <span class="meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                                Field A, West Section
+                            </span>
+                        </div>
+                        <p class="task-description">Complete deep plowing of Field A to 20-25 cm depth.</p>
+                        <div class="task-equipment">
+                            <span class="equipment-label">Equipment:</span>
+                            <span class="equipment-tag">Tractor</span>
+                            <span class="equipment-tag">Disc Plow</span>
+                        </div>
+                        <div class="task-actions">
+                            <button class="action-btn primary">Update Progress</button>
+                            <button class="action-btn">Mark Complete</button>
+                            <button class="action-btn">View Details</button>
+                        </div>
+                    </div>
+
+                    <div class="task-card pending">
+                        <div class="task-header">
+                            <h3>Irrigation Setup - Field B</h3>
+                            <div class="task-badges">
+                                <span class="badge medium">medium</span>
+                                <span class="badge pending">pending</span>
+                            </div>
+                        </div>
+                        <div class="task-meta">
+                            <span class="meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path d="M12 6v6l4 2"/>
+                                </svg>
+                                Deadline: Tomorrow, 10:00 AM
+                            </span>
+                            <span class="meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path d="M12 6v6l4 2"/>
+                                </svg>
+                                Not started
+                            </span>
+                            <span class="meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                                Field B, East Section
+                            </span>
+                        </div>
+                        <p class="task-description">Set up drip irrigation system for the new crop area.</p>
+                        <div class="task-equipment">
+                            <span class="equipment-label">Equipment:</span>
+                            <span class="equipment-tag">Irrigation Pipes</span>
+                            <span class="equipment-tag">Pump</span>
+                        </div>
+                        <div class="task-actions">
+                            <button class="action-btn primary">Start Task</button>
+                            <button class="action-btn">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="attendance-section">
+                <h2>This Week's Attendance</h2>
+                <div class="attendance-grid">
+                    <div class="attendance-day">
+                        <span class="day-name">Mon</span>
+                        <span class="day-date">10</span>
+                        <span class="hours">8h</span>
+                    </div>
+                    <div class="attendance-day">
+                        <span class="day-name">Tue</span>
+                        <span class="day-date">11</span>
+                        <span class="hours">8h</span>
+                    </div>
+                    <div class="attendance-day">
+                        <span class="day-name">Wed</span>
+                        <span class="day-date">12</span>
+                        <span class="hours">8h</span>
+                    </div>
+                    <div class="attendance-day">
+                        <span class="day-name">Thu</span>
+                        <span class="day-date">13</span>
+                        <span class="hours">8h</span>
+                    </div>
+                    <div class="attendance-day">
+                        <span class="day-name">Fri</span>
+                        <span class="day-date">14</span>
+                        <span class="hours">-</span>
+                    </div>
+                    <div class="attendance-day">
+                        <span class="day-name">Sat</span>
+                        <span class="day-date">15</span>
+                        <span class="hours">-</span>
+                    </div>
+                    <div class="attendance-day">
+                        <span class="day-name">Sun</span>
+                        <span class="day-date">16</span>
+                        <span class="hours">-</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
