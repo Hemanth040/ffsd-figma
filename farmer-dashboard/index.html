@@ -3,342 +3,373 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farm Dashboard - Farm Operations Platform</title>
+    <title>Farmer Dashboard - FarmOps</title>
     <link rel="stylesheet" href="../common/global.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div data-navbar data-user-name="Rajat" data-user-initial="R" data-active-page="Dashboard"></div>
-    <script src="../common/navbar.js"></script>
-    
-    <div class="dashboard-container">
-        <!-- Stats Row -->
-        <div class="stats-row">
-            <div class="stat-card green">
-                <div class="stat-icon green">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                        <path d="M22 4L12 14.01l-3-3"/>
+    <div class="dashboard-wrapper">
+        <!-- Header -->
+        <header class="main-header">
+            <div class="header-left">
+                <div class="logo">
+                    <svg width="40" height="40" viewBox="0 0 56 56" fill="none">
+                        <rect width="56" height="56" rx="10" fill="#DCFCE7"/>
+                        <path d="M28 12L12 22l16 10 16-10-16-10zM12 34l16 10 16-10M12 28l16 10 16-10" stroke="#008236" stroke-width="2.67" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </div>
-                <div class="stat-content">
-                    <span class="stat-label">Active Tasks</span>
-                    <span class="stat-value">2</span>
+                <div class="header-title-group">
+                    <h1>Farmer Dashboard</h1>
+                    <p>Welcome back, Rajat</p>
                 </div>
             </div>
-            <div class="stat-card red">
-                <div class="stat-icon red">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <div class="header-actions">
+                <button class="action-btn alert-btn" onclick="window.location.href='../warnings-alerts/index.html'">
+                    <span class="alert-dot"></span>
+                    Alerts
+                </button>
+                <button class="action-btn add-crop-btn" onclick="window.location.href='../crop-planning/index.html'">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    Add Crop
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Stats Row -->
+            <div class="stats-row">
+                <div class="stat-card gradient-green">
+                    <div class="stat-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <span class="stat-label">Active Tasks</span>
+                        <span class="stat-value">2</span>
+                    </div>
+                </div>
+                <div class="stat-card gradient-red">
+                    <div class="stat-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                            <line x1="12" y1="9" x2="12" y2="13"/>
+                            <line x1="12" y1="17" x2="12.01" y2="17"/>
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <span class="stat-label">High Alerts</span>
+                        <span class="stat-value">2</span>
+                    </div>
+                </div>
+                <div class="stat-card gradient-blue">
+                    <div class="stat-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <span class="stat-label">Active Workers</span>
+                        <span class="stat-value">4</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Grid -->
+            <div class="content-grid">
+                <!-- Left Column -->
+                <div class="left-column">
+                    <!-- Reminders Card -->
+                    <div class="card reminders-card">
+                        <div class="card-header">
+                            <h3 class="card-title">Reminders</h3>
+                            <button class="new-crop-btn" onclick="window.location.href='../crop-planning/index.html'">New Crop</button>
+                        </div>
+                        <div class="reminders-list">
+                            <div class="reminder-item">
+                                <div class="reminder-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                </div>
+                                <div class="reminder-content">
+                                    <span class="reminder-title">Irrigate Wheat Field</span>
+                                    <span class="reminder-time">Today 4:00 PM</span>
+                                </div>
+                                <span class="priority-badge high">high</span>
+                            </div>
+                            <div class="reminder-item">
+                                <div class="reminder-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                </div>
+                                <div class="reminder-content">
+                                    <span class="reminder-title">Apply Fertilizer to Corn</span>
+                                    <span class="reminder-time">Tomorrow 10:00 AM</span>
+                                </div>
+                                <span class="priority-badge high">high</span>
+                            </div>
+                            <div class="reminder-item">
+                                <div class="reminder-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                </div>
+                                <div class="reminder-content">
+                                    <span class="reminder-title">Harvest Tomatoes</span>
+                                    <span class="reminder-time">March 5</span>
+                                </div>
+                                <span class="priority-badge medium">medium</span>
+                            </div>
+                            <div class="reminder-item">
+                                <div class="reminder-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                </div>
+                                <div class="reminder-content">
+                                    <span class="reminder-title">Worker Salary Payment</span>
+                                    <span class="reminder-time">March 7</span>
+                                </div>
+                                <span class="priority-badge high">high</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Warnings Card -->
+                    <div class="card warnings-card">
+                        <div class="card-header">
+                            <h3 class="card-title">Warnings</h3>
+                        </div>
+                        <div class="warnings-list">
+                            <div class="warning-item">
+                                <div class="warning-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2">
+                                        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                                        <line x1="12" y1="9" x2="12" y2="13"/>
+                                        <line x1="12" y1="17" x2="12.01" y2="17"/>
+                                    </svg>
+                                </div>
+                                <div class="warning-content">
+                                    <span class="warning-title">Heavy Rain Expected</span>
+                                    <span class="warning-desc">Rainfall expected in next 48 hours</span>
+                                </div>
+                            </div>
+                            <div class="warning-item">
+                                <div class="warning-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2">
+                                        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                                        <line x1="12" y1="9" x2="12" y2="13"/>
+                                        <line x1="12" y1="17" x2="12.01" y2="17"/>
+                                    </svg>
+                                </div>
+                                <div class="warning-content">
+                                    <span class="warning-title">Fertilizer Stock Low</span>
+                                    <span class="warning-desc">NPK fertilizer below 20% capacity</span>
+                                </div>
+                            </div>
+                            <div class="warning-item">
+                                <div class="warning-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2">
+                                        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                                        <line x1="12" y1="9" x2="12" y2="13"/>
+                                        <line x1="12" y1="17" x2="12.01" y2="17"/>
+                                    </svg>
+                                </div>
+                                <div class="warning-content">
+                                    <span class="warning-title">Aphid Infestation Risk</span>
+                                    <span class="warning-desc">Neighboring farms reporting aphids</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Current Crop Card -->
+                    <div class="card crops-card">
+                        <div class="card-header">
+                            <h3 class="card-title">Current Crop</h3>
+                        </div>
+                        <div class="crops-list">
+                            <div class="crop-item">
+                                <div class="crop-icon">🌱</div>
+                                <div class="crop-details">
+                                    <span class="crop-name">Wheat – Field A</span>
+                                    <span class="crop-info">Growth Stage: Vegetative</span>
+                                    <span class="crop-info">Sowing Date: Feb 10</span>
+                                    <span class="crop-info">Next Action: Irrigation in 2 days</span>
+                                </div>
+                            </div>
+                            <div class="crop-item">
+                                <div class="crop-icon">🌱</div>
+                                <div class="crop-details">
+                                    <span class="crop-name">Corn – Field B</span>
+                                    <span class="crop-info">Growth Stage: Flowering</span>
+                                    <span class="crop-info">Sowing Date: Jan 13</span>
+                                    <span class="crop-info">Next Action: Fertilizer application</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column - Action Cards -->
+                <div class="right-column">
+                    <div class="action-cards-grid">
+                        <!-- Crop Planning -->
+                        <div class="action-card">
+                            <div class="action-header">
+                                <div class="action-icon crop-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                                    </svg>
+                                </div>
+                                <div class="action-title-group">
+                                    <h4 class="action-title">Crop Planning</h4>
+                                    <p class="action-desc">Plan and manage crop cycles</p>
+                                </div>
+                            </div>
+                            <button class="action-button" onclick="window.location.href='../crop-planning/index.html'">Manage Crops</button>
+                        </div>
+
+                        <!-- Worker Management -->
+                        <div class="action-card">
+                            <div class="action-header">
+                                <div class="action-icon worker-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                        <circle cx="9" cy="7" r="4"/>
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                    </svg>
+                                </div>
+                                <div class="action-title-group">
+                                    <h4 class="action-title">Worker Management</h4>
+                                    <p class="action-desc">Assign tasks and monitor workers</p>
+                                </div>
+                            </div>
+                            <button class="action-button" onclick="window.location.href='../worker-management-farmer/index.html'">Manage Workers</button>
+                        </div>
+
+                        <!-- Activity Timeline -->
+                        <div class="action-card">
+                            <div class="action-header">
+                                <div class="action-icon timeline-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12 6 12 12 16 14"/>
+                                    </svg>
+                                </div>
+                                <div class="action-title-group">
+                                    <h4 class="action-title">Activity Timeline</h4>
+                                    <p class="action-desc">Track all farm activities</p>
+                                </div>
+                            </div>
+                            <button class="action-button" onclick="window.location.href='../monthly-farm-activity/index.html'">View Timeline</button>
+                        </div>
+
+                        <!-- Resource Management -->
+                        <div class="action-card">
+                            <div class="action-header">
+                                <div class="action-icon resource-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+                                    </svg>
+                                </div>
+                                <div class="action-title-group">
+                                    <h4 class="action-title">Resource Management</h4>
+                                    <p class="action-desc">Track seeds, fertilizers & equipment</p>
+                                </div>
+                            </div>
+                            <button class="action-button" onclick="window.location.href='../resource-management/index.html'">Manage Resources</button>
+                        </div>
+
+                        <!-- Financial Management -->
+                        <div class="action-card">
+                            <div class="action-header">
+                                <div class="action-icon finance-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="12" y1="1" x2="12" y2="23"/>
+                                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                                    </svg>
+                                </div>
+                                <div class="action-title-group">
+                                    <h4 class="action-title">Financial Management</h4>
+                                    <p class="action-desc">Track expenses and income</p>
+                                </div>
+                            </div>
+                            <button class="action-button" onclick="window.location.href='../farmer-wages-management/index.html'">View Finances</button>
+                        </div>
+
+                        <!-- Reports & Analytics -->
+                        <div class="action-card">
+                            <div class="action-header">
+                                <div class="action-icon report-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                        <polyline points="14 2 14 8 20 8"/>
+                                        <line x1="16" y1="13" x2="8" y2="13"/>
+                                        <line x1="16" y1="17" x2="8" y2="17"/>
+                                        <polyline points="10 9 9 9 8 9"/>
+                                    </svg>
+                                </div>
+                                <div class="action-title-group">
+                                    <h4 class="action-title">Reports & Analytics</h4>
+                                    <p class="action-desc">Generate reports and insights</p>
+                                </div>
+                            </div>
+                            <button class="action-button" onclick="window.location.href='../report-analytics/index.html'">View Reports</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions Footer -->
+            <div class="quick-actions">
+                <button class="quick-action-btn" onclick="window.location.href='../tasks-allotment/index.html'">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                        <polyline points="22 4 12 14.01 9 11.01"/>
+                    </svg>
+                    Tasks
+                </button>
+                <button class="quick-action-btn" onclick="window.location.href='../worker-attendance/index.html'">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                    </svg>
+                    Attendance
+                </button>
+                <button class="quick-action-btn" onclick="window.location.href='../farmer-issue-dashboard/index.html'">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
                         <line x1="12" y1="9" x2="12" y2="13"/>
                         <line x1="12" y1="17" x2="12.01" y2="17"/>
                     </svg>
-                </div>
-                <div class="stat-content">
-                    <span class="stat-label">High Alerts</span>
-                    <span class="stat-value">2</span>
-                </div>
+                    Issues
+                </button>
             </div>
-            <div class="stat-card blue">
-                <div class="stat-icon blue">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                        <circle cx="9" cy="7" r="4"/>
-                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                    </svg>
-                </div>
-                <div class="stat-content">
-                    <span class="stat-label">Active Workers</span>
-                    <span class="stat-value">4</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Main Content -->
-        <div class="main-content">
-            <div class="left-column">
-                <!-- Reminders Card -->
-                <div class="card reminders-card">
-                    <div class="card-header">
-                        <h3 class="card-title">Reminders</h3>
-                        <button class="new-crop-btn" onclick="window.location.href='../crop-planning/index.html'">New Crop</button>
-                    </div>
-                    <div class="reminders-list">
-                        <div class="reminder-item">
-                            <div class="reminder-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                                    <line x1="16" y1="2" x2="16" y2="6"/>
-                                    <line x1="8" y1="2" x2="8" y2="6"/>
-                                    <line x1="3" y1="10" x2="21" y2="10"/>
-                                </svg>
-                            </div>
-                            <div class="reminder-content">
-                                <span class="reminder-title">Irrigate Wheat Field</span>
-                                <span class="reminder-time">Today 4:00 PM</span>
-                            </div>
-                            <span class="priority-badge high">high</span>
-                        </div>
-                        <div class="reminder-item">
-                            <div class="reminder-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                                    <line x1="16" y1="2" x2="16" y2="6"/>
-                                    <line x1="8" y1="2" x2="8" y2="6"/>
-                                    <line x1="3" y1="10" x2="21" y2="10"/>
-                                </svg>
-                            </div>
-                            <div class="reminder-content">
-                                <span class="reminder-title">Apply Fertilizer to Corn</span>
-                                <span class="reminder-time">Tomorrow 10:00 AM</span>
-                            </div>
-                            <span class="priority-badge high">high</span>
-                        </div>
-                        <div class="reminder-item">
-                            <div class="reminder-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                                    <line x1="16" y1="2" x2="16" y2="6"/>
-                                    <line x1="8" y1="2" x2="8" y2="6"/>
-                                    <line x1="3" y1="10" x2="21" y2="10"/>
-                                </svg>
-                            </div>
-                            <div class="reminder-content">
-                                <span class="reminder-title">Harvest Tomatoes</span>
-                                <span class="reminder-time">March 5</span>
-                            </div>
-                            <span class="priority-badge medium">medium</span>
-                        </div>
-                        <div class="reminder-item">
-                            <div class="reminder-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                                    <line x1="16" y1="2" x2="16" y2="6"/>
-                                    <line x1="8" y1="2" x2="8" y2="6"/>
-                                    <line x1="3" y1="10" x2="21" y2="10"/>
-                                </svg>
-                            </div>
-                            <div class="reminder-content">
-                                <span class="reminder-title">Worker Salary Payment</span>
-                                <span class="reminder-time">March 7</span>
-                            </div>
-                            <span class="priority-badge high">high</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Warnings Card -->
-                <div class="card warnings-card">
-                    <div class="card-header">
-                        <h3 class="card-title">Warnings</h3>
-                    </div>
-                    <div class="warnings-list">
-                        <div class="warning-item">
-                            <div class="warning-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2">
-                                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
-                                    <line x1="12" y1="9" x2="12" y2="13"/>
-                                    <line x1="12" y1="17" x2="12.01" y2="17"/>
-                                </svg>
-                            </div>
-                            <div class="warning-content">
-                                <span class="warning-title">Heavy Rain Expected</span>
-                                <span class="warning-desc">Rainfall expected in next 48 hours</span>
-                            </div>
-                        </div>
-                        <div class="warning-item">
-                            <div class="warning-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2">
-                                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
-                                    <line x1="12" y1="9" x2="12" y2="13"/>
-                                    <line x1="12" y1="17" x2="12.01" y2="17"/>
-                                </svg>
-                            </div>
-                            <div class="warning-content">
-                                <span class="warning-title">Fertilizer Stock Low</span>
-                                <span class="warning-desc">NPK fertilizer below 20% capacity</span>
-                            </div>
-                        </div>
-                        <div class="warning-item">
-                            <div class="warning-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2">
-                                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
-                                    <line x1="12" y1="9" x2="12" y2="13"/>
-                                    <line x1="12" y1="17" x2="12.01" y2="17"/>
-                                </svg>
-                            </div>
-                            <div class="warning-content">
-                                <span class="warning-title">Aphid Infestation Risk</span>
-                                <span class="warning-desc">Neighboring farms reporting aphids</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Current Crop Card -->
-                <div class="card crops-card">
-                    <div class="card-header">
-                        <h3 class="card-title">Current Crop</h3>
-                    </div>
-                    <div class="crops-list">
-                        <div class="crop-item">
-                            <div class="crop-icon">🌱</div>
-                            <div class="crop-details">
-                                <span class="crop-name">Wheat – Field A</span>
-                                <span class="crop-info">Growth Stage: Vegetative</span>
-                                <span class="crop-info">Sowing Date: Feb 10</span>
-                                <span class="crop-info">Next Action: Irrigation in 2 days</span>
-                            </div>
-                        </div>
-                        <div class="crop-item">
-                            <div class="crop-icon">🌱</div>
-                            <div class="crop-details">
-                                <span class="crop-name">Corn – Field B</span>
-                                <span class="crop-info">Growth Stage: Flowering</span>
-                                <span class="crop-info">Sowing Date: Jan 13</span>
-                                <span class="crop-info">Next Action: Fertilizer application</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="right-column">
-                <div class="action-cards-grid">
-                    <!-- Crop Planning -->
-                    <div class="action-card">
-                        <div class="action-header">
-                            <div class="action-icon crop-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-                                </svg>
-                            </div>
-                            <div class="action-title-group">
-                                <h4 class="action-title">Crop Planning</h4>
-                                <p class="action-desc">Plan and manage crop cycles</p>
-                            </div>
-                        </div>
-                        <button class="action-button" onclick="window.location.href='../crop-planning/index.html'">Manage Crops</button>
-                    </div>
-
-                    <!-- Worker Management -->
-                    <div class="action-card">
-                        <div class="action-header">
-                            <div class="action-icon worker-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                                    <circle cx="9" cy="7" r="4"/>
-                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                                </svg>
-                            </div>
-                            <div class="action-title-group">
-                                <h4 class="action-title">Worker Management</h4>
-                                <p class="action-desc">Assign tasks and monitor workers</p>
-                            </div>
-                        </div>
-                        <button class="action-button" onclick="window.location.href='../worker-management-farmer/index.html'">Manage Workers</button>
-                    </div>
-
-                    <!-- Activity Timeline -->
-                    <div class="action-card">
-                        <div class="action-header">
-                            <div class="action-icon timeline-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <circle cx="12" cy="12" r="10"/>
-                                    <polyline points="12 6 12 12 16 14"/>
-                                </svg>
-                            </div>
-                            <div class="action-title-group">
-                                <h4 class="action-title">Activity Timeline</h4>
-                                <p class="action-desc">Track all farm activities</p>
-                            </div>
-                        </div>
-                        <button class="action-button">View Timeline</button>
-                    </div>
-
-                    <!-- Resource Management -->
-                    <div class="action-card">
-                        <div class="action-header">
-                            <div class="action-icon resource-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
-                                </svg>
-                            </div>
-                            <div class="action-title-group">
-                                <h4 class="action-title">Resource Management</h4>
-                                <p class="action-desc">Track seeds, fertilizers & equipment</p>
-                            </div>
-                        </div>
-                        <button class="action-button">Manage Resources</button>
-                    </div>
-
-                    <!-- Financial Management -->
-                    <div class="action-card">
-                        <div class="action-header">
-                            <div class="action-icon finance-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <line x1="12" y1="1" x2="12" y2="23"/>
-                                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
-                                </svg>
-                            </div>
-                            <div class="action-title-group">
-                                <h4 class="action-title">Financial Management</h4>
-                                <p class="action-desc">Track expenses and income</p>
-                            </div>
-                        </div>
-                        <button class="action-button" onclick="window.location.href='../farmer-wages-management/index.html'">View Finances</button>
-                    </div>
-
-                    <!-- Reports & Analytics -->
-                    <div class="action-card">
-                        <div class="action-header">
-                            <div class="action-icon report-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                                    <polyline points="14 2 14 8 20 8"/>
-                                    <line x1="16" y1="13" x2="8" y2="13"/>
-                                    <line x1="16" y1="17" x2="8" y2="17"/>
-                                    <polyline points="10 9 9 9 8 9"/>
-                                </svg>
-                            </div>
-                            <div class="action-title-group">
-                                <h4 class="action-title">Reports & Analytics</h4>
-                                <p class="action-desc">Generate reports and insights</p>
-                            </div>
-                        </div>
-                        <button class="action-button">View Reports</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Quick Actions Footer -->
-        <div class="quick-actions">
-            <button class="quick-action-btn" onclick="window.location.href='../tasks-allotment/index.html'">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                    <path d="M22 4L12 14.01l-3-3"/>
-                </svg>
-                Tasks
-            </button>
-            <button class="quick-action-btn" onclick="window.location.href='../worker-attendance/index.html'">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                    <circle cx="9" cy="7" r="4"/>
-                </svg>
-                Attendance
-            </button>
-            <button class="quick-action-btn" onclick="window.location.href='../farmer-issue-dashboard/index.html'">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
-                    <line x1="12" y1="9" x2="12" y2="13"/>
-                    <line x1="12" y1="17" x2="12.01" y2="17"/>
-                </svg>
-                Issues
-            </button>
-        </div>
+        </main>
     </div>
     <script src="script.js"></script>
 </body>
