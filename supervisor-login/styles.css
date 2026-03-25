@@ -7,71 +7,56 @@
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: url('https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
-    padding: 20px;
 }
 
 .login-container {
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    min-height: 100vh;
+    background: url('https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1920&q=80') center/cover no-repeat;
+    padding: 20px;
 }
 
 .login-card {
-    width: 100%;
-    max-width: 448px;
-    background: #FFFFFF;
+    width: 448px;
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 14px;
-    box-shadow: 0 0.8px 0 rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    padding: 24px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
 .card-header {
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
+    text-align: center;
+    padding: 24px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    margin-bottom: 24px;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-bottom: 24px;
 }
 
 .logo svg {
-    width: 56px;
-    height: 56px;
+    display: block;
+    margin: 0 auto;
 }
 
 .card-title {
     font-size: 24px;
     font-weight: 500;
     color: #0A0A0A;
-    text-align: center;
-    line-height: 1.333;
+    margin-bottom: 8px;
 }
 
 .card-subtitle {
     font-size: 16px;
-    font-weight: 400;
     color: #717182;
-    text-align: center;
-    line-height: 1.5;
-    margin-top: 4px;
 }
 
 .card-content {
-    padding: 0 24px 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+    padding: 0;
 }
 
 .login-form {
@@ -93,15 +78,13 @@ body {
 }
 
 .form-input {
-    width: 100%;
-    padding: 12px;
+    padding: 10px 12px;
+    background: #F3F3F5;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 8px;
     font-size: 14px;
     color: #0A0A0A;
-    background: #F3F3F5;
-    border: 1px solid transparent;
-    border-radius: 8px;
-    outline: none;
-    transition: border-color 0.2s, background-color 0.2s;
+    transition: all 0.2s;
 }
 
 .form-input::placeholder {
@@ -109,43 +92,38 @@ body {
 }
 
 .form-input:focus {
+    outline: none;
     border-color: #00A63E;
-    background: #FFFFFF;
+    background: white;
 }
 
 .login-button {
     width: 100%;
     padding: 10px;
-    font-size: 14px;
-    font-weight: 500;
-    color: #FFFFFF;
     background: #00A63E;
+    color: white;
     border: none;
     border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
     cursor: pointer;
-    transition: background-color 0.2s;
-    margin-top: 4px;
+    transition: background 0.2s;
+    margin-top: 8px;
 }
 
 .login-button:hover {
-    background: #008F36;
-}
-
-.login-button:active {
-    transform: scale(0.98);
+    background: #008732;
 }
 
 .form-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 4px;
-    padding-top: 8px;
+    text-align: center;
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .footer-text {
     font-size: 14px;
-    font-weight: 400;
     color: #4A5565;
 }
 
@@ -154,28 +132,16 @@ body {
     font-weight: 500;
     color: #00A63E;
     text-decoration: none;
-    transition: color 0.2s;
+    margin-left: 4px;
 }
 
 .register-link:hover {
-    color: #008F36;
     text-decoration: underline;
 }
 
 @media (max-width: 480px) {
     .login-card {
-        max-width: 100%;
-    }
-
-    .card-header {
-        padding: 20px;
-    }
-
-    .card-title {
-        font-size: 20px;
-    }
-
-    .card-content {
-        padding: 0 20px 20px;
+        width: 100%;
+        max-width: 400px;
     }
 }

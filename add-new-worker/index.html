@@ -9,7 +9,6 @@
 </head>
 <body>
     <div class="add-worker-page">
-        <!-- Header -->
         <header class="page-header">
             <div class="header-left">
                 <button class="back-btn" onclick="window.location.href='../worker-management-farmer/index.html'">
@@ -19,144 +18,148 @@
                 </button>
                 <div class="header-title-group">
                     <h1 class="page-title">Add New Worker</h1>
-                    <p class="page-subtitle">Add a new worker to your farm</p>
+                    <p class="page-subtitle">Enter worker details and employment information</p>
                 </div>
             </div>
         </header>
 
-        <!-- Main Content -->
         <main class="main-content">
             <div class="content-wrapper">
-                <!-- Form Section -->
                 <div class="form-section">
-                    <!-- Personal Information -->
                     <div class="form-card">
                         <h2 class="card-title">Personal Information</h2>
                         <div class="form-grid">
                             <div class="form-group">
-                                <label class="form-label">First Name</label>
-                                <input type="text" class="form-input" placeholder="Enter first name">
+                                <label class="form-label">First Name *</label>
+                                <input type="text" class="form-input" placeholder="e.g., Ramu">
                             </div>
                             <div class="form-group">
-                                <label class="form-label">Last Name</label>
-                                <input type="text" class="form-input" placeholder="Enter last name">
+                                <label class="form-label">Last Name *</label>
+                                <input type="text" class="form-input" placeholder="e.g., Pandu">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Phone Number *</label>
+                                <input type="tel" class="form-input" placeholder="e.g., +91 98765 43210">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Email Address</label>
+                                <input type="email" class="form-input" placeholder="e.g., ramu@example.com">
                             </div>
                             <div class="form-group full-width">
-                                <label class="form-label">Email Address</label>
-                                <input type="email" class="form-input" placeholder="Enter email address">
+                                <label class="form-label">Address</label>
+                                <input type="text" class="form-input" placeholder="Street address">
                             </div>
                             <div class="form-group">
-                                <label class="form-label">Phone Number</label>
-                                <input type="tel" class="form-input" placeholder="Enter phone number">
+                                <label class="form-label">City</label>
+                                <input type="text" class="form-input" placeholder="City">
                             </div>
                             <div class="form-group">
-                                <label class="form-label">Date of Birth</label>
-                                <input type="date" class="form-input">
+                                <label class="form-label">State</label>
+                                <input type="text" class="form-input" placeholder="State">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">ZIP Code</label>
+                                <input type="text" class="form-input" placeholder="ZIP">
                             </div>
                         </div>
                     </div>
 
-                    <!-- Employment Details -->
                     <div class="form-card">
                         <h2 class="card-title">Employment Details</h2>
                         <div class="form-grid">
                             <div class="form-group">
-                                <label class="form-label">Employee ID</label>
-                                <input type="text" class="form-input" placeholder="Auto-generated">
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label">Role</label>
+                                <label class="form-label">Role/Position *</label>
                                 <select class="form-select">
-                                    <option value="">Select role</option>
-                                    <option value="farm-worker">Farm Worker</option>
-                                    <option value="supervisor">Supervisor</option>
-                                    <option value="equipment-operator">Equipment Operator</option>
-                                    <option value="harvesting">Harvesting</option>
+                                    <option>Select role</option>
+                                    <option>Farm Worker</option>
+                                    <option>Supervisor</option>
+                                    <option>Equipment Operator</option>
+                                    <option>Harvesting</option>
+                                    <option>Irrigation</option>
+                                    <option>Security</option>
+                                    <option>Manager</option>
+                                    <option>General Helper</option>
                                 </select>
                             </div>
+                            <div class="form-group">
+                                <label class="form-label">Experience (years)</label>
+                                <input type="number" class="form-input" placeholder="0">
+                            </div>
                             <div class="form-group full-width">
-                                <label class="form-label">Address</label>
-                                <input type="text" class="form-input" placeholder="Enter address">
+                                <label class="form-label">Skills & Expertise</label>
+                                <div class="skills-input">
+                                    <input type="text" class="form-input" placeholder="e.g., Plowing, Irrigation, Harvesting">
+                                    <button class="add-btn">Add</button>
+                                </div>
                             </div>
                             <div class="form-group">
-                                <label class="form-label">Join Date</label>
+                                <label class="form-label">Date of Joining</label>
                                 <input type="date" class="form-input">
                             </div>
                             <div class="form-group">
-                                <label class="form-label">Experience</label>
-                                <select class="form-select">
-                                    <option value="">Select experience</option>
-                                    <option value="0-1">Less than 1 year</option>
-                                    <option value="1-3">1-3 years</option>
-                                    <option value="3-5">3-5 years</option>
-                                    <option value="5-10">5-10 years</option>
-                                    <option value="10+">10+ years</option>
-                                </select>
+                                <label class="form-label">Assigned Location</label>
+                                <input type="text" class="form-input" placeholder="e.g., Field A, West Section">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Salary (per month)</label>
+                                <input type="number" class="form-input" placeholder="0">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Working Hours (per day)</label>
+                                <input type="number" class="form-input" placeholder="8">
                             </div>
                         </div>
                     </div>
 
-                    <!-- Emergency Contact -->
                     <div class="form-card">
                         <h2 class="card-title">Emergency Contact</h2>
                         <div class="form-grid">
                             <div class="form-group">
                                 <label class="form-label">Contact Name</label>
-                                <input type="text" class="form-input" placeholder="Enter contact name">
+                                <input type="text" class="form-input" placeholder="Full name">
                             </div>
                             <div class="form-group">
-                                <label class="form-label">Relationship</label>
-                                <input type="text" class="form-input" placeholder="e.g., Parent, Spouse">
+                                <label class="form-label">Contact Phone</label>
+                                <input type="tel" class="form-input" placeholder="Phone number">
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Action Buttons -->
-                    <div class="form-actions">
-                        <button class="btn btn-outline" onclick="window.location.href='../worker-management-farmer/index.html'">Cancel</button>
-                        <button class="btn btn-primary">Add Worker</button>
                     </div>
                 </div>
 
-                <!-- Sidebar Section -->
                 <div class="sidebar-section">
-                    <!-- Tips Card -->
                     <div class="tips-card">
                         <div class="tips-header">
-                            <div class="tips-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <circle cx="12" cy="12" r="10"/>
-                                    <path d="M12 16v-4M12 8h.01"/>
-                                </svg>
-                            </div>
-                            <h3 class="tips-title">Tips</h3>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 16v-4M12 8h.01"/>
+                            </svg>
+                            <h3 class="tips-title">Quick Guide</h3>
                         </div>
                         <ul class="tips-list">
-                            <li>Verify all details before adding</li>
-                            <li>Add relevant skills for better task assignment</li>
-                            <li>Ensure emergency contact is accurate</li>
+                            <li>• Complete all required fields (*)</li>
+                            <li>• Add relevant skills for better task assignment</li>
+                            <li>• Emergency contact is important for safety</li>
                         </ul>
                     </div>
 
-                    <!-- Summary Card -->
                     <div class="summary-card">
                         <h2 class="card-title">Summary</h2>
                         <div class="summary-list">
                             <div class="summary-item">
-                                <span class="summary-label">Personal Info</span>
-                                <span class="summary-status incomplete">Incomplete</span>
+                                <span class="summary-label">Skills Added</span>
+                                <span class="summary-value">0</span>
                             </div>
                             <div class="summary-item">
-                                <span class="summary-label">Employment Details</span>
-                                <span class="summary-status incomplete">Incomplete</span>
+                                <span class="summary-label">Experience</span>
+                                <span class="summary-value">Not specified</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Working Hours</span>
+                                <span class="summary-value">Not set</span>
                             </div>
                             <div class="summary-item">
                                 <span class="summary-label">Emergency Contact</span>
-                                <span class="summary-status incomplete">Incomplete</span>
-                            </div>
-                            <div class="summary-item">
-                                <span class="summary-label">Documents</span>
-                                <span class="summary-status pending">Pending</span>
+                                <span class="summary-value">Not added</span>
                             </div>
                         </div>
                     </div>

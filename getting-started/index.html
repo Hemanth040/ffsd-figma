@@ -8,51 +8,219 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="navbar-container" data-navbar data-user-name="John Farmer" data-user-initial="J" data-active-page=""></div>
-    
-    <main class="main-content">
-        <div class="getting-started">
-            <h1>Getting Started with FarmOps</h1>
-            <p class="subtitle">Welcome! Let's set up your farm in a few steps</p>
-
-            <div class="steps-container">
-                <div class="step-card">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h3>Complete Your Profile</h3>
-                        <p>Add your personal and farm details</p>
-                        <a href="../profile-settings-farmer/index.html" class="btn btn-primary">Start</a>
+    <div class="getting-started-page">
+        <section class="hero-section">
+            <div class="hero-content">
+                <span class="tagline">🌿 India's #1 Farm Management Platform</span>
+                <h1 class="hero-title">
+                    <span>Grow Smarter,</span>
+                    <span>Harvest Better</span>
+                </h1>
+                <p class="hero-desc">A complete operations platform for farmers, supervisors, and agri businesses — manage crops, workers, finances, and resources all in one place.</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary-large" onclick="window.location.href='../farmer-login/index.html'">Get Started</button>
+                    <button class="btn-outline-large">See How It Works →</button>
+                </div>
+            </div>
+            <div class="hero-card">
+                <div class="card-header">
+                    <h3>Farm Overview</h3>
+                    <span class="date">Wed, March 4, 2026</span>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label">Workers</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">4</span>
+                        <span class="stat-label">Fields</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">4</span>
+                        <span class="stat-label">Crops</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">50ac</span>
+                        <span class="stat-label">Total Area</span>
                     </div>
                 </div>
-                <div class="step-card">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h3>Add Your Workers</h3>
-                        <p>Register workers and assign roles</p>
-                        <a href="../add-new-worker/index.html" class="btn btn-primary">Start</a>
+                <div class="crops-list">
+                    <div class="crop-item">
+                        <div class="crop-info">
+                            <span class="crop-name">Wheat</span>
+                            <span class="crop-status">15 acres · Growing</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 85%"></div>
+                        </div>
+                        <span class="progress-text">85%</span>
                     </div>
-                </div>
-                <div class="step-card">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h3>Plan Your Crops</h3>
-                        <p>Create your first crop plan</p>
-                        <a href="../plan-new-crop/index.html" class="btn btn-primary">Start</a>
+                    <div class="crop-item">
+                        <div class="crop-info">
+                            <span class="crop-name">Rice</span>
+                            <span class="crop-status">20 acres · Harvested</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill done" style="width: 100%"></div>
+                        </div>
+                        <span class="progress-text done">Done</span>
                     </div>
-                </div>
-                <div class="step-card">
-                    <div class="step-number">4</div>
-                    <div class="step-content">
-                        <h3>Manage Resources</h3>
-                        <p>Add equipment and supplies</p>
-                        <a href="../resource-management/index.html" class="btn btn-primary">Start</a>
+                    <div class="crop-item">
+                        <div class="crop-info">
+                            <span class="crop-name">Corn</span>
+                            <span class="crop-status">10 acres · Growing</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 72%"></div>
+                        </div>
+                        <span class="progress-text">72%</span>
+                    </div>
+                    <div class="crop-item">
+                        <div class="crop-info">
+                            <span class="crop-name">Tomatoes</span>
+                            <span class="crop-status">5 acres · Ready</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 88%"></div>
+                        </div>
+                        <span class="progress-text">88%</span>
                     </div>
                 </div>
             </div>
-        </div>
-    </main>
+        </section>
 
-    <script src="../common/navbar.js"></script>
+        <section class="features-section">
+            <div class="section-header">
+                <span class="section-tag">Core Features</span>
+                <h2>Everything Your Farm Needs to Thrive</h2>
+                <p>From daily task assignment to financial insights — manage your entire operation on one platform.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon icon-green">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                    </div>
+                    <h3>Task Management</h3>
+                    <p>Assign, track, and complete daily tasks with a Kanban board. Monitor progress from plowing to harvesting.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon icon-purple">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/>
+                            <line x1="8" y1="2" x2="8" y2="6"/>
+                            <line x1="3" y1="10" x2="21" y2="10"/>
+                        </svg>
+                    </div>
+                    <h3>Attendance Tracking</h3>
+                    <p>Mark daily attendance, track hours worked, manage leave requests, and view weekly summaries.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon icon-orange">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3>Crop Planning</h3>
+                    <p>Plan planting cycles, monitor crop health, and get alerts when it's time to harvest or replant.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon icon-blue">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16.5 9.4l-9-5.19M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
+                        </svg>
+                    </div>
+                    <h3>Resource Management</h3>
+                    <p>Track fertilizers, seeds, equipment, and water. Get low-stock alerts before you run out.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon icon-teal">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="1" x2="12" y2="23"/>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                        </svg>
+                    </div>
+                    <h3>Finance Dashboard</h3>
+                    <p>Monitor revenue, expenses, and net income with charts. Access loan suggestions at competitive rates.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon icon-pink">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+                        </svg>
+                    </div>
+                    <h3>Smart Reminders</h3>
+                    <p>Never miss irrigation, fertilization, salary payments, or maintenance with priority-based reminders.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="roles-section">
+            <div class="section-header">
+                <span class="section-tag">User Roles</span>
+                <h2>Built for Every Person on the Farm</h2>
+                <p>FarmOps adapts to every role — whether you're in the fields, managing a farm, or overseeing multiple properties.</p>
+            </div>
+            <div class="roles-grid">
+                <div class="role-card">
+                    <div class="role-icon farmer-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3>Farmer</h3>
+                    <p>Plan crops, manage farm activities, assign tasks, and monitor productivity across the entire farm.</p>
+                    <ul class="role-features">
+                        <li>✓ Plan crops and manage resources</li>
+                        <li>✓ Assign tasks to workers</li>
+                        <li>✓ Track farm activities and timelines</li>
+                        <li>✓ Manage expenses and income</li>
+                        <li>✓ Monitor yield and performance</li>
+                    </ul>
+                </div>
+                <div class="role-card">
+                    <div class="role-icon worker-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                        </svg>
+                    </div>
+                    <h3>Worker</h3>
+                    <p>Perform assigned farm tasks, update progress, track attendance, and communicate issues to the farmer.</p>
+                    <ul class="role-features">
+                        <li>✓ View assigned daily tasks</li>
+                        <li>✓ Update task progress</li>
+                        <li>✓ Report crop or equipment issues</li>
+                        <li>✓ Track wages and payments</li>
+                        <li>✓ Mark attendance and work hours</li>
+                    </ul>
+                </div>
+                <div class="role-card">
+                    <div class="role-icon supervisor-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                    </div>
+                    <h3>Supervisor</h3>
+                    <p>Support farm operations by monitoring activities, guiding farmers, and ensuring smooth field coordination.</p>
+                    <ul class="role-features">
+                        <li>✓ Monitor multiple farms</li>
+                        <li>✓ Oversee worker performance</li>
+                        <li>✓ Coordinate activities across farms</li>
+                        <li>✓ Generate reports and analytics</li>
+                        <li>✓ Manage farm inventories</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>

@@ -125,12 +125,37 @@ body {
 .form-input,
 .form-select {
     padding: 10px 12px;
-    border: 1px solid #E5E7EB;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     font-size: 14px;
     color: #111827;
     background: #FFFFFF;
     transition: border-color 0.2s;
+}
+
+.skills-input {
+    display: flex;
+    gap: 8px;
+}
+
+.skills-input .form-input {
+    flex: 1;
+}
+
+.add-btn {
+    padding: 10px 16px;
+    background: #2E7D32;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.add-btn:hover {
+    background: #1B5E20;
 }
 
 .form-input::placeholder {
@@ -265,29 +290,13 @@ body {
 
 .summary-label {
     font-size: 14px;
-    color: #374151;
+    color: #717182;
 }
 
-.summary-status {
-    font-size: 12px;
+.summary-value {
+    font-size: 14px;
     font-weight: 500;
-    padding: 4px 8px;
-    border-radius: 6px;
-}
-
-.summary-status.incomplete {
-    background: #FEF3C7;
-    color: #92400E;
-}
-
-.summary-status.pending {
-    background: #E0E7FF;
-    color: #4F46E5;
-}
-
-.summary-status.complete {
-    background: #DCFCE7;
-    color: #15803D;
+    color: #0A0A0A;
 }
 
 /* Responsive */
