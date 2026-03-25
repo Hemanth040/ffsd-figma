@@ -1,9 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const addResourceBtn = document.getElementById('addResourceBtn');
+    const updateStockBtns = document.querySelectorAll('.update-stock-btn');
     
-    if (addResourceBtn) {
-        addResourceBtn.addEventListener('click', function() {
-            alert('Add Resource modal would open here');
+    updateStockBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const card = this.closest('.resource-card');
+            const title = card.querySelector('.card-title').textContent;
+            alert(`Update stock for ${title}`);
         });
-    }
+    });
 });

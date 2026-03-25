@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
             } else if (btnText === 'Manage Workers') {
                 window.location.href = '../worker-management-farmer/index.html';
             } else if (btnText === 'View Timeline') {
-                alert('Activity Timeline feature coming soon');
+                // Navigation handled in HTML onclick
             } else if (btnText === 'Manage Resources') {
                 alert('Resource Management feature coming soon');
             } else if (btnText === 'View Finances') {
