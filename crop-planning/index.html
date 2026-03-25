@@ -11,8 +11,16 @@
     <div class="crop-planning-page">
         <!-- Header -->
         <header class="page-header">
-            <div class="header-content">
-                <h1 class="page-title">Crop Planning</h1>
+            <div class="header-left">
+                <button class="back-btn" onclick="window.location.href='../farmer-dashboard/index.html'">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                </button>
+                <div class="header-title-group">
+                    <h1 class="page-title">Crop Planning</h1>
+                    <p class="page-subtitle">Manage your farm crops</p>
+                </div>
             </div>
             <button class="add-crop-btn">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -25,189 +33,302 @@
 
         <!-- Main Content -->
         <main class="main-content">
-            <!-- Crops Grid -->
-            <div class="crops-grid">
-                <div class="crop-card">
-                    <div class="crop-header">
-                        <div class="crop-icon">🌾</div>
-                        <div class="crop-info">
-                            <h3>Wheat</h3>
-                            <p class="crop-season">Rabi Season</p>
-                        </div>
-                        <span class="badge badge-success">Active</span>
-                    </div>
-                    <div class="crop-details">
-                        <div class="detail-row">
-                            <span class="detail-label">Planting Date</span>
-                            <span class="detail-value">Nov 15, 2025</span>
-                        </div>
-                        <div class="detail-row">
-                            <span class="detail-label">Expected Harvest</span>
-                            <span class="detail-value">Apr 20, 2026</span>
-                        </div>
-                        <div class="detail-row">
-                            <span class="detail-label">Area</span>
-                            <span class="detail-value">5 acres</span>
-                        </div>
-                        <div class="detail-row">
-                            <span class="detail-label">Status</span>
-                            <span class="detail-value text-success">Growing</span>
-                        </div>
-                    </div>
-                    <div class="crop-progress">
-                        <div class="progress-label">
-                            <span>Growth Progress</span>
-                            <span>65%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 65%"></div>
-                        </div>
+            <!-- Stats Cards Row -->
+            <div class="stats-row">
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <span class="stat-label">Total Crops</span>
+                        <span class="stat-value">4</span>
                     </div>
                 </div>
-
-                <div class="crop-card">
-                    <div class="crop-header">
-                        <div class="crop-icon">🌽</div>
-                        <div class="crop-info">
-                            <h3>Corn</h3>
-                            <p class="crop-season">Kharif Season</p>
-                        </div>
-                        <span class="badge badge-info">Planned</span>
-                    </div>
-                    <div class="crop-details">
-                        <div class="detail-row">
-                            <span class="detail-label">Planting Date</span>
-                            <span class="detail-value">Jun 1, 2026</span>
-                        </div>
-                        <div class="detail-row">
-                            <span class="detail-label">Expected Harvest</span>
-                            <span class="detail-value">Sep 30, 2026</span>
-                        </div>
-                        <div class="detail-row">
-                            <span class="detail-label">Area</span>
-                            <span class="detail-value">3 acres</span>
-                        </div>
-                        <div class="detail-row">
-                            <span class="detail-label">Status</span>
-                            <span class="detail-value text-muted">Not Started</span>
-                        </div>
-                    </div>
-                    <div class="crop-progress">
-                        <div class="progress-label">
-                            <span>Preparation</span>
-                            <span>20%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 20%"></div>
-                        </div>
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <span class="stat-label">Growing</span>
+                        <span class="stat-value">2</span>
                     </div>
                 </div>
-
-                <div class="crop-card">
-                    <div class="crop-header">
-                        <div class="crop-icon">🍚</div>
-                        <div class="crop-info">
-                            <h3>Rice</h3>
-                            <p class="crop-season">Kharif Season</p>
-                        </div>
-                        <span class="badge badge-warning">Pending</span>
-                    </div>
-                    <div class="crop-details">
-                        <div class="detail-row">
-                            <span class="detail-label">Planting Date</span>
-                            <span class="detail-value">Jul 15, 2026</span>
-                        </div>
-                        <div class="detail-row">
-                            <span class="detail-label">Expected Harvest</span>
-                            <span class="detail-value">Nov 1, 2026</span>
-                        </div>
-                        <div class="detail-row">
-                            <span class="detail-label">Area</span>
-                            <span class="detail-value">4 acres</span>
-                        </div>
-                        <div class="detail-row">
-                            <span class="detail-label">Status</span>
-                            <span class="detail-value text-muted">Not Started</span>
-                        </div>
-                    </div>
-                    <div class="crop-progress">
-                        <div class="progress-label">
-                            <span>Preparation</span>
-                            <span>0%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 0%"></div>
-                        </div>
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <span class="stat-label">Ready to Harvest</span>
+                        <span class="stat-value">1</span>
                     </div>
                 </div>
-
-                <div class="crop-card">
-                    <div class="crop-header">
-                        <div class="crop-icon">🥬</div>
-                        <div class="crop-info">
-                            <h3>Vegetables</h3>
-                            <p class="crop-season">Year-round</p>
-                        </div>
-                        <span class="badge badge-success">Active</span>
-                    </div>
-                    <div class="crop-details">
-                        <div class="detail-row">
-                            <span class="detail-label">Planting Date</span>
-                            <span class="detail-value">Jan 10, 2026</span>
-                        </div>
-                        <div class="detail-row">
-                            <span class="detail-label">Expected Harvest</span>
-                            <span class="detail-value">Continuous</span>
-                        </div>
-                        <div class="detail-row">
-                            <span class="detail-label">Area</span>
-                            <span class="detail-value">1 acre</span>
-                        </div>
-                        <div class="detail-row">
-                            <span class="detail-label">Status</span>
-                            <span class="detail-value text-success">Harvesting</span>
-                        </div>
-                    </div>
-                    <div class="crop-progress">
-                        <div class="progress-label">
-                            <span>Growth Progress</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 90%"></div>
-                        </div>
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <span class="stat-label">Total Area</span>
+                        <span class="stat-value">50 acres</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Season Summary -->
-            <div class="season-summary">
-                <div class="summary-card">
-                    <div class="summary-icon">📅</div>
-                    <div class="summary-content">
-                        <span class="summary-value">4</span>
-                        <span class="summary-label">Total Crops</span>
+            <!-- Crops List -->
+            <div class="crops-list">
+                <!-- Wheat Card -->
+                <div class="crop-card">
+                    <div class="crop-header">
+                        <div class="crop-title-row">
+                            <div class="crop-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 2L12 22M12 2C12 2 8 6 8 12C8 18 12 22 12 22M12 2C12 2 16 6 16 12C16 18 12 22 12 22" stroke="#15803D" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M8 8L16 8M8 12L16 12M8 16L16 16" stroke="#15803D" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <div class="crop-info">
+                                <h3 class="crop-name">Wheat</h3>
+                                <span class="crop-area">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    15 acres
+                                </span>
+                            </div>
+                        </div>
+                        <span class="badge badge-growing">growing</span>
+                    </div>
+                    <div class="crop-body">
+                        <div class="date-row">
+                            <div class="date-item">
+                                <span class="date-label">Sowing Date</span>
+                                <span class="date-value">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                    2025-11-15
+                                </span>
+                            </div>
+                            <div class="date-item">
+                                <span class="date-label">Harvest Date</span>
+                                <span class="date-value">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                    2026-04-20
+                                </span>
+                            </div>
+                        </div>
+                        <div class="health-row">
+                            <div class="health-info">
+                                <span class="health-label">Crop Health</span>
+                                <span class="health-value">85%</span>
+                            </div>
+                            <div class="health-bar">
+                                <div class="health-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="btn btn-outline">View Details</button>
+                            <button class="btn btn-primary">Manage</button>
+                        </div>
                     </div>
                 </div>
-                <div class="summary-card">
-                    <div class="summary-icon">🌱</div>
-                    <div class="summary-content">
-                        <span class="summary-value">2</span>
-                        <span class="summary-label">Active</span>
+
+                <!-- Rice Card -->
+                <div class="crop-card">
+                    <div class="crop-header">
+                        <div class="crop-title-row">
+                            <div class="crop-icon rice-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <ellipse cx="12" cy="14" rx="8" ry="6" stroke="#6B7280" stroke-width="2"/>
+                                    <path d="M8 14V10C8 8 10 6 12 6C14 6 16 8 16 10V14" stroke="#6B7280" stroke-width="2"/>
+                                    <path d="M12 6V4" stroke="#6B7280" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <div class="crop-info">
+                                <h3 class="crop-name">Rice</h3>
+                                <span class="crop-area">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    20 acres
+                                </span>
+                            </div>
+                        </div>
+                        <span class="badge badge-harvested">harvested</span>
+                    </div>
+                    <div class="crop-body">
+                        <div class="date-row">
+                            <div class="date-item">
+                                <span class="date-label">Sowing Date</span>
+                                <span class="date-value">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                    2025-06-10
+                                </span>
+                            </div>
+                            <div class="date-item">
+                                <span class="date-label">Harvest Date</span>
+                                <span class="date-value">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                    2025-10-15
+                                </span>
+                            </div>
+                        </div>
+                        <div class="health-row">
+                            <div class="health-info">
+                                <span class="health-label">Crop Health</span>
+                                <span class="health-value">100%</span>
+                            </div>
+                            <div class="health-bar">
+                                <div class="health-fill" style="width: 100%"></div>
+                            </div>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="btn btn-outline">View Details</button>
+                            <button class="btn btn-primary">Manage</button>
+                        </div>
                     </div>
                 </div>
-                <div class="summary-card">
-                    <div class="summary-icon">📊</div>
-                    <div class="summary-content">
-                        <span class="summary-value">13</span>
-                        <span class="summary-label">Acres</span>
+
+                <!-- Corn Card -->
+                <div class="crop-card">
+                    <div class="crop-header">
+                        <div class="crop-title-row">
+                            <div class="crop-icon corn-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M8 22L16 22" stroke="#D97706" stroke-width="2"/>
+                                    <path d="M9 2L15 2" stroke="#D97706" stroke-width="2"/>
+                                    <ellipse cx="12" cy="12" rx="3" ry="8" stroke="#D97706" stroke-width="2"/>
+                                    <path d="M9 12L15 12" stroke="#92400E" stroke-width="2"/>
+                                    <path d="M9 16L15 16" stroke="#92400E" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <div class="crop-info">
+                                <h3 class="crop-name">Corn</h3>
+                                <span class="crop-area">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    10 acres
+                                </span>
+                            </div>
+                        </div>
+                        <span class="badge badge-growing">growing</span>
+                    </div>
+                    <div class="crop-body">
+                        <div class="date-row">
+                            <div class="date-item">
+                                <span class="date-label">Sowing Date</span>
+                                <span class="date-value">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                    2026-02-01
+                                </span>
+                            </div>
+                            <div class="date-item">
+                                <span class="date-label">Harvest Date</span>
+                                <span class="date-value">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                    2026-06-15
+                                </span>
+                            </div>
+                        </div>
+                        <div class="health-row">
+                            <div class="health-info">
+                                <span class="health-label">Crop Health</span>
+                                <span class="health-value">72%</span>
+                            </div>
+                            <div class="health-bar">
+                                <div class="health-fill" style="width: 72%"></div>
+                            </div>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="btn btn-outline">View Details</button>
+                            <button class="btn btn-primary">Manage</button>
+                        </div>
                     </div>
                 </div>
-                <div class="summary-card">
-                    <div class="summary-icon">💰</div>
-                    <div class="summary-content">
-                        <span class="summary-value">₹2.5L</span>
-                        <span class="summary-label">Est. Revenue</span>
+
+                <!-- Tomatoes Card -->
+                <div class="crop-card">
+                    <div class="crop-header">
+                        <div class="crop-title-row">
+                            <div class="crop-icon tomato-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <circle cx="12" cy="14" r="7" fill="#EF4444"/>
+                                    <path d="M12 7V5M12 7C10 7 9 8 9 9M12 7C14 7 15 8 15 9" stroke="#15803D" stroke-width="2"/>
+                                    <path d="M8 5L10 3M16 5L14 3" stroke="#15803D" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <div class="crop-info">
+                                <h3 class="crop-name">Tomatoes</h3>
+                                <span class="crop-area">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    5 acres
+                                </span>
+                            </div>
+                        </div>
+                        <span class="badge badge-ready">ready</span>
+                    </div>
+                    <div class="crop-body">
+                        <div class="date-row">
+                            <div class="date-item">
+                                <span class="date-label">Sowing Date</span>
+                                <span class="date-value">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                    2025-12-01
+                                </span>
+                            </div>
+                            <div class="date-item">
+                                <span class="date-label">Harvest Date</span>
+                                <span class="date-value">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                    2026-03-15
+                                </span>
+                            </div>
+                        </div>
+                        <div class="health-row">
+                            <div class="health-info">
+                                <span class="health-label">Crop Health</span>
+                                <span class="health-value">95%</span>
+                            </div>
+                            <div class="health-bar">
+                                <div class="health-fill" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="btn btn-outline">View Details</button>
+                            <button class="btn btn-primary">Manage</button>
+                        </div>
                     </div>
                 </div>
             </div>
