@@ -125,18 +125,19 @@ body {
     color: #111827;
 }
 
-/* Crops List */
-.crops-list {
-    display: flex;
-    flex-direction: column;
+/* Crops Grid - 2x2 Layout */
+.crops-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 16px;
+    margin-bottom: 24px;
 }
 
 .crop-card {
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 14px;
-    padding: 20px;
+    padding: 24px;
 }
 
 .crop-header {
@@ -193,7 +194,7 @@ body {
     align-items: center;
     gap: 4px;
     font-size: 14px;
-    color: #6B7280;
+    color: #4A5565;
 }
 
 /* Badges */
@@ -286,26 +287,27 @@ body {
 
 .health-bar {
     height: 8px;
-    background: #F3F4F6;
+    background: rgba(3, 2, 19, 0.2);
     border-radius: 100px;
     overflow: hidden;
 }
 
 .health-fill {
     height: 100%;
-    background: #15803D;
+    background: #030213;
     border-radius: 100px;
 }
 
 /* Action Buttons */
 .action-buttons {
     display: flex;
-    gap: 12px;
+    gap: 8px;
     padding-top: 8px;
 }
 
 .btn {
-    padding: 10px 20px;
+    flex: 1;
+    padding: 10px 12px;
     font-size: 14px;
     font-weight: 500;
     border-radius: 8px;
@@ -325,20 +327,109 @@ body {
 }
 
 .btn-primary {
-    background: #15803D;
-    border: 1px solid #15803D;
+    background: #2E7D32;
+    border: 1px solid #2E7D32;
     color: #FFFFFF;
 }
 
 .btn-primary:hover {
-    background: #14532D;
-    border-color: #14532D;
+    background: #1B5E20;
+    border-color: #1B5E20;
+}
+
+/* Upcoming Planting Schedule */
+.schedule-section {
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 14px;
+    padding: 24px;
+}
+
+.schedule-header {
+    padding-bottom: 16px;
+    border-bottom: 1px solid #E5E7EB;
+    margin-bottom: 16px;
+}
+
+.schedule-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #0A0A0A;
+}
+
+.schedule-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.schedule-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-radius: 10px;
+}
+
+.schedule-blue {
+    background: #EFF6FF;
+}
+
+.schedule-green {
+    background: #F0FDF4;
+}
+
+.schedule-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.schedule-icon {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+}
+
+.schedule-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.schedule-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #111827;
+}
+
+.schedule-date {
+    font-size: 12px;
+    color: #6B7280;
+}
+
+.schedule-badge {
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #6B7280;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
     .stats-row {
         grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .crops-grid {
+        grid-template-columns: 1fr;
     }
     
     .date-row {
