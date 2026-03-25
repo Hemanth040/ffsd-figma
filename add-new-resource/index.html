@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Resource - FarmOps</title>
+    <link rel="stylesheet" href="../common/global.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="navbar-container" data-navbar data-user-name="John Farmer" data-user-initial="J" data-active-page=""></div>
+    
+    <main class="main-content">
+        <div class="page-header">
+            <div class="page-header-content">
+                <div>
+                    <h1 class="page-title">Add New Resource</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="resource-form-container card">
+            <form class="resource-form">
+                <div class="form-group">
+                    <label>Resource Type</label>
+                    <select>
+                        <option>Equipment</option>
+                        <option>Fertilizer</option>
+                        <option>Pesticide</option>
+                        <option>Seeds</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" placeholder="Resource name">
+                </div>
+                <div class="form-group">
+                    <label>Quantity</label>
+                    <input type="number" placeholder="0">
+                </div>
+                <div class="form-group">
+                    <label>Notes</label>
+                    <textarea placeholder="Additional notes..."></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-primary">Add Resource</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="../common/navbar.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

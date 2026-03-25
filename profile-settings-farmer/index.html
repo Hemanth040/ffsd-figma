@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Settings - FarmOps</title>
+    <link rel="stylesheet" href="../common/global.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="navbar-container" data-navbar data-user-name="John Farmer" data-user-initial="J" data-active-page=""></div>
+    
+    <main class="main-content">
+        <div class="page-header">
+            <div class="page-header-content">
+                <div>
+                    <h1 class="page-title">Profile Settings</h1>
+                    <p class="page-subtitle">Manage your account and farm details</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="settings-container">
+            <div class="settings-sidebar">
+                <div class="profile-summary">
+                    <div class="profile-avatar">JF</div>
+                    <h3>John Farmer</h3>
+                    <p>Farm Owner</p>
+                </div>
+                <nav class="settings-nav">
+                    <a href="#" class="nav-item active">Personal Info</a>
+                    <a href="#" class="nav-item">Farm Details</a>
+                    <a href="#" class="nav-item">Notifications</a>
+                    <a href="#" class="nav-item">Security</a>
+                    <a href="#" class="nav-item">Payment Methods</a>
+                </nav>
+            </div>
+
+            <div class="settings-content">
+                <div class="settings-section">
+                    <h2>Personal Information</h2>
+                    <form class="settings-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>First Name</label>
+                                <input type="text" value="John">
+                            </div>
+                            <div class="form-group">
+                                <label>Last Name</label>
+                                <input type="text" value="Farmer">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" value="john.farmer@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="tel" value="+91 9876543210">
+                        </div>
+                        <div class="form-group">
+                            <label>Address</label>
+                            <textarea>123 Farm Road, Village Name, District, State - 123456</textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-primary">Save Changes</button>
+                            <button type="button" class="btn btn-secondary">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="settings-section">
+                    <h2>Farm Information</h2>
+                    <form class="settings-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Farm Name</label>
+                                <input type="text" value="Green Valley Farm">
+                            </div>
+                            <div class="form-group">
+                                <label>Farm Size (Acres)</label>
+                                <input type="number" value="25">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Location</label>
+                            <input type="text" value="Village Ramapuram, District Namakkal, Tamil Nadu">
+                        </div>
+                        <div class="form-group">
+                            <label>Primary Crops</label>
+                            <input type="text" value="Wheat, Rice, Corn, Vegetables">
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-primary">Save Changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 FarmOps. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../common/navbar.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

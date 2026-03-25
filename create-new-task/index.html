@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Task - FarmOps</title>
+    <link rel="stylesheet" href="../common/global.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="navbar-container" data-navbar data-user-name="John Farmer" data-user-initial="J" data-active-page=""></div>
+    
+    <main class="main-content">
+        <div class="page-header">
+            <div class="page-header-content">
+                <div>
+                    <h1 class="page-title">Create New Task</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="create-task-container card">
+            <form class="task-form">
+                <div class="form-group">
+                    <label>Task Name</label>
+                    <input type="text" placeholder="Enter task name">
+                </div>
+                <div class="form-group">
+                    <label>Assign To</label>
+                    <select>
+                        <option>Select worker</option>
+                        <option>Ramu</option>
+                        <option>Lakshman</option>
+                        <option>Krishna</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Due Date</label>
+                        <input type="date">
+                    </div>
+                    <div class="form-group">
+                        <label>Priority</label>
+                        <select>
+                            <option>Low</option>
+                            <option>Medium</option>
+                            <option>High</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea placeholder="Task description..."></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-primary">Create Task</button>
+                    <button type="button" class="btn btn-secondary">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="../common/navbar.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

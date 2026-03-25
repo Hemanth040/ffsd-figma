@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reminders - FarmOps</title>
+    <link rel="stylesheet" href="../common/global.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="navbar-container" data-navbar data-user-name="John Farmer" data-user-initial="J" data-active-page=""></div>
+    
+    <main class="main-content">
+        <div class="page-header">
+            <div class="page-header-content">
+                <div>
+                    <h1 class="page-title">Reminders</h1>
+                    <p class="page-subtitle">Manage your farm tasks and notifications</p>
+                </div>
+                <button class="btn btn-primary" id="addReminderBtn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    Add Reminder
+                </button>
+            </div>
+        </div>
+
+        <div class="reminders-container">
+            <div class="reminders-section">
+                <h2 class="section-title">Upcoming Reminders</h2>
+                <div class="reminders-list">
+                    <div class="reminder-card">
+                        <div class="reminder-date">
+                            <span class="date-day">25</span>
+                            <span class="date-month">Mar</span>
+                        </div>
+                        <div class="reminder-content">
+                            <h3>Fertilizer Application - Wheat Field</h3>
+                            <p>Apply urea fertilizer to wheat crop section B</p>
+                            <span class="reminder-time">9:00 AM</span>
+                        </div>
+                        <span class="badge badge-warning">Pending</span>
+                    </div>
+                    <div class="reminder-card">
+                        <div class="reminder-date">
+                            <span class="date-day">26</span>
+                            <span class="date-month">Mar</span>
+                        </div>
+                        <div class="reminder-content">
+                            <h3>Supervisor Meeting</h3>
+                            <p>Weekly meeting with supervisor to discuss crop progress</p>
+                            <span class="reminder-time">10:00 AM</span>
+                        </div>
+                        <span class="badge badge-info">Scheduled</span>
+                    </div>
+                    <div class="reminder-card">
+                        <div class="reminder-date">
+                            <span class="date-day">28</span>
+                            <span class="date-month">Mar</span>
+                        </div>
+                        <div class="reminder-content">
+                            <h3>Payment Due - Worker Wages</h3>
+                            <p>Monthly wages payment for all workers</p>
+                            <span class="reminder-time">5:00 PM</span>
+                        </div>
+                        <span class="badge badge-danger">Urgent</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reminders-section">
+                <h2 class="section-title">Completed</h2>
+                <div class="reminders-list">
+                    <div class="reminder-card completed">
+                        <div class="reminder-date">
+                            <span class="date-day">20</span>
+                            <span class="date-month">Mar</span>
+                        </div>
+                        <div class="reminder-content">
+                            <h3>Irrigation Schedule</h3>
+                            <p>Water all corn fields</p>
+                            <span class="reminder-time">6:00 AM</span>
+                        </div>
+                        <span class="badge badge-success">Completed</span>
+                    </div>
+                    <div class="reminder-card completed">
+                        <div class="reminder-date">
+                            <span class="date-day">18</span>
+                            <span class="date-month">Mar</span>
+                        </div>
+                        <div class="reminder-content">
+                            <h3>Pest Inspection</h3>
+                            <p>Weekly pest inspection for all crops</p>
+                            <span class="reminder-time">8:00 AM</span>
+                        </div>
+                        <span class="badge badge-success">Completed</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 FarmOps. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../common/navbar.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

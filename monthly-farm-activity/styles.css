@@ -1,0 +1,46 @@
+.activity-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.month-selector select {
+    padding: 12px 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 15px;
+    background: var(--card-background);
+}
+
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.activity-item {
+    display: flex;
+    gap: 16px;
+    padding: 16px;
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+}
+
+.activity-date {
+    width: 60px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.activity-content h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.activity-content p {
+    font-size: 13px;
+    color: var(--text-secondary);
+}

@@ -1,0 +1,30 @@
+.issues-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.issue-card {
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.issue-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.issue-header h3 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.issue-card p {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-top: 8px;
+}

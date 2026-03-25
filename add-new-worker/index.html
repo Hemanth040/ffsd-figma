@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Worker - FarmOps</title>
+    <link rel="stylesheet" href="../common/global.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="navbar-container" data-navbar data-user-name="John Farmer" data-user-initial="J" data-active-page=""></div>
+    
+    <main class="main-content">
+        <div class="page-header">
+            <div class="page-header-content">
+                <div>
+                    <h1 class="page-title">Add New Worker</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="add-worker-container card">
+            <form class="worker-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text" placeholder="First name">
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text" placeholder="Last name">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" placeholder="+91 ">
+                </div>
+                <div class="form-group">
+                    <label>Role</label>
+                    <select>
+                        <option>Farm Worker</option>
+                        <option>Supervisor</option>
+                        <option>Equipment Operator</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Daily Wage (₹)</label>
+                    <input type="number" placeholder="500">
+                </div>
+                <div class="form-group">
+                    <label>Address</label>
+                    <textarea placeholder="Address..."></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-primary">Add Worker</button>
+                    <button type="button" class="btn btn-secondary">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="../common/navbar.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

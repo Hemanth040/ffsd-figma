@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assign Task - FarmOps</title>
+    <link rel="stylesheet" href="../common/global.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="navbar-container" data-navbar data-user-name="John Farmer" data-user-initial="J" data-active-page=""></div>
+    
+    <main class="main-content">
+        <div class="page-header">
+            <div class="page-header-content">
+                <div>
+                    <h1 class="page-title">Assign Task</h1>
+                    <p class="page-subtitle">Assign tasks to your workers</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="assign-task-container card">
+            <form class="assign-form">
+                <div class="form-group">
+                    <label>Select Task</label>
+                    <select>
+                        <option>Irrigation - Wheat Field</option>
+                        <option>Fertilizer Application</option>
+                        <option>Pest Inspection</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Assign To</label>
+                    <select>
+                        <option>Ramu</option>
+                        <option>Lakshman</option>
+                        <option>Krishna</option>
+                        <option>Sita</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Due Date</label>
+                    <input type="date">
+                </div>
+                <div class="form-group">
+                    <label>Instructions</label>
+                    <textarea placeholder="Additional instructions..."></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-primary">Assign Task</button>
+                    <button type="button" class="btn btn-secondary">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="../common/navbar.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

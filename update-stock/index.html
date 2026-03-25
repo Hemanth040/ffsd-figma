@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Stock - FarmOps</title>
+    <link rel="stylesheet" href="../common/global.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="navbar-container" data-navbar data-user-name="John Farmer" data-user-initial="J" data-active-page=""></div>
+    
+    <main class="main-content">
+        <div class="page-header">
+            <div class="page-header-content">
+                <div>
+                    <h1 class="page-title">Update Stock</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="stock-form-container card">
+            <form class="stock-form">
+                <div class="form-group">
+                    <label>Select Item</label>
+                    <select>
+                        <option>Urea Fertilizer</option>
+                        <option>DAP</option>
+                        <option>Pesticide</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Current Stock</label>
+                    <input type="number" value="50">
+                </div>
+                <div class="form-group">
+                    <label>New Stock</label>
+                    <input type="number" placeholder="Enter new quantity">
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-primary">Update Stock</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="../common/navbar.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

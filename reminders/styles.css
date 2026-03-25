@@ -1,0 +1,93 @@
+.reminders-container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.reminders-section {
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.reminders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.reminder-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    background: var(--background-color);
+    border-radius: 10px;
+    transition: var(--transition);
+}
+
+.reminder-card:hover {
+    background: #F3F4F6;
+}
+
+.reminder-card.completed {
+    opacity: 0.7;
+}
+
+.reminder-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background: var(--primary-light);
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.date-day {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 1;
+}
+
+.date-month {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+
+.reminder-content {
+    flex: 1;
+}
+
+.reminder-content h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.reminder-content p {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+}
+
+.reminder-time {
+    font-size: 12px;
+    color: var(--text-secondary);
+}

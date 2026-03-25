@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan New Crop - FarmOps</title>
+    <link rel="stylesheet" href="../common/global.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="navbar-container" data-navbar data-user-name="John Farmer" data-user-initial="J" data-active-page=""></div>
+    
+    <main class="main-content">
+        <div class="page-header">
+            <div class="page-header-content">
+                <div>
+                    <h1 class="page-title">Plan New Crop</h1>
+                    <p class="page-subtitle">Create a new crop plan for your farm</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="plan-crop-container card">
+            <form class="crop-form">
+                <div class="form-group">
+                    <label>Crop Name</label>
+                    <input type="text" placeholder="e.g., Wheat, Rice, Corn">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Season</label>
+                        <select>
+                            <option>Kharif</option>
+                            <option>Rabi</option>
+                            <option>Zaid</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Area (Acres)</label>
+                        <input type="number" placeholder="Enter area">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Planting Date</label>
+                        <input type="date">
+                    </div>
+                    <div class="form-group">
+                        <label>Expected Harvest</label>
+                        <input type="date">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Notes</label>
+                    <textarea placeholder="Additional notes..."></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-primary">Create Plan</button>
+                    <button type="button" class="btn btn-secondary">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="../common/navbar.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

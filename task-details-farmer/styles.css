@@ -1,0 +1,48 @@
+.task-details-container {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+}
+
+.task-header h1 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.task-info {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info-row .label {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.info-row .value {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.task-actions {
+    display: flex;
+    gap: 12px;
+}
