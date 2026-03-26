@@ -1,154 +1,273 @@
-.settings-container {
-    display: grid;
-    grid-template-columns: 280px 1fr;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: linear-gradient(135deg, #F0FDF4 0%, #F0F9FF 100%);
+    min-height: 100vh;
+    padding: 16px 24px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.page-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 24px;
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    margin-bottom: 24px;
+}
+
+.back-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+.back-button:hover {
+    background: #F3F4F6;
+}
+
+.back-button svg {
+    color: #4B5563;
+}
+
+.header-content {
+    flex: 1;
+}
+
+.page-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.settings-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+.settings-button:hover {
+    background: #F3F4F6;
+}
+
+.settings-button svg {
+    color: #4B5563;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
     gap: 24px;
 }
 
-.settings-sidebar {
-    background: var(--card-background);
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    padding: 24px;
-    height: fit-content;
+.settings-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.profile-summary {
-    text-align: center;
-    padding-bottom: 20px;
-    border-bottom: 1px solid var(--border-color);
-    margin-bottom: 20px;
+.settings-card {
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.05);
+}
+
+.profile-header {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
 }
 
 .profile-avatar {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background: var(--primary-color);
-    color: white;
+    background: #3B82F6;
+    color: #FFFFFF;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 24px;
-    font-weight: 700;
-    margin: 0 auto 12px;
-}
-
-.profile-summary h3 {
-    font-size: 18px;
     font-weight: 600;
-    color: var(--text-primary);
-    margin-bottom: 4px;
+    flex-shrink: 0;
 }
 
-.profile-summary p {
-    font-size: 14px;
-    color: var(--text-secondary);
-}
-
-.settings-nav {
+.profile-info {
     display: flex;
     flex-direction: column;
     gap: 4px;
 }
 
-.nav-item {
-    padding: 12px 16px;
-    border-radius: 8px;
-    font-size: 14px;
-    color: var(--text-secondary);
-    transition: var(--transition);
-}
-
-.nav-item:hover {
-    background: var(--background-color);
-    color: var(--text-primary);
-}
-
-.nav-item.active {
-    background: var(--primary-light);
-    color: var(--primary-color);
-    font-weight: 500;
-}
-
-.settings-content {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-}
-
-.settings-section {
-    background: var(--card-background);
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    padding: 24px;
-}
-
-.settings-section h2 {
-    font-size: 18px;
+.profile-name {
+    font-size: 20px;
     font-weight: 600;
-    color: var(--text-primary);
+    color: #111827;
+}
+
+.profile-email,
+.profile-phone,
+.profile-location {
+    font-size: 14px;
+    color: #6B7280;
+}
+
+.card-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #111827;
     margin-bottom: 20px;
     padding-bottom: 12px;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid #E5E7EB;
 }
 
-.settings-form {
+.farm-details {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-.form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.detail-label {
+    font-size: 14px;
+    color: #6B7280;
+}
+
+.detail-value {
+    font-size: 14px;
+    font-weight: 500;
+    color: #111827;
+}
+
+.password-form {
+    display: flex;
+    flex-direction: column;
     gap: 16px;
 }
 
 .form-group {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 8px;
 }
 
 .form-group label {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 500;
-    color: var(--text-secondary);
+    color: #374151;
 }
 
-.form-group input,
-.form-group textarea {
-    padding: 10px 12px;
-    border: 1px solid var(--border-color);
+.form-group input {
+    padding: 12px;
+    border: 1px solid #E5E7EB;
     border-radius: 8px;
     font-size: 14px;
-    color: var(--text-primary);
-    background: var(--background-color);
+    background: #FFFFFF;
+    color: #111827;
+    transition: border-color 0.2s;
+    font-family: 'Inter', sans-serif;
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
+.form-group input::placeholder {
+    color: #9CA3AF;
+}
+
+.form-group input:focus {
     outline: none;
-    border-color: var(--primary-color);
-}
-
-.form-group textarea {
-    min-height: 80px;
-    resize: vertical;
+    border-color: #15803D;
 }
 
 .form-actions {
     display: flex;
+    justify-content: flex-end;
     gap: 12px;
-    padding-top: 12px;
+    margin-top: 8px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: none;
+    font-family: 'Inter', sans-serif;
+}
+
+.btn-primary {
+    background: #15803D;
+    color: #FFFFFF;
+}
+
+.btn-primary:hover {
+    background: #166534;
+}
+
+.btn-secondary {
+    background: #FFFFFF;
+    color: #374151;
+    border: 1px solid #E5E7EB;
+}
+
+.btn-secondary:hover {
+    background: #F9FAFB;
+    border-color: #D1D5DB;
 }
 
 @media (max-width: 768px) {
-    .settings-container {
-        grid-template-columns: 1fr;
+    .profile-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
-    
-    .form-row {
-        grid-template-columns: 1fr;
+
+    .detail-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
     }
 }

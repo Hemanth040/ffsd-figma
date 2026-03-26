@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    background: #f5f5f5;
+    background: linear-gradient(135deg, #EDF5F5 0%, #F0E4FE 100%);
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -93,20 +93,20 @@ body {
 .online-dot {
     width: 8px;
     height: 8px;
-    background: #00C950;
+    background: #4EAE57;
     border-radius: 50%;
 }
 
 .supervisor-name {
     font-size: 14px;
     font-weight: 400;
-    color: #4A5565;
+    color: #6A7282;
 }
 
 .online-text {
     font-size: 14px;
     font-weight: 400;
-    color: #4A5565;
+    color: #6A7282;
 }
 
 .chat-content {
@@ -168,9 +168,9 @@ body {
 }
 
 .sender-name {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 500;
-    color: #4A5565;
+    color: #101828;
     margin-bottom: 4px;
 }
 
@@ -191,7 +191,7 @@ body {
 
 .message-time {
     font-size: 12px;
-    color: #4A5565;
+    color: #6A7282;
 }
 
 .user-message .message-time {

@@ -1,30 +1,236 @@
-.symptoms-grid {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #F6F8F6;
+}
+
+.symptoms-page {
+    min-height: 100vh;
+}
+
+.page-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 24px 32px;
+    background: white;
+    border-bottom: 1px solid #F1F5F9;
+}
+
+.back-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: white;
+    border: 1px solid #E2E8F0;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.back-btn:hover {
+    background: #F8FAFC;
+}
+
+.back-btn svg {
+    color: #64748B;
+}
+
+.header-title-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.page-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #0A0A0A;
+}
+
+.page-subtitle {
+    font-size: 14px;
+    color: #64748B;
+    margin-top: 4px;
+}
+
+.main-content {
+    padding: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.info-section {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 32px;
 }
 
-.symptom-card {
-    background: var(--card-background);
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
+.info-card {
+    background: white;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
     padding: 24px;
-    text-align: center;
 }
 
-.symptom-icon {
-    font-size: 48px;
-    margin-bottom: 12px;
+.info-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #0A0A0A;
+    margin-bottom: 16px;
 }
 
-.symptom-card h3 {
+.tips-card {
+    background: #ECFDF5;
+    border-color: #A7F3D0;
+}
+
+.info-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.info-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: #1E293B;
+}
+
+.info-list li svg {
+    color: #64748B;
+    flex-shrink: 0;
+}
+
+.tips-card .info-list li svg {
+    color: #059669;
+}
+
+.symptoms-section {
+    background: white;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.symptoms-section h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #0A0A0A;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.symptom-item {
+    display: flex;
+    gap: 16px;
+    padding: 20px 0;
+    border-bottom: 1px solid #F1F5F9;
+}
+
+.symptom-item:last-child {
+    border-bottom: none;
+}
+
+.symptom-number {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F1F5F9;
+    border-radius: 50%;
     font-size: 16px;
     font-weight: 600;
+    color: #64748B;
+    flex-shrink: 0;
+}
+
+.symptom-content {
+    flex: 1;
+}
+
+.symptom-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
     margin-bottom: 8px;
 }
 
-.symptom-card p {
+.symptom-header h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #0A0A0A;
+}
+
+.severity-badge {
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.severity-badge.early {
+    background: #FEF3C7;
+    color: #92400E;
+}
+
+.severity-badge.moderate {
+    background: #DBEAFE;
+    color: #1E40AF;
+}
+
+.severity-badge.severe {
+    background: #FEE2E2;
+    color: #991B1B;
+}
+
+.symptom-location {
+    font-size: 14px;
+    color: #64748B;
+    margin-bottom: 8px;
+}
+
+.symptom-desc {
+    font-size: 14px;
+    color: #334155;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.visibility-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     font-size: 13px;
-    color: var(--text-secondary);
-    margin-bottom: 16px;
+    color: #64748B;
+}
+
+.visibility-info svg {
+    color: #94A3B8;
+}
+
+@media (max-width: 768px) {
+    .page-header {
+        padding: 16px;
+    }
+    
+    .main-content {
+        padding: 16px;
+    }
+    
+    .info-section {
+        grid-template-columns: 1fr;
+    }
 }

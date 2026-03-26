@@ -1,11 +1,30 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const navItems = document.querySelectorAll('.nav-item');
-    
-    navItems.forEach(item => {
-        item.addEventListener('click', function(e) {
-            e.preventDefault();
-            navItems.forEach(n => n.classList.remove('active'));
-            this.classList.add('active');
+    const backBtn = document.getElementById('backBtn');
+    const settingsBtn = document.getElementById('settingsBtn');
+    const saveBtn = document.querySelector('.btn-primary');
+    const cancelBtn = document.querySelector('.btn-secondary');
+
+    if (backBtn) {
+        backBtn.addEventListener('click', () => {
+            window.history.back();
         });
-    });
+    }
+
+    if (settingsBtn) {
+        settingsBtn.addEventListener('click', () => {
+            alert('Settings options would appear here');
+        });
+    }
+
+    if (saveBtn) {
+        saveBtn.addEventListener('click', () => {
+            alert('Changes saved successfully!');
+        });
+    }
+
+    if (cancelBtn) {
+        cancelBtn.addEventListener('click', () => {
+            window.history.back();
+        });
+    }
 });

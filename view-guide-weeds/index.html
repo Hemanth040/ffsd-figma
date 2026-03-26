@@ -3,51 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weeds Guide - FarmOps</title>
+    <title>Weed Guide - FarmOps</title>
     <link rel="stylesheet" href="../common/global.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="navbar-container" data-navbar data-user-name="John Farmer" data-user-initial="J" data-active-page=""></div>
-    
-    <main class="main-content">
-        <div class="page-header">
-            <div class="page-header-content">
-                <div>
-                    <h1 class="page-title">Weeds Guide</h1>
+    <div class="container">
+        <header class="main-header">
+            <button class="back-button">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+            </button>
+            <div class="header-content">
+                <svg class="header-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#15803D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <h1 class="page-title">Farm Guides</h1>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <nav class="navigation-tabs">
+                <button class="tab-button">Diseases</button>
+                <button class="tab-button active">Weeds</button>
+                <button class="tab-button">Pesticides</button>
+                <button class="tab-button">Fertilizers</button>
+            </nav>
+
+            <div class="search-bar">
+                <div class="search-input-container">
+                    <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <circle cx="11" cy="11" r="8" stroke="#9CA3AF" stroke-width="2"/>
+                        <path d="M21 21l-4.35-4.35" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <input type="text" class="search-input" placeholder="Search weeds...">
                 </div>
             </div>
-        </div>
 
-        <div class="weeds-content card">
-            <h2>Common Weeds</h2>
-            <div class="weed-list">
-                <div class="weed-item">
-                    <div class="weed-info">
-                        <h3>Phyllanthus Niruri</h3>
-                        <p>Also known as Stonebreaker</p>
+            <section class="content-section">
+                <div class="section-header">
+                    <div class="section-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#15803D" stroke-width="2">
+                            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+                            <path d="M9 12l2 2 4-4"/>
+                        </svg>
                     </div>
-                    <span class="badge badge-warning">Common</span>
+                    <h2 class="section-title">Weed Identification & Control Guide</h2>
                 </div>
-                <div class="weed-item">
-                    <div class="weed-info">
-                        <h3>Cynodon Dactylon</h3>
-                        <p>Also known as Bermuda Grass</p>
-                    </div>
-                    <span class="badge badge-danger">Hard to Control</span>
-                </div>
-                <div class="weed-item">
-                    <div class="weed-info">
-                        <h3>Parthenium Hysterophorus</h3>
-                        <p>Also known as Carrot Grass</p>
-                    </div>
-                    <span class="badge badge-danger">Invasive</span>
-                </div>
-            </div>
-        </div>
-    </main>
 
-    <script src="../common/navbar.js"></script>
+                <div class="weed-list">
+                    <div class="weed-card">
+                        <div class="weed-header">
+                            <div class="weed-title-row">
+                                <h3 class="weed-name">Phalaris Minor</h3>
+                                <span class="crop-badge">Wheat</span>
+                            </div>
+                            <p class="weed-alias">Also Known As: Little Seed Canary Grass</p>
+                        </div>
+                        <div class="weed-details">
+                            <div class="detail-row">
+                                <span class="detail-label">Characteristics:</span>
+                                <span class="detail-text">Grass weed with narrow leaves, purple-tinged stems, and spike-like panicles</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Control Methods:</span>
+                                <span class="detail-text">Pre-emergence herbicides, hand weeding, crop rotation</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Critical Stage:</span>
+                                <span class="detail-text">Early growth stage (2-4 weeks after sowing)</span>
+                            </div>
+                        </div>
+                        <div class="threat-section">
+                            <span class="threat-label">Threat Level:</span>
+                            <span class="threat-badge high">High</span>
+                        </div>
+                        <button class="view-guide-btn">View Full Guide</button>
+                    </div>
+
+                    <div class="weed-card">
+                        <div class="weed-header">
+                            <div class="weed-title-row">
+                                <h3 class="weed-name">Cyperus Rotundus</h3>
+                                <span class="crop-badge">Rice</span>
+                            </div>
+                            <p class="weed-alias">Also Known As: Purple Nut Sedge</p>
+                        </div>
+                        <div class="weed-details">
+                            <div class="detail-row">
+                                <span class="detail-label">Characteristics:</span>
+                                <span class="detail-text">Triangular stems, dark green leaves, aromatic tuberous roots</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Control Methods:</span>
+                                <span class="detail-text">Post-emergence herbicides, hand weeding, flooding</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Critical Stage:</span>
+                                <span class="detail-text">Before tuber formation (30-45 days)</span>
+                            </div>
+                        </div>
+                        <div class="threat-section">
+                            <span class="threat-label">Threat Level:</span>
+                            <span class="threat-badge high">High</span>
+                        </div>
+                        <button class="view-guide-btn">View Full Guide</button>
+                    </div>
+
+                    <div class="weed-card">
+                        <div class="weed-header">
+                            <div class="weed-title-row">
+                                <h3 class="weed-name">Echinochloa Crus-Galli</h3>
+                                <span class="crop-badge">Rice</span>
+                            </div>
+                            <p class="weed-alias">Also Known As: Barnyard Grass</p>
+                        </div>
+                        <div class="weed-details">
+                            <div class="detail-row">
+                                <span class="detail-label">Characteristics:</span>
+                                <span class="detail-text">Tall grass with thick stems, large leaf blades, branching panicle</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Control Methods:</span>
+                                <span class="detail-text">Pre-emergence herbicide, hand weeding, water management</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Critical Stage:</span>
+                                <span class="detail-text">First 30 days after sowing</span>
+                            </div>
+                        </div>
+                        <div class="threat-section">
+                            <span class="threat-label">Threat Level:</span>
+                            <span class="threat-badge medium">Medium</span>
+                        </div>
+                        <button class="view-guide-btn">View Full Guide</button>
+                    </div>
+
+                    <div class="weed-card">
+                        <div class="weed-header">
+                            <div class="weed-title-row">
+                                <h3 class="weed-name">Parthenium Hysterophorus</h3>
+                                <span class="crop-badge">Cotton</span>
+                            </div>
+                            <p class="weed-alias">Also Known As: Carrot Grass, Congress Grass</p>
+                        </div>
+                        <div class="weed-details">
+                            <div class="detail-row">
+                                <span class="detail-label">Characteristics:</span>
+                                <span class="detail-text">Bushy plant with feathery leaves, white flower heads, rapid growth</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Control Methods:</span>
+                                <span class="detail-text">Manual removal, post-emergence herbicides, competitive cropping</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Critical Stage:</span>
+                                <span class="detail-text">Before flowering (45-60 days)</span>
+                            </div>
+                        </div>
+                        <div class="threat-section">
+                            <span class="threat-label">Threat Level:</span>
+                            <span class="threat-badge high">High</span>
+                        </div>
+                        <button class="view-guide-btn">View Full Guide</button>
+                    </div>
+
+                    <div class="weed-card">
+                        <div class="weed-header">
+                            <div class="weed-title-row">
+                                <h3 class="weed-name">Avena Fatua</h3>
+                                <span class="crop-badge">Wheat</span>
+                            </div>
+                            <p class="weed-alias">Also Known As: Wild Oat</p>
+                        </div>
+                        <div class="weed-details">
+                            <div class="detail-row">
+                                <span class="detail-label">Characteristics:</span>
+                                <span class="detail-text">Tall grass with drooping panicles, flat leaves, twisted awns</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Control Methods:</span>
+                                <span class="detail-text">Pre-emergence herbicides, crop rotation, seed cleaning</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Critical Stage:</span>
+                                <span class="detail-text">Tillering stage (25-35 days)</span>
+                            </div>
+                        </div>
+                        <div class="threat-section">
+                            <span class="threat-label">Threat Level:</span>
+                            <span class="threat-badge medium">Medium</span>
+                        </div>
+                        <button class="view-guide-btn">View Full Guide</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

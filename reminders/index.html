@@ -8,107 +8,127 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="navbar-container" data-navbar data-user-name="John Farmer" data-user-initial="J" data-active-page=""></div>
-    
-    <main class="main-content">
-        <div class="page-header">
-            <div class="page-header-content">
-                <div>
-                    <h1 class="page-title">Reminders</h1>
-                    <p class="page-subtitle">Manage your farm tasks and notifications</p>
-                </div>
-                <button class="btn btn-primary" id="addReminderBtn">
+    <div class="reminders-page">
+        <header class="page-header">
+            <div class="header-left">
+                <button class="back-btn" onclick="window.history.back()">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <line x1="12" y1="5" x2="12" y2="19"></line>
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
                     </svg>
-                    Add Reminder
                 </button>
-            </div>
-        </div>
-
-        <div class="reminders-container">
-            <div class="reminders-section">
-                <h2 class="section-title">Upcoming Reminders</h2>
-                <div class="reminders-list">
-                    <div class="reminder-card">
-                        <div class="reminder-date">
-                            <span class="date-day">25</span>
-                            <span class="date-month">Mar</span>
-                        </div>
-                        <div class="reminder-content">
-                            <h3>Fertilizer Application - Wheat Field</h3>
-                            <p>Apply urea fertilizer to wheat crop section B</p>
-                            <span class="reminder-time">9:00 AM</span>
-                        </div>
-                        <span class="badge badge-warning">Pending</span>
-                    </div>
-                    <div class="reminder-card">
-                        <div class="reminder-date">
-                            <span class="date-day">26</span>
-                            <span class="date-month">Mar</span>
-                        </div>
-                        <div class="reminder-content">
-                            <h3>Supervisor Meeting</h3>
-                            <p>Weekly meeting with supervisor to discuss crop progress</p>
-                            <span class="reminder-time">10:00 AM</span>
-                        </div>
-                        <span class="badge badge-info">Scheduled</span>
-                    </div>
-                    <div class="reminder-card">
-                        <div class="reminder-date">
-                            <span class="date-day">28</span>
-                            <span class="date-month">Mar</span>
-                        </div>
-                        <div class="reminder-content">
-                            <h3>Payment Due - Worker Wages</h3>
-                            <p>Monthly wages payment for all workers</p>
-                            <span class="reminder-time">5:00 PM</span>
-                        </div>
-                        <span class="badge badge-danger">Urgent</span>
-                    </div>
+                <div class="header-title-group">
+                    <h1 class="page-title">Reminders</h1>
                 </div>
             </div>
+            <button class="add-reminder-btn" id="addReminderBtn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                New Reminder
+            </button>
+        </header>
 
-            <div class="reminders-section">
-                <h2 class="section-title">Completed</h2>
-                <div class="reminders-list">
-                    <div class="reminder-card completed">
-                        <div class="reminder-date">
-                            <span class="date-day">20</span>
-                            <span class="date-month">Mar</span>
-                        </div>
-                        <div class="reminder-content">
-                            <h3>Irrigation Schedule</h3>
-                            <p>Water all corn fields</p>
-                            <span class="reminder-time">6:00 AM</span>
-                        </div>
-                        <span class="badge badge-success">Completed</span>
+        <main class="main-content">
+            <div class="reminders-list">
+                <div class="reminder-card">
+                    <div class="reminder-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/>
+                            <line x1="8" y1="2" x2="8" y2="6"/>
+                            <line x1="3" y1="10" x2="21" y2="10"/>
+                        </svg>
                     </div>
-                    <div class="reminder-card completed">
-                        <div class="reminder-date">
-                            <span class="date-day">18</span>
-                            <span class="date-month">Mar</span>
-                        </div>
-                        <div class="reminder-content">
-                            <h3>Pest Inspection</h3>
-                            <p>Weekly pest inspection for all crops</p>
-                            <span class="reminder-time">8:00 AM</span>
-                        </div>
-                        <span class="badge badge-success">Completed</span>
+                    <div class="reminder-details">
+                        <h3 class="reminder-title">Irrigate Wheat Field</h3>
+                        <p class="reminder-time">Today 4:00 PM</p>
                     </div>
+                    <span class="reminder-badge badge-high">high</span>
+                </div>
+
+                <div class="reminder-card">
+                    <div class="reminder-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/>
+                            <line x1="8" y1="2" x2="8" y2="6"/>
+                            <line x1="3" y1="10" x2="21" y2="10"/>
+                        </svg>
+                    </div>
+                    <div class="reminder-details">
+                        <h3 class="reminder-title">Apply Fertilizer to Corn</h3>
+                        <p class="reminder-time">Tomorrow 10:00 AM</p>
+                    </div>
+                    <span class="reminder-badge badge-high">high</span>
+                </div>
+
+                <div class="reminder-card">
+                    <div class="reminder-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/>
+                            <line x1="8" y1="2" x2="8" y2="6"/>
+                            <line x1="3" y1="10" x2="21" y2="10"/>
+                        </svg>
+                    </div>
+                    <div class="reminder-details">
+                        <h3 class="reminder-title">Harvest Tomatoes</h3>
+                        <p class="reminder-time">March 5</p>
+                    </div>
+                    <span class="reminder-badge badge-medium">medium</span>
+                </div>
+
+                <div class="reminder-card">
+                    <div class="reminder-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/>
+                            <line x1="8" y1="2" x2="8" y2="6"/>
+                            <line x1="3" y1="10" x2="21" y2="10"/>
+                        </svg>
+                    </div>
+                    <div class="reminder-details">
+                        <h3 class="reminder-title">Worker Salary Payment</h3>
+                        <p class="reminder-time">March 7</p>
+                    </div>
+                    <span class="reminder-badge badge-low">low</span>
+                </div>
+
+                <div class="reminder-card">
+                    <div class="reminder-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/>
+                            <line x1="8" y1="2" x2="8" y2="6"/>
+                            <line x1="3" y1="10" x2="21" y2="10"/>
+                        </svg>
+                    </div>
+                    <div class="reminder-details">
+                        <h3 class="reminder-title">Supervisor Meeting</h3>
+                        <p class="reminder-time">March 10</p>
+                    </div>
+                    <span class="reminder-badge badge-medium">medium</span>
+                </div>
+
+                <div class="reminder-card">
+                    <div class="reminder-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/>
+                            <line x1="8" y1="2" x2="8" y2="6"/>
+                            <line x1="3" y1="10" x2="21" y2="10"/>
+                        </svg>
+                    </div>
+                    <div class="reminder-details">
+                        <h3 class="reminder-title">Pesticide Spray - Rice Field</h3>
+                        <p class="reminder-time">March 12</p>
+                    </div>
+                    <span class="reminder-badge badge-high">high</span>
                 </div>
             </div>
-        </div>
-    </main>
-
-    <footer class="footer">
-        <div class="footer-content">
-            <p>&copy; 2026 FarmOps. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="../common/navbar.js"></script>
+        </main>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

@@ -2,6 +2,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const messageInput = document.getElementById('messageInput');
     const sendBtn = document.getElementById('sendBtn');
     const messagesContainer = document.getElementById('messagesContainer');
+    const backBtn = document.querySelector('.back-btn');
+
+    if (backBtn) {
+        backBtn.addEventListener('click', () => {
+            window.history.back();
+        });
+    }
 
     function sendMessage() {
         const messageText = messageInput.value.trim();

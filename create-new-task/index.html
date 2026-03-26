@@ -6,61 +6,88 @@
     <title>Create New Task - FarmOps</title>
     <link rel="stylesheet" href="../common/global.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="navbar-container" data-navbar data-user-name="John Farmer" data-user-initial="J" data-active-page=""></div>
-    
-    <main class="main-content">
-        <div class="page-header">
-            <div class="page-header-content">
-                <div>
-                    <h1 class="page-title">Create New Task</h1>
-                </div>
+    <div class="container">
+        <header class="page-header">
+            <button class="back-button" id="backBtn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+            </button>
+            <div class="header-content">
+                <h1 class="page-title">Create New Task</h1>
+                <p class="page-subtitle">Add task details and assign workers</p>
             </div>
-        </div>
+        </header>
 
-        <div class="create-task-container card">
+        <main class="main-content">
             <form class="task-form">
-                <div class="form-group">
-                    <label>Task Name</label>
-                    <input type="text" placeholder="Enter task name">
-                </div>
-                <div class="form-group">
-                    <label>Assign To</label>
-                    <select>
-                        <option>Select worker</option>
-                        <option>Ramu</option>
-                        <option>Lakshman</option>
-                        <option>Krishna</option>
-                    </select>
-                </div>
-                <div class="form-row">
+                <div class="form-section">
+                    <h2 class="section-title">Basic Information</h2>
                     <div class="form-group">
-                        <label>Due Date</label>
-                        <input type="date">
+                        <label>Task Title <span class="required">*</span></label>
+                        <input type="text" placeholder="e.g., Plow Field A">
                     </div>
                     <div class="form-group">
-                        <label>Priority</label>
-                        <select>
-                            <option>Low</option>
-                            <option>Medium</option>
-                            <option>High</option>
-                        </select>
+                        <label>Short Description <span class="required">*</span></label>
+                        <input type="text" placeholder="e.g., Prepare field for wheat sowing">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Status</label>
+                            <select>
+                                <option>Pending</option>
+                                <option>In Progress</option>
+                                <option>Completed</option>
+                                <option>On Hold</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Priority</label>
+                            <select>
+                                <option>Low</option>
+                                <option>Medium</option>
+                                <option>High</option>
+                                <option>Urgent</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
-                <div class="form-group">
-                    <label>Description</label>
-                    <textarea placeholder="Task description..."></textarea>
+
+                <div class="form-section">
+                    <h2 class="section-title">Task Details</h2>
+                    <div class="form-group">
+                        <label>Field Location</label>
+                        <input type="text" placeholder="e.g., Field A, West Section">
+                    </div>
+                    <div class="form-group">
+                        <label>Detailed Description</label>
+                        <textarea placeholder="Provide detailed instructions for completing this task..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Equipment Required</label>
+                        <div class="equipment-input">
+                            <input type="text" placeholder="Add equipment (e.g., Tractor, Plow)">
+                            <button type="button" class="add-btn">Add</button>
+                        </div>
+                        <div class="equipment-tags">
+                            <span class="equipment-tag">Tractor <button type="button" class="remove-tag">&times;</button></span>
+                            <span class="equipment-tag">Plow <button type="button" class="remove-tag">&times;</button></span>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="form-actions">
-                    <button type="button" class="btn btn-primary">Create Task</button>
                     <button type="button" class="btn btn-secondary">Cancel</button>
+                    <button type="button" class="btn btn-primary">Create Task</button>
                 </div>
             </form>
-        </div>
-    </main>
-
-    <script src="../common/navbar.js"></script>
+        </main>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

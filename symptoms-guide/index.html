@@ -3,46 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Symptoms Guide - FarmOps</title>
+    <title>Symptoms Guide - Leaf Rust - FarmOps</title>
     <link rel="stylesheet" href="../common/global.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="navbar-container" data-navbar data-user-name="John Farmer" data-user-initial="J" data-active-page=""></div>
-    
-    <main class="main-content">
-        <div class="page-header">
-            <div class="page-header-content">
-                <div>
-                    <h1 class="page-title">Symptoms Guide</h1>
-                    <p class="page-subtitle">Identify crop diseases by symptoms</p>
+    <div class="symptoms-page">
+        <header class="page-header">
+            <button class="back-btn" onclick="window.history.back()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+            </button>
+            <div class="header-title-group">
+                <h1 class="page-title">Symptoms - Leaf Rust</h1>
+                <p class="page-subtitle">Puccinia triticina • Wheat Disease Identification</p>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="info-section">
+                <div class="info-card">
+                    <h3>When to Take Action</h3>
+                    <ul class="info-list">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="12" y1="8" x2="12" y2="12"/>
+                                <line x1="12" y1="16" x2="12.01" y2="16"/>
+                            </svg>
+                            Immediate action: If flag leaf shows pustules
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="12" y1="8" x2="12" y2="12"/>
+                                <line x1="12" y1="16" x2="12.01" y2="16"/>
+                            </svg>
+                            Urgent: When 5-10% leaf area is infected
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="12" y1="8" x2="12" y2="12"/>
+                                <line x1="12" y1="16" x2="12.01" y2="16"/>
+                            </svg>
+                            Monitor closely: During warm humid weather
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="12" y1="8" x2="12" y2="12"/>
+                                <line x1="12" y1="16" x2="12.01" y2="16"/>
+                            </svg>
+                            Critical stage: Booting to grain fill period
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="info-card tips-card">
+                    <h3>Quick Identification Tips</h3>
+                    <ul class="info-list">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            Look for orange-brown powdery pustules on leaves
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            Rub leaf surface - spores will stain fingers orange
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            Check both upper and lower leaf surfaces
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            Scout regularly during stem elongation to flowering
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </div>
 
-        <div class="symptoms-grid">
-            <div class="symptom-card">
-                <div class="symptom-icon">🍂</div>
-                <h3>Yellowing Leaves</h3>
-                <p>Common in nitrogen deficiency</p>
-                <a href="#" class="btn btn-secondary">Learn More</a>
-            </div>
-            <div class="symptom-card">
-                <div class="symptom-icon">🟤</div>
-                <h3>Brown Spots</h3>
-                <p>Fungal infection indicator</p>
-                <a href="#" class="btn btn-secondary">Learn More</a>
-            </div>
-            <div class="symptom-card">
-                <div class="symptom-icon">🥀</div>
-                <h3>Wilting</h3>
-                <p>Water stress or disease</p>
-                <a href="#" class="btn btn-secondary">Learn More</a>
-            </div>
-        </div>
-    </main>
+            <div class="symptoms-section">
+                <h2>Disease Symptoms (10)</h2>
+                
+                <div class="symptom-item">
+                    <div class="symptom-number">1</div>
+                    <div class="symptom-content">
+                        <div class="symptom-header">
+                            <h3>Small Yellow Flecks</h3>
+                            <span class="severity-badge early">Early</span>
+                        </div>
+                        <p class="symptom-location">Upper leaf surface • Tillering to Stem Elongation</p>
+                        <p class="symptom-desc">Tiny yellow to orange colored spots appear on leaf surface, typically 0.5-1mm in diameter. These are the earliest visible signs of infection.</p>
+                        <div class="visibility-info">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                <circle cx="12" cy="12" r="3"/>
+                            </svg>
+                            Visibility: Requires close inspection
+                        </div>
+                    </div>
+                </div>
 
-    <script src="../common/navbar.js"></script>
+                <div class="symptom-item">
+                    <div class="symptom-number">2</div>
+                    <div class="symptom-content">
+                        <div class="symptom-header">
+                            <h3>Orange-Brown Pustules</h3>
+                            <span class="severity-badge moderate">Moderate</span>
+                        </div>
+                        <p class="symptom-location">Both leaf surfaces • Stem Elongation to Booting</p>
+                        <p class="symptom-desc">Circular to oval raised pustules develop, containing masses of orange-brown urediniospores. Pustules are scattered randomly on leaf surface.</p>
+                        <div class="visibility-info">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                <circle cx="12" cy="12" r="3"/>
+                            </svg>
+                            Visibility: Easily visible
+                        </div>
+                    </div>
+                </div>
+
+                <div class="symptom-item">
+                    <div class="symptom-number">3</div>
+                    <div class="symptom-content">
+                        <div class="symptom-header">
+                            <h3>Powdery Spore Mass</h3>
+                            <span class="severity-badge moderate">Moderate</span>
+                        </div>
+                        <p class="symptom-location">Leaf surface and sheaths • Booting to Flowering</p>
+                        <p class="symptom-desc">Pustules rupture the leaf epidermis, releasing dusty orange-brown spores that can be rubbed off on fingers when touched.</p>
+                        <div class="visibility-info">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                <circle cx="12" cy="12" r="3"/>
+                            </svg>
+                            Visibility: Very conspicuous
+                        </div>
+                    </div>
+                </div>
+
+                <div class="symptom-item">
+                    <div class="symptom-number">4</div>
+                    <div class="symptom-content">
+                        <div class="symptom-header">
+                            <h3>Chlorotic Halos</h3>
+                            <span class="severity-badge severe">Severe</span>
+                        </div>
+                        <p class="symptom-location">Around pustules • Flowering to Grain Fill</p>
+                        <p class="symptom-desc">Yellow to pale green halos form around individual pustules as the infection progresses, indicating tissue damage.</p>
+                        <div class="visibility-info">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                <circle cx="12" cy="12" r="3"/>
+                            </svg>
+                            Visibility: Easily visible
+                        </div>
+                    </div>
+                </div>
+
+                <div class="symptom-item">
+                    <div class="symptom-number">5</div>
+                    <div class="symptom-content">
+                        <div class="symptom-header">
+                            <h3>Pustule Coalescence</h3>
+                            <span class="severity-badge severe">Severe</span>
+                        </div>
+                        <p class="symptom-location">Entire leaf blade • Flowering to Grain Fill</p>
+                        <p class="symptom-desc">Multiple pustules merge together, covering large areas of leaf tissue and reducing photosynthetic capacity significantly.</p>
+                        <div class="visibility-info">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                <circle cx="12" cy="12" r="3"/>
+                            </svg>
+                            Visibility: Very conspicuous
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>

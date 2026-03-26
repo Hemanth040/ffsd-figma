@@ -8,67 +8,125 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="navbar-container" data-navbar data-user-name="John Farmer" data-user-initial="J" data-active-page=""></div>
-    
-    <main class="main-content">
-        <div class="worker-details-container">
-            <div class="worker-profile card">
-                <div class="profile-header">
-                    <div class="profile-avatar">R</div>
+    <div class="worker-details-page">
+        <header class="page-header">
+            <div class="header-left">
+                <button class="back-btn" onclick="window.history.back()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                </button>
+                <div class="header-title-group">
+                    <h1 class="page-title">Worker Details</h1>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="worker-profile-section">
+                <div class="profile-card">
+                    <div class="profile-avatar">RP</div>
                     <div class="profile-info">
-                        <h1>Ramu</h1>
-                        <p>Farm Worker</p>
-                        <span class="badge badge-success">Active</span>
+                        <div class="profile-name-row">
+                            <h1 class="profile-name">Ramu Pandu</h1>
+                            <span class="status-badge">Active</span>
+                        </div>
+                        <p class="profile-role">Lead Worker • Joined January 15, 2024</p>
                     </div>
                 </div>
             </div>
 
-            <div class="worker-stats">
+            <div class="stats-grid">
                 <div class="stat-card">
-                    <span class="stat-value">95%</span>
+                    <span class="stat-label">Tasks Active</span>
+                    <span class="stat-value">1</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Completed</span>
+                    <span class="stat-value">47</span>
+                </div>
+                <div class="stat-card">
                     <span class="stat-label">Attendance</span>
+                    <span class="stat-value stat-highlight">89%</span>
                 </div>
                 <div class="stat-card">
-                    <span class="stat-value">8</span>
-                    <span class="stat-label">Years Working</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-value">₹500</span>
-                    <span class="stat-label">Daily Wage</span>
+                    <span class="stat-label">Rating</span>
+                    <span class="stat-value">4.8</span>
                 </div>
             </div>
 
-            <div class="worker-info card">
-                <h2>Contact Information</h2>
-                <div class="info-list">
+            <div class="info-card">
+                <h2 class="section-title">Personal Information</h2>
+                <div class="info-grid">
                     <div class="info-item">
-                        <span class="label">Phone</span>
-                        <span class="value">+91 9876543210</span>
+                        <span class="info-label">Phone Number</span>
+                        <span class="info-value">+91 98765 43210</span>
                     </div>
                     <div class="info-item">
-                        <span class="label">Address</span>
-                        <span class="value">Village Ramapuram, District Namakkal</span>
+                        <span class="info-label">Email Address</span>
+                        <span class="info-value">ramu.pandu@email.com</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Date of Birth</span>
+                        <span class="info-value">March 15, 1990</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Address</span>
+                        <span class="info-value">Village Ramapuram, District Namakkal, Tamil Nadu</span>
                     </div>
                 </div>
             </div>
 
-            <div class="worker-tasks card">
-                <h2>Recent Tasks</h2>
+            <div class="info-card">
+                <h2 class="section-title">Employment Details</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span class="info-label">Role</span>
+                        <span class="info-value">Lead Worker</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Daily Wage</span>
+                        <span class="info-value">₹500</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Experience</span>
+                        <span class="info-value">8 years</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Joined Date</span>
+                        <span class="info-value">January 15, 2024</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tasks-card">
+                <h2 class="section-title">Recent Tasks</h2>
                 <div class="task-list">
                     <div class="task-item">
-                        <span>Irrigation - Wheat Field</span>
-                        <span class="badge badge-success">Completed</span>
+                        <div class="task-info">
+                            <span class="task-name">Irrigation - Wheat Field</span>
+                            <span class="task-date">Mar 20, 2026</span>
+                        </div>
+                        <span class="task-status status-completed">Completed</span>
                     </div>
                     <div class="task-item">
-                        <span>Fertilizer Application</span>
-                        <span class="badge badge-success">Completed</span>
+                        <div class="task-info">
+                            <span class="task-name">Fertilizer Application</span>
+                            <span class="task-date">Mar 18, 2026</span>
+                        </div>
+                        <span class="task-status status-completed">Completed</span>
+                    </div>
+                    <div class="task-item">
+                        <div class="task-info">
+                            <span class="task-name">Harvest Assistance - Tomatoes</span>
+                            <span class="task-date">Mar 15, 2026</span>
+                        </div>
+                        <span class="task-status status-completed">Completed</span>
                     </div>
                 </div>
             </div>
-        </div>
-    </main>
-
-    <script src="../common/navbar.js"></script>
+        </main>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
             } else if (tabName === 'fertilizers') {
                 window.location.href = '../fertilizers/index.html';
             } else if (tabName === 'weeds') {
-                window.location.href = '../weeds-guide/index.html';
+                window.location.href = '../view-guide-weeds/index.html';
             }
         });
     });
