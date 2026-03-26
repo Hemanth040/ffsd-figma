@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (backBtn) {
         backBtn.addEventListener('click', () => {
-            window.history.back();
+            window.location.href = '../worker-dashboard/index.html';
         });
     }
 

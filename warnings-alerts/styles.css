@@ -1,53 +1,69 @@
-.warnings-page {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 20px 40px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #FFFFFF;
+    color: #0F172A;
+    min-height: 100vh;
+}
+
+.main-content {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px 40px 40px;
+}
+
+.warnings-page {
+    width: 100%;
+}
+
+/* Header */
 .warnings-header {
     display: flex;
     align-items: center;
     gap: 16px;
     padding-bottom: 16px;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid #E2E8F0;
     margin-bottom: 24px;
 }
 
 .back-button {
     width: 40px;
     height: 40px;
-    border: 1px solid var(--border-color);
-    background: var(--background-color);
+    background: #F1F5F9;
+    border: none;
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: var(--transition);
-    color: var(--text-secondary);
+    transition: background 0.2s;
+    color: #64748B;
+    flex-shrink: 0;
 }
 
 .back-button:hover {
-    background: var(--card-background);
-    color: var(--text-primary);
+    background: #E2E8F0;
 }
 
-.header-title {
-    flex: 1;
+.header-title-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
-.header-title h1 {
-    font-size: 20px;
+.header-title-group h1 {
+    font-size: 24px;
     font-weight: 700;
-    color: var(--text-primary);
+    color: #0F172A;
+    letter-spacing: -0.5px;
 }
 
-.header-title p {
-    font-size: 14px;
-    color: var(--text-secondary);
-    margin-top: 2px;
-}
-
+/* Summary Section */
 .summary-section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -57,193 +73,223 @@
 
 .summary-card {
     display: flex;
-    align-items: center;
-    gap: 16px;
-    padding: 24px;
-    background: #FFFFFF;
-    border: 1px solid #E5E7EB;
-    border-radius: 12px;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-}
-
-.summary-icon {
-    width: 48px;
-    height: 48px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.summary-icon.high {
-    background: #FEE2E2;
-    color: #DC2626;
-}
-
-.summary-icon.medium {
-    background: #FEF3C7;
-    color: #D97706;
-}
-
-.summary-icon.low {
-    background: #DBEAFE;
-    color: #2563EB;
-}
-
-.summary-details {
-    display: flex;
     flex-direction: column;
-}
-
-.summary-count {
-    font-size: 28px;
-    font-weight: 700;
-    color: var(--text-primary);
-}
-
-.summary-label {
-    font-size: 13px;
-    color: var(--text-secondary);
-}
-
-.active-warnings {
-    margin-bottom: 16px;
-}
-
-.active-warnings h2 {
-    font-size: 20px;
-    font-weight: 700;
-    color: var(--text-primary);
-}
-
-.warnings-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-    margin-bottom: 32px;
-}
-
-.warning-card {
-    background: var(--card-background);
-    border: 1px solid var(--border-color);
+    gap: 8px;
+    padding: 24px;
+    background: #D3DFEB;
     border-radius: 12px;
-    padding: 20px;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 }
 
-.warning-header {
+.summary-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.summary-label {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: rgba(0,0,0,0.9);
+}
+
+.summary-count {
+    font-size: 36px;
+    font-weight: 700;
+    color: #000000;
+    line-height: 1.1;
+}
+
+/* Active Warnings Heading */
+.active-warnings-heading {
+    padding: 8px 4px 0;
     margin-bottom: 16px;
 }
 
-.priority-badge {
-    padding: 4px 10px;
-    border-radius: 6px;
-    font-size: 12px;
-    font-weight: 600;
+.active-warnings-heading h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0F172A;
 }
 
-.priority-badge.high {
-    background: #FEE2E2;
-    color: #DC2626;
+/* Warnings Grid */
+.warnings-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 0;
 }
 
-.priority-badge.medium {
-    background: #FEF3C7;
-    color: #D97706;
+.warning-card {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    margin: -1px;
 }
 
-.warning-time {
-    font-size: 12px;
-    color: var(--text-secondary);
-}
-
-.warning-content {
+.warning-card-body {
+    padding: 20px;
     display: flex;
-    gap: 12px;
-    margin-bottom: 16px;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    min-height: 193px;
 }
 
-.warning-icon {
-    font-size: 32px;
-    line-height: 1;
+.warning-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
-.warning-details h3 {
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--text-primary);
+.warning-labels {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     margin-bottom: 4px;
 }
 
-.warning-details p {
-    font-size: 13px;
-    color: var(--text-secondary);
-    line-height: 1.5;
+.priority-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
 }
 
+.priority-label.high {
+    color: #DC2626;
+}
+
+.priority-label.medium {
+    color: #EA580C;
+}
+
+.dot-sep {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #CBD5E1;
+    flex-shrink: 0;
+}
+
+.category-label {
+    font-size: 12px;
+    font-weight: 500;
+    color: #64748B;
+}
+
+.warning-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0F172A;
+    margin-bottom: 4px;
+    line-height: 1.4;
+}
+
+.warning-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-top: 4px;
+}
+
+.detail-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #475569;
+}
+
+.detail-row svg {
+    flex-shrink: 0;
+    color: #94A3B8;
+}
+
+/* Warning Actions */
 .warning-actions {
     display: flex;
-    gap: 8px;
-    padding-top: 12px;
-    border-top: 1px solid var(--border-color);
+    gap: 12px;
+    padding-top: 16px;
+    border-top: 1px solid #E2E8F0;
+    margin-top: 16px;
 }
 
-.btn-dismiss {
+.btn-view-details {
     padding: 8px 16px;
-    border: 1px solid var(--border-color);
-    background: transparent;
-    border-radius: 6px;
-    font-size: 13px;
-    color: var(--text-secondary);
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-.btn-dismiss:hover {
-    background: var(--background-color);
-    color: var(--text-primary);
-}
-
-.btn-view {
-    padding: 8px 16px;
+    background: #F1F5F9;
     border: none;
-    background: var(--primary-color);
-    border-radius: 6px;
-    font-size: 13px;
-    color: white;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #0F172A;
     cursor: pointer;
-    transition: var(--transition);
+    transition: background 0.2s;
 }
 
-.btn-view:hover {
-    background: var(--primary-dark);
+.btn-view-details:hover {
+    background: #E2E8F0;
 }
 
+.btn-take-action {
+    padding: 8px 16px;
+    background: #1BA73E;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #0F172A;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-take-action:hover {
+    background: #16A34A;
+    color: #FFFFFF;
+}
+
+/* Bottom Action */
 .bottom-action {
     display: flex;
     justify-content: center;
     padding: 24px 0;
-    border-top: 1px solid var(--border-color);
+    border-top: 1px solid #E2E8F0;
+    margin-top: 0;
 }
 
-.bottom-action .btn {
+.btn-archive {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     padding: 12px 32px;
+    background: #F1F5F9;
+    border: none;
     border-radius: 12px;
+    font-size: 14px;
     font-weight: 700;
+    color: #0F172A;
+    cursor: pointer;
+    transition: background 0.2s;
 }
 
+.btn-archive:hover {
+    background: #E2E8F0;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-    .warnings-page {
+    .main-content {
         padding: 16px;
     }
-    
+
     .summary-section {
         grid-template-columns: 1fr;
     }
-    
+
     .warnings-grid {
         grid-template-columns: 1fr;
     }

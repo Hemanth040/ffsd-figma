@@ -7,6 +7,26 @@
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     background: #F6F8F6;
+    position: relative;
+}
+
+.back-link {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #15803D;
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: none;
+    z-index: 10;
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: #166534;
 }
 
 .getting-started-page {

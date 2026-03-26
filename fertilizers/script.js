@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const backButton = document.querySelector('.back-button');
     if (backButton) {
         backButton.addEventListener('click', function() {
-            window.history.back();
+            window.location.href = '../farmer-dashboard/index.html';
         });
     }
 });

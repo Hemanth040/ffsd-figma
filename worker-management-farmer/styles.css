@@ -155,6 +155,34 @@ body {
     color: #0F172A;
 }
 
+.stat-value-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.stat-new-badge {
+    font-size: 11px;
+    font-weight: 500;
+    color: #16A34A;
+    background: #F0FDF4;
+    padding: 2px 8px;
+    border-radius: 9999px;
+}
+
+.stat-scheduled-badge {
+    font-size: 11px;
+    font-weight: 500;
+    color: #B45309;
+    background: #FFF7ED;
+    padding: 2px 8px;
+    border-radius: 9999px;
+}
+
+.attendance-green {
+    color: #16A34A;
+}
+
 /* Attendance */
 .attendance-row {
     display: flex;
@@ -269,7 +297,15 @@ body {
 .worker-info {
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 4px;
+    flex: 1;
+}
+
+.worker-name-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
 }
 
 .worker-name {
@@ -281,6 +317,11 @@ body {
 .worker-role {
     font-size: 14px;
     color: #64748B;
+}
+
+.worker-phone {
+    font-size: 13px;
+    color: #94A3B8;
 }
 
 .worker-status {

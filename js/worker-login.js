@@ -108,9 +108,9 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
             
             setTimeout(() => {
                 if (result.worker.role === 'Supervisor') {
-                    window.location.href = 'worker-attendance.html';
+                    window.location.href = '../supervisor-dashboard/index.html';
                 } else {
-                    window.location.href = 'worker-attendance.html';
+                    window.location.href = '../worker-dashboard/index.html';
                 }
             }, 1500);
         } else {

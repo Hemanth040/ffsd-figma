@@ -1,35 +1,23 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const backBtn = document.getElementById('backBtn');
     const archiveBtn = document.getElementById('archiveBtn');
-    const dismissBtns = document.querySelectorAll('.btn-dismiss');
-    const viewBtns = document.querySelectorAll('.btn-view');
-
-    if (backBtn) {
-        backBtn.addEventListener('click', function() {
-            window.history.back();
-        });
-    }
+    const viewDetailsBtns = document.querySelectorAll('.btn-view-details');
+    const takeActionBtns = document.querySelectorAll('.btn-take-action');
 
     if (archiveBtn) {
         archiveBtn.addEventListener('click', function() {
-            alert('Archived alerts would be moved to archive');
+            alert('Cleared alerts have been archived.');
         });
     }
 
-    dismissBtns.forEach(btn => {
+    viewDetailsBtns.forEach(btn => {
         btn.addEventListener('click', function() {
-            const card = this.closest('.warning-card');
-            card.style.opacity = '0';
-            card.style.transform = 'scale(0.95)';
-            setTimeout(() => {
-                card.remove();
-            }, 300);
+            console.log('View details clicked');
         });
     });
 
-    viewBtns.forEach(btn => {
+    takeActionBtns.forEach(btn => {
         btn.addEventListener('click', function() {
-            console.log('View details clicked');
+            console.log('Take action clicked');
         });
     });
 });

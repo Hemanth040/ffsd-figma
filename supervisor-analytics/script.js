@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const backBtn = document.querySelector('.back-btn');
     if (backBtn) {
         backBtn.addEventListener('click', function() {
-            window.history.back();
+            window.location.href = '../supervisor-dashboard/index.html';
         });
     }
 });

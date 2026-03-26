@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
             } else if (title === 'Notifications') {
                 alert('Notifications feature coming soon');
             } else if (title === 'Settings') {
-                alert('Settings feature coming soon');
+                window.location.href = '../settings-supervisor/index.html';
             }
         });
     });
@@ -46,6 +46,14 @@ document.addEventListener('DOMContentLoaded', function() {
         item.addEventListener('click', function() {
             const taskName = this.querySelector('h4').textContent;
             console.log('Todo clicked:', taskName);
+        });
+    });
+
+    // Analytics link if present
+    const analyticsLinks = document.querySelectorAll('[data-link="analytics"], .analytics-btn');
+    analyticsLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            window.location.href = '../supervisor-analytics/index.html';
         });
     });
 });

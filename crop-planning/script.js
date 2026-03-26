@@ -1,16 +1,23 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const addCropBtn = document.getElementById('addCropBtn');
+    const addCropBtn = document.querySelector('.add-crop-btn');
     
     if (addCropBtn) {
         addCropBtn.addEventListener('click', function() {
-            alert('Add New Crop modal would open here');
+            window.location.href = '../plan-new-crop/index.html';
         });
     }
 
-    const cropCards = document.querySelectorAll('.crop-card');
-    cropCards.forEach(card => {
-        card.addEventListener('click', function() {
-            console.log('Crop card clicked');
+    const viewDetailsBtns = document.querySelectorAll('.btn-outline');
+    viewDetailsBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            window.location.href = '../wheat-crop-activity/index.html';
+        });
+    });
+
+    const manageBtns = document.querySelectorAll('.btn-primary');
+    manageBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            window.location.href = '../modify-crop-timeline/index.html';
         });
     });
 });

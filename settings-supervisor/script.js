@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (cancelBtn) {
         cancelBtn.addEventListener('click', function() {
-            window.history.back();
+            window.location.href = '../supervisor-dashboard/index.html';
         });
     }
 

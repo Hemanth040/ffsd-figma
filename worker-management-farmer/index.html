@@ -47,10 +47,13 @@
                 <div class="stat-card">
                     <div class="stat-content">
                         <div class="stat-label-row">
-                            <span class="stat-label">Active</span>
+                            <span class="stat-label">Active Today</span>
                             <span class="stat-dot active"></span>
                         </div>
-                        <span class="stat-value">4</span>
+                        <div class="stat-value-row">
+                            <span class="stat-value">4</span>
+                            <span class="stat-new-badge">+1 new</span>
+                        </div>
                     </div>
                 </div>
                 <div class="stat-card">
@@ -59,16 +62,19 @@
                             <span class="stat-label">On Leave</span>
                             <span class="stat-dot leave"></span>
                         </div>
-                        <span class="stat-value">1</span>
+                        <div class="stat-value-row">
+                            <span class="stat-value">1</span>
+                            <span class="stat-scheduled-badge">Scheduled</span>
+                        </div>
                     </div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-content">
-                        <span class="stat-label">Average Attendance</span>
+                        <span class="stat-label">Avg Attendance</span>
                         <div class="attendance-row">
-                            <span class="stat-value">90%</span>
+                            <span class="stat-value">92%</span>
                             <div class="attendance-bar">
-                                <div class="attendance-fill" style="width: 90%"></div>
+                                <div class="attendance-fill" style="width: 92%"></div>
                             </div>
                         </div>
                     </div>
@@ -93,29 +99,28 @@
                 <div class="worker-card">
                     <div class="worker-header">
                         <div class="worker-avatar">
-                            <span class="initials">R</span>
+                            <span class="initials">RP</span>
                         </div>
                         <div class="worker-info">
-                            <h3 class="worker-name">Ramu</h3>
-                            <p class="worker-role">Farm Worker</p>
-                            <span class="worker-status active">Active</span>
+                            <div class="worker-name-row">
+                                <h3 class="worker-name">Ramu Pandu</h3>
+                                <span class="worker-status active">Active</span>
+                            </div>
+                            <p class="worker-role">Field Worker</p>
+                            <p class="worker-phone">+91 98765 43210</p>
                         </div>
                     </div>
                     <div class="worker-body">
                         <div class="worker-details-row">
                             <div class="detail-item">
-                                <span class="detail-label">Attendance</span>
-                                <span class="detail-value">95%</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Experience</span>
-                                <span class="detail-value">8 Years</span>
+                                <span class="detail-label">Monthly Attendance</span>
+                                <span class="detail-value attendance-green">98%</span>
                             </div>
                         </div>
                     </div>
                     <div class="worker-actions">
-                        <button class="btn btn-outline">Assign Task</button>
-                        <button class="btn btn-primary">Review Details</button>
+                        <button class="btn btn-outline" onclick="window.location.href='../assign-task/index.html'">Assign Task</button>
+                        <button class="btn btn-primary" onclick="window.location.href='../worker-details-farmer/index.html'">View Details</button>
                     </div>
                 </div>
 
@@ -123,29 +128,28 @@
                 <div class="worker-card">
                     <div class="worker-header">
                         <div class="worker-avatar">
-                            <span class="initials">L</span>
+                            <span class="initials">PS</span>
                         </div>
                         <div class="worker-info">
-                            <h3 class="worker-name">Lakshman</h3>
-                            <p class="worker-role">Supervisor</p>
-                            <span class="worker-status active">Active</span>
+                            <div class="worker-name-row">
+                                <h3 class="worker-name">Priya Singh</h3>
+                                <span class="worker-status active">Active</span>
+                            </div>
+                            <p class="worker-role">Irrigation Specialist</p>
+                            <p class="worker-phone">+91 98765 43211</p>
                         </div>
                     </div>
                     <div class="worker-body">
                         <div class="worker-details-row">
                             <div class="detail-item">
-                                <span class="detail-label">Attendance</span>
-                                <span class="detail-value">98%</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Experience</span>
-                                <span class="detail-value">12 Years</span>
+                                <span class="detail-label">Monthly Attendance</span>
+                                <span class="detail-value attendance-green">95%</span>
                             </div>
                         </div>
                     </div>
                     <div class="worker-actions">
-                        <button class="btn btn-outline">Assign Task</button>
-                        <button class="btn btn-primary">Review Details</button>
+                        <button class="btn btn-outline" onclick="window.location.href='../assign-task/index.html'">Assign Task</button>
+                        <button class="btn btn-primary" onclick="window.location.href='../worker-details-farmer/index.html'">View Details</button>
                     </div>
                 </div>
 
@@ -153,29 +157,28 @@
                 <div class="worker-card on-leave">
                     <div class="worker-header">
                         <div class="worker-avatar leave-avatar">
-                            <span class="initials">K</span>
+                            <span class="initials">AP</span>
                         </div>
                         <div class="worker-info">
-                            <h3 class="worker-name">Krishna</h3>
-                            <p class="worker-role">Farm Worker</p>
-                            <span class="worker-status on-leave">On Leave</span>
+                            <div class="worker-name-row">
+                                <h3 class="worker-name">Amit Patel</h3>
+                                <span class="worker-status on-leave">On Leave</span>
+                            </div>
+                            <p class="worker-role">Harvest Lead</p>
+                            <p class="worker-phone">+91 98765 43212</p>
                         </div>
                     </div>
                     <div class="worker-body">
                         <div class="worker-details-row">
                             <div class="detail-item">
-                                <span class="detail-label">Attendance</span>
-                                <span class="detail-value">88%</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Experience</span>
-                                <span class="detail-value">5 Years</span>
+                                <span class="detail-label">Monthly Attendance</span>
+                                <span class="detail-value attendance-green">88%</span>
                             </div>
                         </div>
                     </div>
                     <div class="worker-actions">
-                        <button class="btn btn-outline">Assign Task</button>
-                        <button class="btn btn-primary">Review Details</button>
+                        <button class="btn btn-outline" onclick="window.location.href='../assign-task/index.html'">Assign Task</button>
+                        <button class="btn btn-primary" onclick="window.location.href='../worker-details-farmer/index.html'">View Details</button>
                     </div>
                 </div>
 
@@ -183,29 +186,28 @@
                 <div class="worker-card">
                     <div class="worker-header">
                         <div class="worker-avatar">
-                            <span class="initials">S</span>
+                            <span class="initials">SD</span>
                         </div>
                         <div class="worker-info">
-                            <h3 class="worker-name">Sita</h3>
-                            <p class="worker-role">Farm Worker</p>
-                            <span class="worker-status active">Active</span>
+                            <div class="worker-name-row">
+                                <h3 class="worker-name">Sita Devi</h3>
+                                <span class="worker-status active">Active</span>
+                            </div>
+                            <p class="worker-role">Pest Control</p>
+                            <p class="worker-phone">+91 98765 43213</p>
                         </div>
                     </div>
                     <div class="worker-body">
                         <div class="worker-details-row">
                             <div class="detail-item">
-                                <span class="detail-label">Attendance</span>
-                                <span class="detail-value">92%</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Experience</span>
-                                <span class="detail-value">3 Years</span>
+                                <span class="detail-label">Monthly Attendance</span>
+                                <span class="detail-value attendance-green">92%</span>
                             </div>
                         </div>
                     </div>
                     <div class="worker-actions">
-                        <button class="btn btn-outline">Assign Task</button>
-                        <button class="btn btn-primary">Review Details</button>
+                        <button class="btn btn-outline" onclick="window.location.href='../assign-task/index.html'">Assign Task</button>
+                        <button class="btn btn-primary" onclick="window.location.href='../worker-details-farmer/index.html'">View Details</button>
                     </div>
                 </div>
 
@@ -213,29 +215,28 @@
                 <div class="worker-card">
                     <div class="worker-header">
                         <div class="worker-avatar">
-                            <span class="initials">M</span>
+                            <span class="initials">VR</span>
                         </div>
                         <div class="worker-info">
-                            <h3 class="worker-name">Madhu</h3>
-                            <p class="worker-role">Equipment Operator</p>
-                            <span class="worker-status active">Active</span>
+                            <div class="worker-name-row">
+                                <h3 class="worker-name">Vikram Roy</h3>
+                                <span class="worker-status active">Active</span>
+                            </div>
+                            <p class="worker-role">Machinery Operator</p>
+                            <p class="worker-phone">+91 98765 43214</p>
                         </div>
                     </div>
                     <div class="worker-body">
                         <div class="worker-details-row">
                             <div class="detail-item">
-                                <span class="detail-label">Attendance</span>
-                                <span class="detail-value">96%</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Experience</span>
-                                <span class="detail-value">6 Years</span>
+                                <span class="detail-label">Monthly Attendance</span>
+                                <span class="detail-value attendance-green">94%</span>
                             </div>
                         </div>
                     </div>
                     <div class="worker-actions">
-                        <button class="btn btn-outline">Assign Task</button>
-                        <button class="btn btn-primary">Review Details</button>
+                        <button class="btn btn-outline" onclick="window.location.href='../assign-task/index.html'">Assign Task</button>
+                        <button class="btn btn-primary" onclick="window.location.href='../worker-details-farmer/index.html'">View Details</button>
                     </div>
                 </div>
             </div>

@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (backBtn) {
         backBtn.addEventListener('click', () => {
-            window.history.back();
+            window.location.href = '../tasks-allotment/index.html';
         });
     }
 
@@ -31,18 +31,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (createTaskBtn) {
         createTaskBtn.addEventListener('click', () => {
-            const taskTitle = document.querySelector('input[placeholder="e.g., Plow Field A"]').value;
-            if (!taskTitle) {
+            const taskTitle = document.querySelector('input[placeholder="e.g., Plow Field A"]');
+            if (!taskTitle || !taskTitle.value) {
                 alert('Please enter a task title');
                 return;
             }
             alert('Task created successfully!');
+            window.location.href = '../tasks-allotment/index.html';
         });
     }
 
     if (cancelBtn) {
         cancelBtn.addEventListener('click', () => {
-            window.history.back();
+            window.location.href = '../tasks-allotment/index.html';
         });
     }
 });

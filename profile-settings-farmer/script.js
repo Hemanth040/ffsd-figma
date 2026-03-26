@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (backBtn) {
         backBtn.addEventListener('click', () => {
-            window.history.back();
+            window.location.href = '../farmer-dashboard/index.html';
         });
     }
 
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (cancelBtn) {
         cancelBtn.addEventListener('click', () => {
-            window.history.back();
+            window.location.href = '../farmer-dashboard/index.html';
         });
     }
 });

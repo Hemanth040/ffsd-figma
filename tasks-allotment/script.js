@@ -108,9 +108,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    document.querySelector('.back-btn').addEventListener('click', () => {
-        window.history.back();
-    });
+    const backBtn = document.querySelector('.back-btn');
+    if (backBtn) {
+        backBtn.addEventListener('click', () => {
+            window.location.href = '../farmer-dashboard/index.html';
+        });
+    }
 
     function escapeHtml(text) {
         const div = document.createElement('div');
