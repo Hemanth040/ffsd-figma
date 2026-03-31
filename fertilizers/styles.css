@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Nimbus Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-    background: linear-gradient(135deg, #F0FDF4 0%, #F0F9FF 100%);
+    background: #FFFFFF;
     min-height: 100vh;
     padding: 16px 24px;
 }
@@ -78,17 +78,17 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(229, 231, 235, 0.5);
+    background: #F5F3FF;
     border-radius: 16px;
     padding: 6px;
     gap: 4px;
 }
 
 .tab-button {
-    padding: 10px 16px;
+    padding: 10px 20px;
     font-size: 14px;
     font-weight: 500;
-    color: #4B5563;
+    color: #6B7280;
     background: transparent;
     border: none;
     border-radius: 12px;
@@ -97,14 +97,15 @@ body {
 }
 
 .tab-button:hover {
-    color: #111827;
+    color: #7C3AED;
+    background: rgba(124, 58, 237, 0.08);
 }
 
 .tab-button.active {
-    background: #FFFFFF;
-    color: #111827;
+    background: #7C3AED;
+    color: #FFFFFF;
     font-weight: 600;
-    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 2px 8px rgba(124, 58, 237, 0.3);
 }
 
 .search-bar {
@@ -143,7 +144,7 @@ body {
 }
 
 .search-input:focus {
-    border-color: #15803D;
+    border-color: #7C3AED;
 }
 
 .content-section {
@@ -209,6 +210,48 @@ body {
 }
 
 .filter-button:hover {
+    border-color: #7C3AED;
+    background: #F5F3FF;
+    color: #7C3AED;
+}
+
+.filter-button.active {
+    background: #7C3AED;
+    color: #FFFFFF;
+    border-color: #7C3AED;
+}
+
+.filter-button.nitrogen.active {
+    background: #7C3AED;
+    color: #FFFFFF;
+}
+
+.filter-button.phosphorus.active {
+    background: #7C3AED;
+    color: #FFFFFF;
+}
+
+.filter-button.potassium.active {
+    background: #7C3AED;
+    color: #FFFFFF;
+}
+
+.filter-button.complex.active {
+    background: #7C3AED;
+    color: #FFFFFF;
+}
+
+.filter-button.micronutrient.active {
+    background: #7C3AED;
+    color: #FFFFFF;
+}
+
+.filter-button.organic.active {
+    background: #7C3AED;
+    color: #FFFFFF;
+}
+
+.filter-button:hover {
     border-color: #D1D5DB;
     background: #F9FAFB;
 }
@@ -219,33 +262,33 @@ body {
 }
 
 .filter-button.nitrogen.active {
-    background: #86EFAC;
-    color: #14532D;
+    background: #EDE9FE;
+    color: #5B21B6;
 }
 
 .filter-button.phosphorus.active {
-    background: #FDE68A;
-    color: #78350F;
+    background: #EDE9FE;
+    color: #5B21B6;
 }
 
 .filter-button.potassium.active {
-    background: #FECACA;
-    color: #7F1D1D;
+    background: #EDE9FE;
+    color: #5B21B6;
 }
 
 .filter-button.complex.active {
-    background: #C4B5FD;
+    background: #EDE9FE;
     color: #5B21B6;
 }
 
 .filter-button.micronutrient.active {
-    background: #7DD3FC;
-    color: #0C4A6E;
+    background: #EDE9FE;
+    color: #5B21B6;
 }
 
 .filter-button.organic.active {
-    background: #BBF7D0;
-    color: #166534;
+    background: #EDE9FE;
+    color: #5B21B6;
 }
 
 .fertilizer-categories {
@@ -269,15 +312,15 @@ body {
 }
 
 .category-header.nitrogen {
-    background: #DCFCE7;
+    background: #EDE9FE;
 }
 
 .category-header.phosphorus {
-    background: #FEF9C3;
+    background: #EDE9FE;
 }
 
 .category-header.potassium {
-    background: #FEE2E2;
+    background: #EDE9FE;
 }
 
 .category-header.complex {
@@ -285,11 +328,11 @@ body {
 }
 
 .category-header.micronutrient {
-    background: #E0F2FE;
+    background: #EDE9FE;
 }
 
 .category-header.organic {
-    background: #D1FAE5;
+    background: #EDE9FE;
 }
 
 .category-icon {
@@ -347,18 +390,18 @@ body {
 }
 
 .nitrogen-tag {
-    background: #DCFCE7;
-    color: #14532D;
+    background: #EDE9FE;
+    color: #5B21B6;
 }
 
 .phosphorus-tag {
-    background: #FEF9C3;
-    color: #78350F;
+    background: #EDE9FE;
+    color: #5B21B6;
 }
 
 .potassium-tag {
-    background: #FEE2E2;
-    color: #7F1D1D;
+    background: #EDE9FE;
+    color: #5B21B6;
 }
 
 .complex-tag {
@@ -367,13 +410,13 @@ body {
 }
 
 .micronutrient-tag {
-    background: #E0F2FE;
-    color: #0C4A6E;
+    background: #EDE9FE;
+    color: #5B21B6;
 }
 
 .organic-tag {
-    background: #D1FAE5;
-    color: #166534;
+    background: #EDE9FE;
+    color: #5B21B6;
 }
 
 .fertilizer-formula {
@@ -423,17 +466,17 @@ body {
     padding: 8px 16px;
     font-size: 14px;
     font-weight: 600;
-    color: #374151;
+    color: #7C3AED;
     background: #FFFFFF;
-    border: 1px solid #E5E7EB;
+    border: 1px solid #7C3AED;
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.2s;
 }
 
 .guide-button:hover {
-    background: #F9FAFB;
-    border-color: #D1D5DB;
+    background: #7C3AED;
+    color: #FFFFFF;
 }
 
 @media (max-width: 768px) {

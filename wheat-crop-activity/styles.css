@@ -1,107 +1,197 @@
-.activity-container {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.crop-info .crop-header {
+body {
+    font-family: Inter, sans-serif;
+    background: #F3F4F6;
+}
+
+/* Layout */
+.main-content {
+    max-width: 900px;
+    margin: auto;
+    padding: 24px;
+}
+
+/* Header */
+.page-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
 }
 
-.crop-info h2 {
+.page-header h1 {
     font-size: 20px;
-    font-weight: 600;
+}
+
+.page-header p {
+    font-size: 14px;
+    color: #6B7280;
+}
+
+.btn {
+    background: #16A34A;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Cards */
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #E5E7EB;
+}
+
+/* Crop Info */
+.crop-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.badge {
+    background: #DCFCE7;
+    color: #15803D;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
 }
 
 .crop-details {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
 }
 
-.detail-item {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+.label {
+    font-size: 12px;
+    color: #6B7280;
 }
 
-.detail-item .label {
-    font-size: 13px;
-    color: var(--text-secondary);
-}
-
-.detail-item .value {
-    font-size: 16px;
+.value {
     font-weight: 600;
-    color: var(--text-primary);
 }
 
-.timeline {
-    padding: 24px;
-}
-
+/* Timeline */
 .timeline h2 {
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
+    font-size: 16px;
 }
 
 .timeline-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
     position: relative;
-    padding-left: 24px;
+    padding-left: 30px;
 }
 
 .timeline-list::before {
-    content: '';
+    content: "";
     position: absolute;
-    left: 6px;
-    top: 8px;
-    bottom: 8px;
+    left: 10px;
+    top: 0;
+    bottom: 0;
     width: 2px;
-    background: var(--border-color);
+    background: #E5E7EB;
 }
 
 .timeline-item {
     position: relative;
+    margin-bottom: 20px;
 }
 
 .timeline-dot {
     position: absolute;
-    left: -24px;
-    top: 4px;
-    width: 14px;
-    height: 14px;
+    left: -20px;
+    top: 10px;
+    width: 12px;
+    height: 12px;
+    background: #374151;
     border-radius: 50%;
-    background: var(--primary-color);
-    border: 3px solid var(--card-background);
+    border: 3px solid white;
 }
 
-.timeline-content h4 {
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--text-primary);
-    margin-bottom: 4px;
+/* Timeline Card */
+.timeline-card {
+    background: #F9FAFB;
+    border: 1px solid #E5E7EB;
+    border-radius: 10px;
+    padding: 14px;
 }
 
-.timeline-content p {
-    font-size: 13px;
-    color: var(--text-secondary);
-    margin-bottom: 4px;
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
 }
 
-.timeline-date {
+.timeline-header h4 {
+    font-size: 14px;
+}
+
+/* Status */
+.status {
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: 6px;
+}
+
+.pending {
+    background: #E5E7EB;
+    color: #6B7280;
+}
+
+.completed {
+    background: #DCFCE7;
+    color: #15803D;
+}
+
+/* Text */
+.timeline-meta {
     font-size: 12px;
-    color: var(--text-secondary);
+    color: #6B7280;
+    margin-bottom: 6px;
 }
 
+.timeline-desc {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+/* Inner Box */
+.timeline-box {
+    background: white;
+    border: 1px solid #E5E7EB;
+    padding: 8px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+}
+
+.timeline-box span {
+    font-size: 12px;
+    color: #6B7280;
+}
+
+.timeline-box p {
+    font-size: 13px;
+}
+
+/* Priority */
+.priority {
+    font-size: 12px;
+    color: #16A34A;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
     .crop-details {
         grid-template-columns: 1fr;
+        gap: 10px;
     }
 }

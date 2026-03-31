@@ -13,9 +13,7 @@
         <header class="page-header">
             <div class="header-left">
                 <button class="back-btn" onclick="window.location.href='../farmer-dashboard/index.html'">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M19 12H5M12 19l-7-7 7-7"/>
-                    </svg>
+                    <img src = "left-arrow.png">
                 </button>
                 <div class="header-title-group">
                     <h1 class="page-title">Crop Planning</h1>
@@ -23,41 +21,28 @@
                 </div>
             </div>
             <button class="add-crop-btn">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <line x1="12" y1="5" x2="12" y2="19"></line>
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                </svg>
+                <img src = "add.png">
                 Add Crop
             </button>
         </header>
 
-        <!-- Main Content -->
         <main class="main-content">
-            <!-- Stats Cards Row -->
             <div class="stats-row">
                 <div class="stat-card">
-                    <div class="stat-content">
-                        <span class="stat-label">Total Crops</span>
-                        <span class="stat-value">4</span>
-                    </div>
+                        <p class="stat-label">Total Crops</p>
+                        <h1 class="stat-value">4</h1>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-content">
-                        <span class="stat-label">Growing</span>
-                        <span class="stat-value">2</span>
-                    </div>
+                        <p class="stat-label">Growing</p>
+                        <h1 class="stat-value">2</h1>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-content">
-                        <span class="stat-label">Ready to Harvest</span>
-                        <span class="stat-value">1</span>
-                    </div>
+                        <p class="stat-label">Ready to Harvest</p>
+                        <h1 class="stat-value">1</h1>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-content">
-                        <span class="stat-label">Total Area</span>
-                        <span class="stat-value">50 acres</span>
-                    </div>
+                        <p class="stat-label">Total Area</p>
+                        <h1 class="stat-value">50 acres</h1>
                 </div>
             </div>
 
@@ -67,22 +52,11 @@
                 <div class="crop-card">
                     <div class="crop-header">
                         <div class="crop-title-row">
-                            <div class="crop-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                    <path d="M12 2L12 22M12 2C12 2 8 6 8 12C8 18 12 22 12 22M12 2C12 2 16 6 16 12C16 18 12 22 12 22" stroke="#15803D" stroke-width="2" stroke-linecap="round"/>
-                                    <path d="M8 8L16 8M8 12L16 12M8 16L16 16" stroke="#15803D" stroke-width="2"/>
-                                </svg>
-                            </div>
-                            <div class="crop-info">
+                            <img src = "wheat.png" width="32" height="32">
                                 <h3 class="crop-name">Wheat</h3>
                                 <span class="crop-area">
-                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                                        <circle cx="12" cy="10" r="3"/>
-                                    </svg>
                                     15 acres
                                 </span>
-                            </div>
                         </div>
                         <span class="badge badge-growing">growing</span>
                     </div>
@@ -91,24 +65,12 @@
                             <div class="date-item">
                                 <span class="date-label">Sowing Date</span>
                                 <span class="date-value">
-                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                                        <line x1="16" y1="2" x2="16" y2="6"/>
-                                        <line x1="8" y1="2" x2="8" y2="6"/>
-                                        <line x1="3" y1="10" x2="21" y2="10"/>
-                                    </svg>
                                     2025-11-15
                                 </span>
                             </div>
                             <div class="date-item">
                                 <span class="date-label">Harvest Date</span>
                                 <span class="date-value">
-                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                                        <line x1="16" y1="2" x2="16" y2="6"/>
-                                        <line x1="8" y1="2" x2="8" y2="6"/>
-                                        <line x1="3" y1="10" x2="21" y2="10"/>
-                                    </svg>
                                     2026-04-20
                                 </span>
                             </div>
@@ -133,23 +95,11 @@
                 <div class="crop-card">
                     <div class="crop-header">
                         <div class="crop-title-row">
-                            <div class="crop-icon rice-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                    <ellipse cx="12" cy="14" rx="8" ry="6" stroke="#6B7280" stroke-width="2"/>
-                                    <path d="M8 14V10C8 8 10 6 12 6C14 6 16 8 16 10V14" stroke="#6B7280" stroke-width="2"/>
-                                    <path d="M12 6V4" stroke="#6B7280" stroke-width="2"/>
-                                </svg>
-                            </div>
-                            <div class="crop-info">
+                            <img src = "rice.png" width="32" height="32">
                                 <h3 class="crop-name">Rice</h3>
                                 <span class="crop-area">
-                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                                        <circle cx="12" cy="10" r="3"/>
-                                    </svg>
                                     20 acres
                                 </span>
-                            </div>
                         </div>
                         <span class="badge badge-harvested">harvested</span>
                     </div>
@@ -158,24 +108,12 @@
                             <div class="date-item">
                                 <span class="date-label">Sowing Date</span>
                                 <span class="date-value">
-                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                                        <line x1="16" y1="2" x2="16" y2="6"/>
-                                        <line x1="8" y1="2" x2="8" y2="6"/>
-                                        <line x1="3" y1="10" x2="21" y2="10"/>
-                                    </svg>
                                     2025-06-10
                                 </span>
                             </div>
                             <div class="date-item">
                                 <span class="date-label">Harvest Date</span>
                                 <span class="date-value">
-                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                                        <line x1="16" y1="2" x2="16" y2="6"/>
-                                        <line x1="8" y1="2" x2="8" y2="6"/>
-                                        <line x1="3" y1="10" x2="21" y2="10"/>
-                                    </svg>
                                     2025-10-15
                                 </span>
                             </div>
@@ -200,25 +138,11 @@
                 <div class="crop-card">
                     <div class="crop-header">
                         <div class="crop-title-row">
-                            <div class="crop-icon corn-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                    <path d="M8 22L16 22" stroke="#D97706" stroke-width="2"/>
-                                    <path d="M9 2L15 2" stroke="#D97706" stroke-width="2"/>
-                                    <ellipse cx="12" cy="12" rx="3" ry="8" stroke="#D97706" stroke-width="2"/>
-                                    <path d="M9 12L15 12" stroke="#92400E" stroke-width="2"/>
-                                    <path d="M9 16L15 16" stroke="#92400E" stroke-width="2"/>
-                                </svg>
-                            </div>
-                            <div class="crop-info">
+                            <img src = "corn.png" width = "32" height = "32">
                                 <h3 class="crop-name">Corn</h3>
                                 <span class="crop-area">
-                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                                        <circle cx="12" cy="10" r="3"/>
-                                    </svg>
                                     10 acres
                                 </span>
-                            </div>
                         </div>
                         <span class="badge badge-growing">growing</span>
                     </div>
@@ -227,24 +151,12 @@
                             <div class="date-item">
                                 <span class="date-label">Sowing Date</span>
                                 <span class="date-value">
-                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                                        <line x1="16" y1="2" x2="16" y2="6"/>
-                                        <line x1="8" y1="2" x2="8" y2="6"/>
-                                        <line x1="3" y1="10" x2="21" y2="10"/>
-                                    </svg>
                                     2026-02-01
                                 </span>
                             </div>
                             <div class="date-item">
                                 <span class="date-label">Harvest Date</span>
                                 <span class="date-value">
-                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                                        <line x1="16" y1="2" x2="16" y2="6"/>
-                                        <line x1="8" y1="2" x2="8" y2="6"/>
-                                        <line x1="3" y1="10" x2="21" y2="10"/>
-                                    </svg>
                                     2026-06-15
                                 </span>
                             </div>
@@ -269,23 +181,11 @@
                 <div class="crop-card">
                     <div class="crop-header">
                         <div class="crop-title-row">
-                            <div class="crop-icon tomato-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                    <circle cx="12" cy="14" r="7" fill="#EF4444"/>
-                                    <path d="M12 7V5M12 7C10 7 9 8 9 9M12 7C14 7 15 8 15 9" stroke="#15803D" stroke-width="2"/>
-                                    <path d="M8 5L10 3M16 5L14 3" stroke="#15803D" stroke-width="2"/>
-                                </svg>
-                            </div>
-                            <div class="crop-info">
+                            <img src = "tomato.png" height = "32" width = "32 ">
                                 <h3 class="crop-name">Tomatoes</h3>
                                 <span class="crop-area">
-                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                                        <circle cx="12" cy="10" r="3"/>
-                                    </svg>
                                     5 acres
                                 </span>
-                            </div>
                         </div>
                         <span class="badge badge-ready">ready</span>
                     </div>
@@ -294,24 +194,12 @@
                             <div class="date-item">
                                 <span class="date-label">Sowing Date</span>
                                 <span class="date-value">
-                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                                        <line x1="16" y1="2" x2="16" y2="6"/>
-                                        <line x1="8" y1="2" x2="8" y2="6"/>
-                                        <line x1="3" y1="10" x2="21" y2="10"/>
-                                    </svg>
                                     2025-12-01
                                 </span>
                             </div>
                             <div class="date-item">
                                 <span class="date-label">Harvest Date</span>
                                 <span class="date-value">
-                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                                        <line x1="16" y1="2" x2="16" y2="6"/>
-                                        <line x1="8" y1="2" x2="8" y2="6"/>
-                                        <line x1="3" y1="10" x2="21" y2="10"/>
-                                    </svg>
                                     2026-03-15
                                 </span>
                             </div>
@@ -341,11 +229,7 @@
                 <div class="schedule-list">
                     <div class="schedule-item schedule-blue">
                         <div class="schedule-info">
-                            <div class="schedule-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                    <path d="M12 2L12 22M12 2C12 2 8 6 8 12C8 18 12 22 12 22M12 2C12 2 16 6 16 12C16 18 12 22 12 22" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
-                                </svg>
-                            </div>
+                            <img src = "wheat.png" height = "32" width = "32">
                             <div class="schedule-details">
                                 <span class="schedule-name">Wheat (Rabi)</span>
                                 <span class="schedule-date">Planned: Nov 2026</span>
@@ -355,12 +239,7 @@
                     </div>
                     <div class="schedule-item schedule-green">
                         <div class="schedule-info">
-                            <div class="schedule-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                    <ellipse cx="12" cy="14" rx="8" ry="6" stroke="#15803D" stroke-width="2"/>
-                                    <path d="M8 14V10C8 8 10 6 12 6C14 6 16 8 16 10V14" stroke="#15803D" stroke-width="2"/>
-                                </svg>
-                            </div>
+                            <img src = "rice.png" width = "32" height = "32">
                             <div class="schedule-details">
                                 <span class="schedule-name">Rice (Kharif)</span>
                                 <span class="schedule-date">Planned: June 2026</span>

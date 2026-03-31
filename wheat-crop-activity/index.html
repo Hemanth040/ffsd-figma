@@ -4,78 +4,129 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wheat Crop Activity - FarmOps</title>
-    <link rel="stylesheet" href="../common/global.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="navbar-container" data-navbar data-user-name="John Farmer" data-user-initial="J" data-active-page=""></div>
-    
-    <main class="main-content">
-        <div class="page-header">
-            <div class="page-header-content">
-                <div>
-                    <h1 class="page-title">Wheat Crop Activity</h1>
-                    <p class="page-subtitle">Track activities and progress of wheat crop</p>
-                </div>
-                <button class="btn btn-primary">Add Activity</button>
-            </div>
+
+<main class="main-content">
+
+    <!-- Header -->
+    <div class="page-header">
+        <div>
+            <h1>Wheat Crop Activity</h1>
+            <p>Track activities and progress of wheat crop</p>
+        </div>
+    </div>
+
+    <!-- Crop Info -->
+    <div class="card crop-info">
+        <div class="crop-header">
+            <h2>Wheat - Rabi 2025-26</h2>
+            <span class="badge">Active</span>
         </div>
 
-        <div class="activity-container">
-            <div class="crop-info card">
-                <div class="crop-header">
-                    <h2>Wheat - Rabi 2025-26</h2>
-                    <span class="badge badge-success">Active</span>
-                </div>
-                <div class="crop-details">
-                    <div class="detail-item">
-                        <span class="label">Planted Area</span>
-                        <span class="value">5 acres</span>
-                    </div>
-                    <div class="detail-item">
-                        <span class="label">Planted Date</span>
-                        <span class="value">Nov 15, 2025</span>
-                    </div>
-                    <div class="detail-item">
-                        <span class="label">Expected Harvest</span>
-                        <span class="value">Apr 20, 2026</span>
-                    </div>
-                </div>
+        <div class="crop-details">
+            <div>
+                <span class="label">Planted Area</span>
+                <span class="value">5 acres</span>
             </div>
-
-            <div class="timeline card">
-                <h2>Activity Timeline</h2>
-                <div class="timeline-list">
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h4>Fertilizer Applied</h4>
-                            <p>Urea fertilizer applied to entire field</p>
-                            <span class="timeline-date">Mar 20, 2026</span>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h4>Irrigation</h4>
-                            <p>Watered the field</p>
-                            <span class="timeline-date">Mar 15, 2026</span>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h4>Pest Inspection</h4>
-                            <p>No issues found</p>
-                            <span class="timeline-date">Mar 10, 2026</span>
-                        </div>
-                    </div>
-                </div>
+            <div>
+                <span class="label">Planted Date</span>
+                <span class="value">Nov 15, 2025</span>
+            </div>
+            <div>
+                <span class="label">Expected Harvest</span>
+                <span class="value">Apr 20, 2026</span>
             </div>
         </div>
-    </main>
+    </div>
 
-    <script src="../common/navbar.js"></script>
-    <script src="script.js"></script>
+    <!-- Timeline -->
+    <div class="card timeline">
+        <h2>Wheat Cultivation Process</h2>
+
+        <div class="timeline-list">
+
+            <!-- ITEM -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+                    <div class="timeline-header">
+                        <h4>Land Preparation & Plowing</h4>
+                        <span class="status pending">Pending</span>
+                    </div>
+
+                    <p class="timeline-meta">Start: Oct 15 • Duration: 7 days</p>
+
+                    <p class="timeline-desc">
+                        Deep plowing, leveling, removing weeds.
+                    </p>
+
+                    <div class="timeline-box">
+                        <span>Equipment</span>
+                        <p>Tractor, Plough</p>
+                    </div>
+
+                    <span class="priority">● Priority: High</span>
+                </div>
+            </div>
+
+            <!-- ITEM -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+                    <div class="timeline-header">
+                        <h4>Seed Treatment</h4>
+                        <span class="status completed">Done</span>
+                    </div>
+
+                    <p class="timeline-meta">Duration: 1 day</p>
+
+                    <p class="timeline-desc">
+                        Treat seeds with fungicide before sowing.
+                    </p>
+
+                    <div class="timeline-box">
+                        <span>Inputs</span>
+                        <p>Fungicide, Seeds</p>
+                    </div>
+
+                    <span class="priority">● Priority: Medium</span>
+                </div>
+            </div>
+
+            <!-- ITEM -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+                    <div class="timeline-header">
+                        <h4>Sowing</h4>
+                        <span class="status pending">Pending</span>
+                    </div>
+
+                    <p class="timeline-meta">Duration: 3 days</p>
+
+                    <p class="timeline-desc">
+                        Sow seeds at proper depth and spacing.
+                    </p>
+
+                    <div class="timeline-box">
+                        <span>Equipment</span>
+                        <p>Seed Drill</p>
+                    </div>
+
+                    <span class="priority">● Priority: High</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</main>
+
+<script src="script.js"></script>
 </body>
 </html>
