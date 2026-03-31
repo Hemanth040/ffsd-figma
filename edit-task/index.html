@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Task - Farm Operations</title>
+    <link rel="stylesheet" href="../global/global.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="create-task-container">
+        <!-- Header -->
+        <header class="page-header">
+            <div class="header-left">
+                <button class="back-btn" onclick="window.location.href='../tasks-allotment/index.html'">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                </button>
+                <div class="header-title">
+                    <h1>Edit Task</h1>
+                    <p>Update task details and assign workers</p>
+                </div>
+            </div>
+            <div class="header-actions">
+                <button type="button" class="cancel-btn" onclick="window.location.href='../tasks-allotment/index.html'">Cancel</button>
+                <button type="button" class="submit-btn" onclick="saveTask()">Save Changes</button>
+            </div>
+        </header>
+
+        <!-- Main Content - 2 Column Layout -->
+        <form id="editTaskForm" class="modal-body">
+            <!-- LEFT SIDE - Form -->
+            <div class="form-left">
+                <!-- Basic Information Card -->
+                <div class="form-card">
+                    <h3 class="card-title">Basic Information</h3>
+                    <div class="form-grid">
+                        <div class="form-group full-width">
+                            <label for="taskTitle">Task Title *</label>
+                            <input type="text" id="taskTitle" class="form-input" value="Plow Field A - Wheat Preparation" required>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="shortDesc">Short Description *</label>
+                            <input type="text" id="shortDesc" class="form-input" value="Prepare field for wheat sowing using disc plough" required>
+                        </div>
+                        <div class="form-group half-width">
+                            <label for="status">Status</label>
+                            <div class="select-wrapper">
+                                <select id="status" class="form-select">
+                                    <option value="pending">Pending</option>
+                                    <option value="in-progress" selected>In Progress</option>
+                                    <option value="completed">Completed</option>
+                                </select>
+                                <svg class="select-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M6 9l6 6 6-6"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="form-group half-width">
+                            <label for="priority">Priority</label>
+                            <div class="select-wrapper">
+                                <select id="priority" class="form-select">
+                                    <option value="low">Low</option>
+                                    <option value="medium">Medium</option>
+                                    <option value="high" selected>High</option>
+                                </select>
+                                <svg class="select-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M6 9l6 6 6-6"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Task Details Card -->
+                <div class="form-card">
+                    <h3 class="card-title">Task Details</h3>
+                    <div class="form-grid">
+                        <div class="form-group full-width">
+                            <label for="fieldLocation">Field Location</label>
+                            <input type="text" id="fieldLocation" class="form-input" value="Field A, Section 2">
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="detailedDesc">Detailed Description</label>
+                            <textarea id="detailedDesc" class="form-textarea">Prepare the field using disc plough for wheat sowing. Ensure proper levelling and remove any debris.</textarea>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="equipment">Equipment Required</label>
+                            <div class="equipment-tags">
+                                <span class="equipment-tag">Tractor <span class="tag-remove">×</span></span>
+                                <span class="equipment-tag">Plough <span class="tag-remove">×</span></span>
+                                <span class="equipment-tag">Harrow <span class="tag-remove">×</span></span>
+                            </div>
+                            <div class="input-with-button">
+                                <input type="text" id="equipment" class="form-input" placeholder="Add equipment">
+                                <button type="button" class="add-btn">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Details Card -->
+                <div class="form-card">
+                    <h3 class="card-title">Additional Details</h3>
+                    <div class="form-grid two-cols">
+                        <div class="form-group">
+                            <label for="distance">Distance (km)</label>
+                            <input type="number" id="distance" class="form-input" value="5">
+                        </div>
+                        <div class="form-group">
+                            <label for="deadlineTime">Deadline Time</label>
+                            <input type="time" id="deadlineTime" class="form-input" value="18:00">
+                        </div>
+                        <div class="form-group">
+                            <label for="duration">Expected Duration (hours)</label>
+                            <input type="number" id="duration" class="form-input" value="8">
+                        </div>
+                        <div class="form-group">
+                            <label for="fieldSize">Field Size (acres)</label>
+                            <input type="number" id="fieldSize" class="form-input" value="10">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT SIDE - Panels -->
+            <div class="form-right">
+                <!-- Assigned Workers Card -->
+                <div class="panel-card">
+                    <h3 class="panel-title">Assigned Workers</h3>
+                    <div class="workers-list">
+                        <div class="worker-item">
+                            <div class="worker-avatar">RP</div>
+                            <div class="worker-info">
+                                <span class="worker-name">Ramu Pandu</span>
+                                <span class="worker-role">Field Worker</span>
+                            </div>
+                            <button class="remove-btn">×</button>
+                        </div>
+                        <div class="worker-item">
+                            <div class="worker-avatar">SP</div>
+                            <div class="worker-info">
+                                <span class="worker-name">Suraj Patel</span>
+                                <span class="worker-role">Equipment Operator</span>
+                            </div>
+                            <button class="remove-btn">×</button>
+                        </div>
+                        <div class="worker-item">
+                            <div class="worker-avatar">AG</div>
+                            <div class="worker-info">
+                                <span class="worker-name">Amit Gupta</span>
+                                <span class="worker-role">Field Worker</span>
+                            </div>
+                            <button class="remove-btn">×</button>
+                        </div>
+                    </div>
+                    <button class="assign-workers-btn">+ Assign More Workers</button>
+                </div>
+
+                <!-- Worker Requirements Card -->
+                <div class="panel-card">
+                    <h3 class="panel-title">Worker Requirements</h3>
+                    <div class="form-stack">
+                        <div class="form-group">
+                            <label for="currentWorkers">Current Workers</label>
+                            <input type="number" id="currentWorkers" class="form-input" value="2">
+                        </div>
+                        <div class="form-group">
+                            <label for="totalWorkers">Total Workers Needed</label>
+                            <input type="number" id="totalWorkers" class="form-input" value="3">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Danger Zone -->
+                <div class="panel-card danger-zone">
+                    <h3 class="panel-title">Danger Zone</h3>
+                    <p class="danger-text">Deleting this task is permanent and cannot be undone.</p>
+                    <button type="button" class="delete-btn">Delete Task</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

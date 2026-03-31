@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Inspection - FarmOps</title>
+    <link rel="stylesheet" href="../global/local.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="inspection-wrapper">
+        <header class="inspection-header">
+            <div class="header-left">
+                <button class="back-btn" onclick="window.location.href='../supervisor-dashboard/index.html'">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6"/>
+                    </svg>
+                    Back to Dashboard
+                </button>
+            </div>
+            <div class="header-center">
+                <div class="logo">
+                    <svg width="36" height="36" viewBox="0 0 56 56" fill="none">
+                        <rect width="56" height="56" rx="10" fill="#EDE9FE"/>
+                        <path d="M28 12L12 22l16 10 16-10-16-10zM12 34l16 10 16-10M12 28l16 10 16-10" stroke="#7C3AED" stroke-width="2.67" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h1>Farm Inspection</h1>
+            </div>
+            <div class="header-right">
+                <span class="inspection-id" id="inspectionId">INS-2024-001</span>
+            </div>
+        </header>
+
+        <main class="inspection-main">
+            <div class="farm-info-card">
+                <div class="farm-icon">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                        <rect width="48" height="48" rx="12" fill="#EDE9FE"/>
+                        <path d="M24 12L12 20l12 8 12-8-12-8zM12 28l12 8 12-8M12 24l12 8 12-8" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="farm-details">
+                    <div class="farm-info-row">
+                        <h2 id="farmName">Loading...</h2>
+                        <span class="status-badge" id="farmStatus">Active</span>
+                    </div>
+                    <p id="farmOwner">Loading...</p>
+                    <div class="farm-meta">
+                        <span class="meta-item" id="farmArea">--</span>
+                        <span class="meta-item" id="farmLastInsp">--</span>
+                    </div>
+                </div>
+            </div>
+
+            <form id="inspectionForm" class="inspection-form">
+                <div class="form-section">
+                    <div class="section-header">
+                        <div class="section-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="16" y1="2" x2="16" y2="6"/>
+                                <line x1="8" y1="2" x2="8" y2="6"/>
+                                <line x1="3" y1="10" x2="21" y2="10"/>
+                            </svg>
+                        </div>
+                        <h3>Inspection Details</h3>
+                    </div>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="inspectionDate">Inspection Date</label>
+                            <input type="date" id="inspectionDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="inspectorName">Inspector Name</label>
+                            <input type="text" id="inspectorName" placeholder="Enter inspector name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="weather">Weather Conditions</label>
+                            <select id="weather">
+                                <option value="sunny">Sunny</option>
+                                <option value="cloudy">Cloudy</option>
+                                <option value="rainy">Rainy</option>
+                                <option value="partly-cloudy">Partly Cloudy</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="inspectionType">Inspection Type</label>
+                            <select id="inspectionType">
+                                <option value="routine">Routine</option>
+                                <option value="follow-up">Follow-up</option>
+                                <option value="complaint">Complaint-based</option>
+                                <option value="emergency">Emergency</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <div class="section-header">
+                        <div class="section-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 11l3 3L22 4"/>
+                                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+                            </svg>
+                        </div>
+                        <h3>Compliance Checklist</h3>
+                    </div>
+                    <div class="checklist-grid">
+                        <label class="checklist-item">
+                            <input type="checkbox" name="compliance" value="crop_health">
+                            <span class="checkmark"></span>
+                            <div class="checklist-content">
+                                <span class="checklist-title">Crop Health Assessment</span>
+                                <span class="checklist-desc">Evaluate crop growth and vitality</span>
+                            </div>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox" name="compliance" value="irrigation">
+                            <span class="checkmark"></span>
+                            <div class="checklist-content">
+                                <span class="checklist-title">Irrigation System Check</span>
+                                <span class="checklist-desc">Verify water distribution systems</span>
+                            </div>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox" name="compliance" value="soil_quality">
+                            <span class="checkmark"></span>
+                            <div class="checklist-content">
+                                <span class="checklist-title">Soil Quality Analysis</span>
+                                <span class="checklist-desc">Test soil nutrients and composition</span>
+                            </div>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox" name="compliance" value="pest_control">
+                            <span class="checkmark"></span>
+                            <div class="checklist-content">
+                                <span class="checklist-title">Pest & Disease Management</span>
+                                <span class="checklist-desc">Check for infestations and diseases</span>
+                            </div>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox" name="compliance" value="equipment">
+                            <span class="checkmark"></span>
+                            <div class="checklist-content">
+                                <span class="checklist-title">Equipment & Infrastructure</span>
+                                <span class="checklist-desc">Inspect machinery and structures</span>
+                            </div>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox" name="compliance" value="storage">
+                            <span class="checkmark"></span>
+                            <div class="checklist-content">
+                                <span class="checklist-title">Storage Facilities</span>
+                                <span class="checklist-desc">Evaluate storage conditions</span>
+                            </div>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox" name="compliance" value="safety">
+                            <span class="checkmark"></span>
+                            <div class="checklist-content">
+                                <span class="checklist-title">Safety Compliance</span>
+                                <span class="checklist-desc">Review safety protocols and equipment</span>
+                            </div>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox" name="compliance" value="documentation">
+                            <span class="checkmark"></span>
+                            <div class="checklist-content">
+                                <span class="checklist-title">Documentation & Records</span>
+                                <span class="checklist-desc">Verify record-keeping practices</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <div class="section-header">
+                        <div class="section-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="20" x2="12" y2="10"/>
+                                <line x1="18" y1="20" x2="18" y2="4"/>
+                                <line x1="6" y1="20" x2="6" y2="16"/>
+                            </svg>
+                        </div>
+                        <h3>Inspection Score</h3>
+                    </div>
+                    <div class="score-section">
+                        <div class="score-input-group">
+                            <input type="range" id="inspectionScore" min="0" max="100" value="75">
+                            <div class="score-display">
+                                <span class="score-value" id="scoreValue">75</span>
+                                <span class="score-percent">%</span>
+                            </div>
+                        </div>
+                        <div class="score-labels">
+                            <span>Poor</span>
+                            <span>Fair</span>
+                            <span>Good</span>
+                            <span>Excellent</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <div class="section-header">
+                        <div class="section-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                            </svg>
+                        </div>
+                        <h3>Observations & Notes</h3>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="observations">Key Findings</label>
+                        <textarea id="observations" rows="4" placeholder="Enter your observations and findings from the inspection..."></textarea>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="recommendations">Recommendations</label>
+                        <textarea id="recommendations" rows="3" placeholder="Enter recommendations for improvement..."></textarea>
+                    </div>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="followUpRequired">Follow-up Required?</label>
+                            <select id="followUpRequired">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select>
+                        </div>
+                        <div class="form-group" id="followUpDateGroup" style="display: none;">
+                            <label for="followUpDate">Follow-up Date</label>
+                            <input type="date" id="followUpDate">
+                        </div>
+                        <div class="form-group">
+                            <label for="priority">Priority Level</label>
+                            <select id="priority">
+                                <option value="low">Low</option>
+                                <option value="medium" selected>Medium</option>
+                                <option value="high">High</option>
+                                <option value="critical">Critical</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <div class="section-header">
+                        <div class="section-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                <circle cx="8.5" cy="8.5" r="1.5"/>
+                                <polyline points="21 15 16 10 5 21"/>
+                            </svg>
+                        </div>
+                        <h3>Photo Evidence (Optional)</h3>
+                    </div>
+                    <div class="upload-area" id="uploadArea">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="17 8 12 3 7 8"/>
+                            <line x1="12" y1="3" x2="12" y2="15"/>
+                        </svg>
+                        <p>Click to upload or drag and drop</p>
+                        <span>PNG, JPG up to 10MB</span>
+                        <input type="file" id="photoUpload" multiple accept="image/*" hidden>
+                    </div>
+                    <div class="photo-preview" id="photoPreview"></div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn-draft" id="btnDraft">Save as Draft</button>
+                    <button type="button" class="btn-cancel" id="btnCancel">Cancel</button>
+                    <button type="submit" class="btn-submit" id="btnSubmit">Submit Inspection</button>
+                </div>
+            </form>
+        </main>
+
+        <footer class="inspection-footer">
+            <p>© 2024 AgriTrack Systems. All rights reserved. Enterprise Version 2.4.0</p>
+        </footer>
+    </div>
+
+    <div class="success-modal" id="successModal">
+        <div class="success-content">
+            <div class="success-icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+            </div>
+            <h2>Inspection Submitted!</h2>
+            <p id="successMessage">Your inspection report has been successfully submitted.</p>
+            <div class="success-actions">
+                <button class="btn-view-report" id="btnViewReport">View Report</button>
+                <button class="btn-back-dashboard" id="btnBackDashboard">Back to Dashboard</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

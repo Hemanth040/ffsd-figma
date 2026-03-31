@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Task - Farm Operations</title>
+    <link rel="stylesheet" href="../global/global.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="create-task-container">
+        <!-- Header -->
+        <header class="page-header">
+            <div class="header-left">
+                <button class="back-btn" onclick="window.location.href='../tasks-allotment/index.html'">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                </button>
+                <div class="header-title">
+                    <h1>Create New Task</h1>
+                    <p>Add task details and assign workers</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content - 2 Column Layout -->
+        <div class="modal-body">
+            <!-- LEFT SIDE - Form -->
+            <div class="form-left">
+                <!-- Basic Information Card -->
+                <div class="form-card">
+                    <h3 class="card-title">Basic Information</h3>
+                    <div class="form-grid">
+                        <div class="form-group full-width">
+                            <label for="taskTitle">Task Title *</label>
+                            <input type="text" id="taskTitle" class="form-input" placeholder="e.g., Plow Field A" required>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="shortDesc">Short Description *</label>
+                            <input type="text" id="shortDesc" class="form-input" placeholder="e.g., Prepare field for wheat sowing" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="status">Status</label>
+                            <div class="select-wrapper">
+                                <select id="status" class="form-select">
+                                    <option value="pending">Pending</option>
+                                    <option value="in-progress">In Progress</option>
+                                    <option value="completed">Completed</option>
+                                </select>
+                                <svg class="select-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M6 9l6 6 6-6"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="priority">Priority</label>
+                            <div class="select-wrapper">
+                                <select id="priority" class="form-select">
+                                    <option value="low">Low</option>
+                                    <option value="medium">Medium</option>
+                                    <option value="high">High</option>
+                                </select>
+                                <svg class="select-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M6 9l6 6 6-6"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Task Details Card -->
+                <div class="form-card">
+                    <h3 class="card-title">Task Details</h3>
+                    <div class="form-grid">
+                        <div class="form-group full-width">
+                            <label for="fieldLocation">Field Location</label>
+                            <input type="text" id="fieldLocation" class="form-input" placeholder="e.g., Field A, Section 1">
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="detailedDesc">Detailed Description</label>
+                            <textarea id="detailedDesc" class="form-textarea" placeholder="Describe the task in detail..."></textarea>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="equipment">Equipment Required</label>
+                            <div class="input-with-button">
+                                <input type="text" id="equipment" class="form-input" placeholder="e.g., Tractor, Plough">
+                                <button type="button" class="add-btn">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scheduling & Logistics Card -->
+                <div class="form-card">
+                    <h3 class="card-title">Scheduling & Logistics</h3>
+                    <div class="form-grid three-cols">
+                        <div class="form-group">
+                            <label for="distance">Distance (km)</label>
+                            <input type="number" id="distance" class="form-input" placeholder="e.g., 5">
+                        </div>
+                        <div class="form-group">
+                            <label for="fieldSize">Field Size (acres)</label>
+                            <input type="number" id="fieldSize" class="form-input" placeholder="e.g., 10">
+                        </div>
+                        <div class="form-group">
+                            <label for="deadlineDate">Deadline Date</label>
+                            <input type="date" id="deadlineDate" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="deadlineTime">Deadline Time</label>
+                            <input type="time" id="deadlineTime" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="duration">Expected Duration (hours)</label>
+                            <input type="number" id="duration" class="form-input" placeholder="e.g., 8">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT SIDE - Panels -->
+            <div class="form-right">
+                <!-- Quick Tips Card -->
+                <div class="tips-card">
+                    <h3 class="tips-title">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 16v-4M12 8h.01"/>
+                        </svg>
+                        Quick Tips
+                    </h3>
+                    <ul class="tips-list">
+                        <li>Fill in all required fields marked with *</li>
+                        <li>Assign workers based on their skills</li>
+                        <li>Set realistic deadlines</li>
+                        <li>List all necessary equipment</li>
+                    </ul>
+                </div>
+
+                <!-- Assigned Workers Card -->
+                <div class="panel-card">
+                    <h3 class="panel-title">Assigned Workers</h3>
+                    <div class="workers-placeholder">
+                        <div class="workers-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                        </div>
+                        <p>No workers assigned yet</p>
+                        <button class="assign-workers-btn">+ Assign Workers</button>
+                    </div>
+                </div>
+
+                <!-- Worker Requirements Card -->
+                <div class="panel-card">
+                    <h3 class="panel-title">Worker Requirements</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="currentWorkers">Current Workers</label>
+                            <input type="number" id="currentWorkers" class="form-input" placeholder="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="totalWorkers">Total Workers Needed</label>
+                            <input type="number" id="totalWorkers" class="form-input" placeholder="e.g., 5">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Actions -->
+                <div class="form-actions">
+                    <button type="button" class="cancel-btn" onclick="window.location.href='../tasks-allotment/index.html'">Cancel</button>
+                    <button type="submit" class="submit-btn">Create Task</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
