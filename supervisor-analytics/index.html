@@ -4,216 +4,279 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Supervisor Analytics & Reports - FarmOps</title>
-    <link rel="stylesheet" href="../common/global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../global/global.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="analytics-page">
-        <header class="page-header">
-            <div class="header-left">
-                <button class="back-btn" onclick="window.location.href='../supervisor-dashboard/index.html'">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M19 12H5M12 19l-7-7 7-7"/>
-                    </svg>
-                </button>
-                <div class="header-title-group">
+        <div class="main-container">
+            <header class="header-section">
+                <div class="header-left">
+                    <button class="back-btn" onclick="window.location.href='../supervisor-dashboard/index.html'">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19 12H5M12 19l-7-7 7-7"/>
+                        </svg>
+                    </button>
                     <h1 class="page-title">Supervisor Analytics & Reports</h1>
                 </div>
-            </div>
-            <button class="export-btn">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                    <polyline points="7 10 12 15 17 10"/>
-                    <line x1="12" y1="15" x2="12" y2="3"/>
-                </svg>
-                Export Report
-            </button>
-        </header>
+            </header>
 
-        <main class="main-content">
-            <div class="kpi-section">
-                <h2 class="section-title">High-Level KPIs</h2>
-                <div class="kpi-grid">
-                    <div class="kpi-card">
-                        <div class="kpi-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                                <circle cx="9" cy="7" r="4"/>
-                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                            </svg>
+            <main class="main-content">
+                <section class="kpi-section">
+                    <h2 class="section-title">High-Level KPIs</h2>
+                    <div class="kpi-grid">
+                        <div class="kpi-card">
+                            <div class="kpi-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                </svg>
+                            </div>
+                            <div class="kpi-content">
+                                <span class="kpi-label">Total Farmers</span>
+                                <span class="kpi-value">5</span>
+                            </div>
                         </div>
-                        <div class="kpi-content">
-                            <span class="kpi-label">Total Farmers</span>
-                            <span class="kpi-value">5</span>
-                        </div>
-                    </div>
-                    <div class="kpi-card">
-                        <div class="kpi-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-                            </svg>
-                        </div>
-                        <div class="kpi-content">
-                            <span class="kpi-label">Aggregate Yield</span>
-                            <span class="kpi-value">125 tons</span>
-                        </div>
-                    </div>
-                    <div class="kpi-card">
-                        <div class="kpi-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                                <line x1="3" y1="9" x2="21" y2="9"/>
-                                <line x1="9" y1="21" x2="9" y2="9"/>
-                            </svg>
-                        </div>
-                        <div class="kpi-content">
-                            <span class="kpi-label">Active Crops</span>
-                            <span class="kpi-value">12</span>
-                        </div>
-                    </div>
-                    <div class="kpi-card">
-                        <div class="kpi-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                                <polyline points="22 4 12 14.01 9 11.01"/>
-                            </svg>
-                        </div>
-                        <div class="kpi-content">
-                            <span class="kpi-label">Tasks Completed</span>
-                            <span class="kpi-value">156</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="reports-section">
-                <h2 class="section-title">Available Reports</h2>
-                <div class="reports-grid">
-                    <div class="report-card">
-                        <div class="report-header">
-                            <div class="report-icon">
+                        <div class="kpi-card">
+                            <div class="kpi-icon">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
                                 </svg>
                             </div>
-                            <span class="report-type">Operations</span>
+                            <div class="kpi-content">
+                                <span class="kpi-label">Aggregate Yield</span>
+                                <span class="kpi-value">125 tons</span>
+                            </div>
                         </div>
-                        <h3 class="report-title">Monthly Farm Summary</h3>
-                        <p class="report-desc">Comprehensive overview of all farm operations, tasks, and activities.</p>
-                        <button class="view-btn">View Report</button>
-                    </div>
-                    <div class="report-card">
-                        <div class="report-header">
-                            <div class="report-icon">
+                        <div class="kpi-card">
+                            <div class="kpi-icon">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <line x1="12" y1="1" x2="12" y2="23"/>
-                                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                    <line x1="3" y1="9" x2="21" y2="9"/>
+                                    <line x1="9" y1="21" x2="9" y2="9"/>
                                 </svg>
                             </div>
-                            <span class="report-type">Finance</span>
+                            <div class="kpi-content">
+                                <span class="kpi-label">Active Crops</span>
+                                <span class="kpi-value">12</span>
+                            </div>
                         </div>
-                        <h3 class="report-title">Financial Overview</h3>
-                        <p class="report-desc">Detailed breakdown of expenses, revenues, and financial performance.</p>
-                        <button class="view-btn">View Report</button>
-                    </div>
-                    <div class="report-card">
-                        <div class="report-header">
-                            <div class="report-icon">
+                        <div class="kpi-card">
+                            <div class="kpi-icon">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22 4 12 14.01 9 11.01"/>
                                 </svg>
                             </div>
-                            <span class="report-type">Workers</span>
+                            <div class="kpi-content">
+                                <span class="kpi-label">Tasks Completed</span>
+                                <span class="kpi-value">156</span>
+                            </div>
                         </div>
-                        <h3 class="report-title">Worker Performance</h3>
-                        <p class="report-desc">Analysis of worker productivity, attendance, and task completion rates.</p>
-                        <button class="view-btn">View Report</button>
                     </div>
-                </div>
-            </div>
+                </section>
 
-            <div class="bottom-section">
-                <div class="activity-section">
-                    <h2 class="section-title">Recent Activity</h2>
-                    <div class="activity-list">
-                        <div class="activity-item">
-                            <div class="activity-dot"></div>
-                            <div class="activity-content">
-                                <span class="activity-title">Farm inspection completed</span>
-                                <span class="activity-time">Green Valley Farm - 2 hours ago</span>
+                <section class="middle-section">
+                    <div class="alerts-card">
+                        <h3 class="card-title">Critical Alerts</h3>
+                        <div class="alerts-list">
+                            <div class="alert-item warning">
+                                <div class="alert-icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <path d="M12 6v6l4 2"/>
+                                    </svg>
+                                </div>
+                                <div class="alert-content">
+                                    <span class="alert-title">Monthly report due</span>
+                                    <span class="alert-desc">Submit by March 31</span>
+                                </div>
+                            </div>
+                            <div class="alert-item urgent">
+                                <div class="alert-icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                                        <line x1="12" y1="9" x2="12" y2="13"/>
+                                        <line x1="12" y1="17" x2="12.01" y2="17"/>
+                                    </svg>
+                                </div>
+                                <div class="alert-content">
+                                    <span class="alert-title">Farm inspection overdue</span>
+                                    <span class="alert-desc">Harvest Fields - 3 days pending</span>
+                                </div>
+                            </div>
+                            <div class="alert-item info">
+                                <div class="alert-icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <line x1="12" y1="16" x2="12" y2="12"/>
+                                        <line x1="12" y1="8" x2="12.01" y2="8"/>
+                                    </svg>
+                                </div>
+                                <div class="alert-content">
+                                    <span class="alert-title">Weather alert</span>
+                                    <span class="alert-desc">Heavy rain expected this weekend</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="activity-item">
-                            <div class="activity-dot"></div>
-                            <div class="activity-content">
-                                <span class="activity-title">Issue resolved</span>
-                                <span class="activity-time">Irrigation repair at Sunrise Organics - 4 hours ago</span>
-                            </div>
-                        </div>
-                        <div class="activity-item">
-                            <div class="activity-dot"></div>
-                            <div class="activity-content">
-                                <span class="activity-title">Task assigned</span>
-                                <span class="activity-time">Pest control at Harvest Fields - Yesterday</span>
-                            </div>
-                        </div>
-                        <div class="activity-item">
-                            <div class="activity-dot"></div>
-                            <div class="activity-content">
-                                <span class="activity-title">New farmer onboarded</span>
-                                <span class="activity-time">Priya Sharma - Golden Crops Ltd - 2 days ago</span>
-                            </div>
-                        </div>
+                        <button class="view-all-btn">View All Actions</button>
                     </div>
-                </div>
 
-                <div class="alerts-section">
-                    <h2 class="section-title">Pending Actions</h2>
-                    <div class="alerts-list">
-                        <div class="alert-item urgent">
-                            <div class="alert-icon">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
-                                    <line x1="12" y1="9" x2="12" y2="13"/>
-                                    <line x1="12" y1="17" x2="12.01" y2="17"/>
-                                </svg>
+                    <div class="crop-distribution-card">
+                        <h3 class="card-title">Crop Distribution</h3>
+                        <div class="crop-chart">
+                            <div class="chart-visual">
+                                <div class="donut-chart">
+                                    <svg viewBox="0 0 160 160" width="160" height="160">
+                                        <circle cx="80" cy="80" r="60" fill="none" stroke="#E2E8F0" stroke-width="20"/>
+                                        <circle cx="80" cy="80" r="60" fill="none" stroke="#7C3AED" stroke-width="20" stroke-dasharray="150 377" stroke-dashoffset="0" transform="rotate(-90 80 80)"/>
+                                        <circle cx="80" cy="80" r="60" fill="none" stroke="#10B981" stroke-width="20" stroke-dasharray="100 377" stroke-dashoffset="-150" transform="rotate(-90 80 80)"/>
+                                        <circle cx="80" cy="80" r="60" fill="none" stroke="#F59E0B" stroke-width="20" stroke-dasharray="75 377" stroke-dashoffset="-250" transform="rotate(-90 80 80)"/>
+                                        <circle cx="80" cy="80" r="60" fill="none" stroke="#3B82F6" stroke-width="20" stroke-dasharray="52 377" stroke-dashoffset="-325" transform="rotate(-90 80 80)"/>
+                                    </svg>
+                                </div>
                             </div>
-                            <div class="alert-content">
-                                <span class="alert-title">Farm inspection overdue</span>
-                                <span class="alert-desc">Harvest Fields - 3 days pending</span>
-                            </div>
-                        </div>
-                        <div class="alert-item warning">
-                            <div class="alert-icon">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <circle cx="12" cy="12" r="10"/>
-                                    <path d="M12 6v6l4 2"/>
-                                </svg>
-                            </div>
-                            <div class="alert-content">
-                                <span class="alert-title">Monthly report due</span>
-                                <span class="alert-desc">Submit by March 31</span>
-                            </div>
-                        </div>
-                        <div class="alert-item info">
-                            <div class="alert-icon">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <circle cx="12" cy="12" r="10"/>
-                                    <line x1="12" y1="16" x2="12" y2="12"/>
-                                    <line x1="12" y1="8" x2="12.01" y2="8"/>
-                                </svg>
-                            </div>
-                            <div class="alert-content">
-                                <span class="alert-title">Weather alert</span>
-                                <span class="alert-desc">Heavy rain expected this weekend</span>
+                            <div class="crop-legend">
+                                <div class="legend-item">
+                                    <span class="legend-dot" style="background: #7C3AED;"></span>
+                                    <span class="legend-label">Wheat</span>
+                                    <span class="legend-value">40%</span>
+                                </div>
+                                <div class="legend-item">
+                                    <span class="legend-dot" style="background: #10B981;"></span>
+                                    <span class="legend-label">Rice</span>
+                                    <span class="legend-value">27%</span>
+                                </div>
+                                <div class="legend-item">
+                                    <span class="legend-dot" style="background: #F59E0B;"></span>
+                                    <span class="legend-label">Corn</span>
+                                    <span class="legend-value">20%</span>
+                                </div>
+                                <div class="legend-item">
+                                    <span class="legend-dot" style="background: #3B82F6;"></span>
+                                    <span class="legend-label">Soybean</span>
+                                    <span class="legend-value">13%</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </main>
+                </section>
+
+                <section class="regional-section">
+                    <div class="regional-card">
+                        <h3 class="card-title">Regional Performance</h3>
+                        <div class="regional-content">
+                            <div class="regional-chart">
+                                <div class="bar-chart">
+                                    <div class="bar-group">
+                                        <div class="bar" style="height: 80%; background: #7C3AED;"></div>
+                                        <span class="bar-label">North</span>
+                                    </div>
+                                    <div class="bar-group">
+                                        <div class="bar" style="height: 65%; background: #10B981;"></div>
+                                        <span class="bar-label">South</span>
+                                    </div>
+                                    <div class="bar-group">
+                                        <div class="bar" style="height: 90%; background: #F59E0B;"></div>
+                                        <span class="bar-label">East</span>
+                                    </div>
+                                    <div class="bar-group">
+                                        <div class="bar" style="height: 55%; background: #3B82F6;"></div>
+                                        <span class="bar-label">West</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="regional-stats">
+                                <div class="stat-row">
+                                    <span class="stat-name">Top Region</span>
+                                    <span class="stat-value">East (90%)</span>
+                                </div>
+                                <div class="stat-row">
+                                    <span class="stat-name">Avg Performance</span>
+                                    <span class="stat-value">72.5%</span>
+                                </div>
+                                <div class="stat-row">
+                                    <span class="stat-name">Total Farms</span>
+                                    <span class="stat-value">4</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="farmer-table-section">
+                    <div class="table-card">
+                        <div class="table-header">
+                            <h3 class="table-title">Individual Farmer Performance</h3>
+                            <div class="table-actions">
+                                <button class="filter-btn">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
+                                    </svg>
+                                </button>
+                                <button class="sort-btn">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M3 6h18M6 12h12M9 18h6"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="table-container">
+                            <table class="farmer-table">
+                                <thead>
+                                    <tr>
+                                        <th>Farmer Name</th>
+                                        <th>Farm</th>
+                                        <th>Yield (tons)</th>
+                                        <th>Tasks Done</th>
+                                        <th>Score</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Ram Singh</td>
+                                        <td>Green Valley Farm</td>
+                                        <td>45.2</td>
+                                        <td>52</td>
+                                        <td>92%</td>
+                                        <td><span class="status-badge success">Excellent</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Vikram Sahay</td>
+                                        <td>Sunrise Organics</td>
+                                        <td>38.7</td>
+                                        <td>48</td>
+                                        <td>85%</td>
+                                        <td><span class="status-badge warning">Good</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Arjun Patel</td>
+                                        <td>Harvest Fields</td>
+                                        <td>41.1</td>
+                                        <td>56</td>
+                                        <td>78%</td>
+                                        <td><span class="status-badge info">Average</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="table-footer">
+                            <span class="table-info">Showing 3 of 128 farmers</span>
+                            <div class="pagination">
+                                <button class="page-btn">Previous</button>
+                                <button class="page-btn">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>

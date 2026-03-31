@@ -93,14 +93,14 @@ body {
 
 .form-input:focus {
     outline: none;
-    border-color: #00A63E;
+    border-color: #7C3AED;
     background: white;
 }
 
 .login-button {
     width: 100%;
     padding: 10px;
-    background: #00A63E;
+    background: #7C3AED;
     color: white;
     border: none;
     border-radius: 8px;
@@ -112,7 +112,7 @@ body {
 }
 
 .login-button:hover {
-    background: #008732;
+    background: #6D28D9;
 }
 
 .form-footer {
@@ -130,7 +130,7 @@ body {
 .register-link {
     font-size: 16px;
     font-weight: 500;
-    color: #00A63E;
+    color: #7C3AED;
     text-decoration: none;
     margin-left: 4px;
 }

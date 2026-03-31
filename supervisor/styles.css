@@ -98,7 +98,7 @@ body {
 }
 
 .stat-card.active {
-    border-color: #22C55E;
+    border-color: #7C3AED;
 }
 
 .stat-card.pending {
@@ -118,7 +118,7 @@ body {
 }
 
 .stat-card.active .stat-value {
-    color: #16A34A;
+    color: #7C3AED;
 }
 
 .stat-card.pending .stat-value {
@@ -138,8 +138,8 @@ body {
 }
 
 .stat-card.active .stat-icon {
-    background: #DCFCE7;
-    color: #16A34A;
+    background: #EDE9FE;
+    color: #7C3AED;
 }
 
 .stat-card.pending .stat-icon {

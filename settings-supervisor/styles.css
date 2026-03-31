@@ -1,3 +1,10 @@
+/* Supervisor Theme Override */
+:root {
+    --primary-color: #7C3AED;
+    --primary-dark: #6D28D9;
+    --primary-light: #EDE9FE;
+}
+
 .settings-page {
     max-width: 1200px;
     margin: 0 auto;
