@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Nimbus Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-    background: linear-gradient(135deg, #F0FDF4 0%, #F0F9FF 100%);
+    background: #FFFFFF;
     min-height: 100vh;
     padding: 16px 24px;
 }
@@ -78,17 +78,17 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #EEF2FF;
+    background: #F5F3FF;
     border-radius: 16px;
     padding: 6px;
     gap: 4px;
 }
 
 .tab-button {
-    padding: 10px 16px;
+    padding: 10px 20px;
     font-size: 14px;
     font-weight: 500;
-    color: #4B5563;
+    color: #6B7280;
     background: transparent;
     border: none;
     border-radius: 12px;
@@ -97,14 +97,15 @@ body {
 }
 
 .tab-button:hover {
-    color: #111827;
+    color: #7C3AED;
+    background: rgba(124, 58, 237, 0.08);
 }
 
 .tab-button.active {
-    background: #FFFFFF;
-    color: #111827;
+    background: #7C3AED;
+    color: #FFFFFF;
     font-weight: 600;
-    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 2px 8px rgba(124, 58, 237, 0.3);
 }
 
 .search-bar {
@@ -143,7 +144,7 @@ body {
 }
 
 .search-input:focus {
-    border-color: #15803D;
+    border-color: #7C3AED;
 }
 
 .content-section {
@@ -209,28 +210,30 @@ body {
 }
 
 .filter-button:hover {
-    border-color: #D1D5DB;
-    background: #F9FAFB;
+    border-color: #7C3AED;
+    background: #F5F3FF;
+    color: #7C3AED;
 }
 
 .filter-button.active {
+    background: #7C3AED;
     color: #FFFFFF;
-    border-color: transparent;
+    border-color: #7C3AED;
 }
 
 .filter-button.insecticides.active {
-    background: #DCFCE7;
-    color: #166534;
+    background: #7C3AED;
+    color: #FFFFFF;
 }
 
 .filter-button.herbicides.active {
-    background: #FEF3C7;
-    color: #92400E;
+    background: #7C3AED;
+    color: #FFFFFF;
 }
 
 .filter-button.fungicides.active {
-    background: #DBEAFE;
-    color: #1E40AF;
+    background: #7C3AED;
+    color: #FFFFFF;
 }
 
 .pesticide-list {
@@ -254,11 +257,11 @@ body {
 }
 
 .category-header.insecticides {
-    background: #DCFCE7;
+    background: #EDE9FE;
 }
 
 .category-header.herbicides {
-    background: #FEF9C3;
+    background: #EDE9FE;
 }
 
 .category-header.fungicides {
@@ -311,13 +314,13 @@ body {
 }
 
 .insecticide-tag {
-    background: #DCFCE7;
-    color: #14532D;
+    background: #EDE9FE;
+    color: #5B21B6;
 }
 
 .herbicide-tag {
-    background: #FEF9C3;
-    color: #78350F;
+    background: #EDE9FE;
+    color: #5B21B6;
 }
 
 .fungicide-tag {
@@ -357,15 +360,15 @@ body {
 .effectiveness-badge {
     display: inline-flex;
     padding: 8px 12px;
-    background: #FEF3C7;
-    border: 1px solid #F59E0B;
+    background: #EDE9FE;
+    border: 1px solid #7C3AED;
     border-radius: 8px;
 }
 
 .effectiveness-badge span {
     font-size: 13px;
     font-weight: 600;
-    color: #78350F;
+    color: #5B21B6;
 }
 
 .safety-button {
@@ -373,17 +376,17 @@ body {
     padding: 8px 16px;
     font-size: 14px;
     font-weight: 600;
-    color: #374151;
+    color: #7C3AED;
     background: #FFFFFF;
-    border: 1px solid #E5E7EB;
+    border: 1px solid #7C3AED;
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.2s;
 }
 
 .safety-button:hover {
-    background: #F9FAFB;
-    border-color: #D1D5DB;
+    background: #7C3AED;
+    color: #FFFFFF;
 }
 
 @media (max-width: 768px) {

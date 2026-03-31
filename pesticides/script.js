@@ -65,7 +65,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const backButton = document.querySelector('.back-button');
     if (backButton) {
         backButton.addEventListener('click', function() {
-            window.location.href = '../farmer-dashboard/index.html';
+            const source = sessionStorage.getItem('userSource');
+            if (source === 'supervisor') {
+                window.location.href = '../supervisor-dashboard/index.html';
+            } else {
+                window.location.href = '../farmer-dashboard/index.html';
+            }
         });
     }
 });

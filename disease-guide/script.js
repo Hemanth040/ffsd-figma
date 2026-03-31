@@ -6,8 +6,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
     tabButtons.forEach(button => {
         button.addEventListener('click', function() {
+            const tabName = this.textContent.toLowerCase();
+            
+            if (tabName === 'diseases') {
+                return;
+            }
+            
             tabButtons.forEach(btn => btn.classList.remove('active'));
             this.classList.add('active');
+            
+            if (tabName === 'pesticides') {
+                window.location.href = '../pesticides/index.html';
+            } else if (tabName === 'fertilizers') {
+                window.location.href = '../fertilizers/index.html';
+            } else if (tabName === 'weeds') {
+                window.location.href = '../weeds-guide/index.html';
+            }
         });
     });
 
@@ -47,7 +61,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const backButton = document.querySelector('.back-button');
     if (backButton) {
         backButton.addEventListener('click', function() {
-            window.location.href = '../farmer-dashboard/index.html';
+            const source = sessionStorage.getItem('userSource');
+            if (source === 'supervisor') {
+                window.location.href = '../supervisor-dashboard/index.html';
+            } else {
+                window.location.href = '../farmer-dashboard/index.html';
+            }
         });
     }
 });

@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             const tabName = this.textContent.toLowerCase();
             if (tabName === 'diseases') {
-                window.location.href = '../symptoms-guide/index.html';
+                window.location.href = '../disease-guide/index.html';
             } else if (tabName === 'pesticides') {
                 window.location.href = '../pesticides/index.html';
             } else if (tabName === 'fertilizers') {

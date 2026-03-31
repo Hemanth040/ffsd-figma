@@ -6,7 +6,8 @@
 
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    background: #F6F8F6;
+    background: linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 100%);
+    min-height: 100vh;
 }
 
 .symptoms-page {
@@ -88,8 +89,8 @@ body {
 }
 
 .tips-card {
-    background: #ECFDF5;
-    border-color: #A7F3D0;
+    background: #F5F3FF;
+    border-color: #C4B5FD;
 }
 
 .info-list {
