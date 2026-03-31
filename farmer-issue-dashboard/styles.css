@@ -263,7 +263,7 @@ body {
 
 .issue-actions {
     display: flex;
-    gap: 8px;
+    gap: 12px;
 }
 
 .action-btn {
@@ -273,6 +273,7 @@ body {
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.2s;
+    flex: 1;
 }
 
 .action-btn.outline {

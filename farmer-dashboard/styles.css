@@ -66,6 +66,9 @@ body {
     cursor: pointer;
     border: none;
     transition: all 0.2s;
+
+    min-width: 120px;   
+    height: 40px; 
 }
 
 .alert-btn {
@@ -304,9 +307,7 @@ body {
     align-items: flex-start;
     gap: 12px;
     padding: 12px;
-    background: #F0FDF4;
-    border: 1px solid #BBF7D0;
-    border-radius: 10px;
+    background: #EFF6FF;
 }
 
 .crop-icon {
@@ -463,7 +464,7 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
-    padding: 10px 20px;
+    padding: 25px 95px;
     font-size: 14px;
     font-weight: 500;
     color: #374151;
