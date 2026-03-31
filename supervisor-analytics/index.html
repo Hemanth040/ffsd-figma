@@ -22,6 +22,16 @@
                     </button>
                     <h1 class="page-title">Supervisor Analytics & Reports</h1>
                 </div>
+                <div class="header-right">
+                    <button class="export-btn" onclick="exportReport()">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="7 10 12 15 17 10"/>
+                            <line x1="12" y1="15" x2="12" y2="3"/>
+                        </svg>
+                        Export Report
+                    </button>
+                </div>
             </header>
 
             <main class="main-content">
@@ -124,7 +134,7 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="view-all-btn">View All Actions</button>
+                        <button class="view-all-btn" id="viewAllActionsBtn">View All Actions</button>
                     </div>
 
                     <div class="crop-distribution-card">
@@ -279,5 +289,68 @@
         </div>
     </div>
     <script src="script.js"></script>
+    <script>
+        function exportReport() {
+            const reportData = {
+                title: "Supervisor Analytics Report",
+                generatedAt: new Date().toLocaleString(),
+                kpis: {
+                    totalFarmers: 5,
+                    aggregateYield: "125 tons",
+                    activeCrops: 12,
+                    tasksCompleted: 156
+                },
+                cropDistribution: {
+                    wheat: "40%",
+                    rice: "27%",
+                    corn: "20%",
+                    soybean: "13%"
+                },
+                regionalPerformance: {
+                    north: "80%",
+                    south: "65%",
+                    east: "90%",
+                    west: "55%"
+                },
+                farmers: [
+                    { name: "Ram Singh", farm: "Green Valley Farm", yield: 45.2, tasksDone: 52, score: "92%", status: "Excellent" },
+                    { name: "Vikram Sahay", farm: "Sunrise Organics", yield: 38.7, tasksDone: 48, score: "85%", status: "Good" },
+                    { name: "Arjun Patel", farm: "Harvest Fields", yield: 41.1, tasksDone: 56, score: "78%", status: "Average" }
+                ]
+            };
+
+            let csvContent = "data:text/csv;charset=utf-8,";
+            csvContent += "Supervisor Analytics Report\n";
+            csvContent += `Generated: ${reportData.generatedAt}\n\n`;
+            csvContent += "KPIs\n";
+            csvContent += `Total Farmers,${reportData.kpis.totalFarmers}\n`;
+            csvContent += `Aggregate Yield,${reportData.kpis.aggregateYield}\n`;
+            csvContent += `Active Crops,${reportData.kpis.activeCrops}\n`;
+            csvContent += `Tasks Completed,${reportData.kpis.tasksCompleted}\n\n`;
+            csvContent += "Crop Distribution\n";
+            csvContent += `Wheat,${reportData.cropDistribution.wheat}\n`;
+            csvContent += `Rice,${reportData.cropDistribution.rice}\n`;
+            csvContent += `Corn,${reportData.cropDistribution.corn}\n`;
+            csvContent += `Soybean,${reportData.cropDistribution.soybean}\n\n`;
+            csvContent += "Regional Performance\n";
+            csvContent += `North,${reportData.regionalPerformance.north}\n`;
+            csvContent += `South,${reportData.regionalPerformance.south}\n`;
+            csvContent += `East,${reportData.regionalPerformance.east}\n`;
+            csvContent += `West,${reportData.regionalPerformance.west}\n\n`;
+            csvContent += "Farmer Performance\n";
+            csvContent += "Name,Farm,Yield (tons),Tasks Done,Score,Status\n";
+            reportData.farmers.forEach(farmer => {
+                csvContent += `${farmer.name},${farmer.farm},${farmer.yield},${farmer.tasksDone},${farmer.score},${farmer.status}\n`;
+            });
+
+            const encodedUri = encodeURI(csvContent);
+            const link = document.createElement("a");
+            link.setAttribute("href", encodedUri);
+            link.setAttribute("download", `supervisor-report-${new Date().toISOString().split('T')[0]}.csv`);
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
 </body>
 </html>
