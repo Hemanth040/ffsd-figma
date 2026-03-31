@@ -4,58 +4,271 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assign Task - FarmOps</title>
-    <link rel="stylesheet" href="../common/global.css">
+    <link rel="stylesheet" href="../global/global.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="navbar-container" data-navbar data-user-name="John Farmer" data-user-initial="J" data-active-page=""></div>
-    
-    <main class="main-content">
-        <div class="page-header">
-            <div class="page-header-content">
-                <div>
-                    <h1 class="page-title">Assign Task</h1>
-                    <p class="page-subtitle">Assign tasks to your workers</p>
+    <div class="assign-task-page">
+        <!-- Top Header (Worker Info Bar) -->
+        <header class="worker-header">
+            <button class="back-btn" onclick="window.location.href='../worker-management-farmer/index.html'">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+            </button>
+            <div class="worker-avatar">RP</div>
+            <div class="worker-info">
+                <div class="worker-name-row">
+                    <h1 class="worker-name">Ramu Pandu</h1>
+                    <span class="worker-status active">Active</span>
+                </div>
+                <p class="worker-subtitle">Lead Worker • Joined January 15, 2024</p>
+            </div>
+        </header>
+
+        <!-- Main Content - 2 Column Layout -->
+        <div class="dashboard-body">
+            <!-- LEFT SIDE -->
+            <div class="left-column">
+                <!-- Summary Cards -->
+                <div class="summary-cards">
+                    <div class="summary-card">
+                        <span class="summary-value">3</span>
+                        <span class="summary-label">Tasks Active</span>
+                    </div>
+                    <div class="summary-card">
+                        <span class="summary-value">12</span>
+                        <span class="summary-label">Completed</span>
+                    </div>
+                    <div class="summary-card">
+                        <span class="summary-value">98%</span>
+                        <span class="summary-label">Attendance</span>
+                    </div>
+                    <div class="summary-card">
+                        <span class="summary-value">4.5</span>
+                        <span class="summary-label">Rating</span>
+                    </div>
+                </div>
+
+                <!-- Assign Task Form Card -->
+                <div class="form-card">
+                    <h3 class="card-title">Assign Task</h3>
+                    <form class="assign-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="selectTask">Select Task</label>
+                                <select id="selectTask" class="form-select">
+                                    <option>Select a task...</option>
+                                    <option>Irrigation - Wheat Field</option>
+                                    <option>Fertilizer Application</option>
+                                    <option>Pest Inspection</option>
+                                    <option>Plow Field A</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="assignTo">Assign To</label>
+                                <select id="assignTo" class="form-select">
+                                    <option>Select worker...</option>
+                                    <option>Ramu Pandu</option>
+                                    <option>Priya Singh</option>
+                                    <option>Amit Patel</option>
+                                    <option>Sita Devi</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="dueDate">Due Date</label>
+                                <input type="date" id="dueDate" class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <label for="priority">Priority</label>
+                                <select id="priority" class="form-select">
+                                    <option>Low</option>
+                                    <option>Medium</option>
+                                    <option>High</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="instructions">Instructions</label>
+                            <textarea id="instructions" class="form-textarea" placeholder="Add additional instructions..."></textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-outline" onclick="window.location.href='../worker-management-farmer/index.html'">Cancel</button>
+                            <button type="button" class="btn btn-primary">Assign Task</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Current Tasks Section -->
+                <div class="tasks-card">
+                    <h3 class="card-title">Current Tasks</h3>
+                    <div class="tasks-list">
+                        <div class="task-item">
+                            <div class="task-info">
+                                <span class="task-name">Irrigation - Wheat Field</span>
+                                <div class="task-badges">
+                                    <span class="badge badge-in-progress">In Progress</span>
+                                    <span class="badge badge-high">High</span>
+                                </div>
+                            </div>
+                            <span class="task-deadline">Due: Tomorrow, 6:00 PM</span>
+                        </div>
+                        <div class="task-item">
+                            <div class="task-info">
+                                <span class="task-name">Fertilizer Application</span>
+                                <div class="task-badges">
+                                    <span class="badge badge-pending">Pending</span>
+                                    <span class="badge badge-medium">Medium</span>
+                                </div>
+                            </div>
+                            <span class="task-deadline">Due: March 28, 2026</span>
+                        </div>
+                        <div class="task-item">
+                            <div class="task-info">
+                                <span class="task-name">Field Preparation</span>
+                                <div class="task-badges">
+                                    <span class="badge badge-completed">Completed</span>
+                                    <span class="badge badge-low">Low</span>
+                                </div>
+                            </div>
+                            <span class="task-deadline">Due: March 20, 2026</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="activity-card">
+                    <h3 class="card-title">Recent Activity</h3>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                            </div>
+                            <div class="activity-content">
+                                <span class="activity-text">Completed task "Field Preparation"</span>
+                                <span class="activity-time">3 hours ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                            </div>
+                            <div class="activity-content">
+                                <span class="activity-text">Started task "Irrigation - Wheat Field"</span>
+                                <span class="activity-time">5 hours ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="8.5" cy="7" r="4"/>
+                                    <line x1="20" y1="8" x2="20" y2="14"/>
+                                    <line x1="23" y1="11" x2="17" y2="11"/>
+                                </svg>
+                            </div>
+                            <div class="activity-content">
+                                <span class="activity-text">Assigned to "Fertilizer Application"</span>
+                                <span class="activity-time">1 day ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT SIDE PANELS -->
+            <div class="right-column">
+                <!-- Personal Information -->
+                <div class="panel-card">
+                    <h3 class="panel-title">Personal Information</h3>
+                    <div class="info-list">
+                        <div class="info-item">
+                            <span class="info-label">Phone</span>
+                            <span class="info-value">+91 98765 43210</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Email</span>
+                            <span class="info-value">ramu.pandu@email.com</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Address</span>
+                            <span class="info-value">Village Rahim Nagar, District Yamuna</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Employment Details -->
+                <div class="panel-card">
+                    <h3 class="panel-title">Employment Details</h3>
+                    <div class="info-list">
+                        <div class="info-item">
+                            <span class="info-label">Role</span>
+                            <span class="info-value">Field Worker</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Experience</span>
+                            <span class="info-value">3 Years</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Salary</span>
+                            <span class="info-value">₹18,000/month</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Working Hours</span>
+                            <span class="info-value">8:00 AM - 5:00 PM</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Location</span>
+                            <span class="info-value">Field A, Section 2</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills & Expertise -->
+                <div class="panel-card">
+                    <h3 class="panel-title">Skills & Expertise</h3>
+                    <div class="skills-tags">
+                        <span class="skill-tag">Plowing</span>
+                        <span class="skill-tag">Irrigation</span>
+                        <span class="skill-tag">Tractor Operation</span>
+                        <span class="skill-tag">Harvesting</span>
+                        <span class="skill-tag">Pest Control</span>
+                        <span class="skill-tag">Fertilizer Application</span>
+                    </div>
+                </div>
+
+                <!-- Emergency Contact -->
+                <div class="panel-card">
+                    <h3 class="panel-title">Emergency Contact</h3>
+                    <div class="info-list">
+                        <div class="info-item">
+                            <span class="info-label">Name</span>
+                            <span class="info-value">Lakshman Pandu</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Phone</span>
+                            <span class="info-value">+91 98765 43211</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Relation</span>
+                            <span class="info-value">Father</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="assign-task-container card">
-            <form class="assign-form">
-                <div class="form-group">
-                    <label>Select Task</label>
-                    <select>
-                        <option>Irrigation - Wheat Field</option>
-                        <option>Fertilizer Application</option>
-                        <option>Pest Inspection</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>Assign To</label>
-                    <select>
-                        <option>Ramu</option>
-                        <option>Lakshman</option>
-                        <option>Krishna</option>
-                        <option>Sita</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>Due Date</label>
-                    <input type="date">
-                </div>
-                <div class="form-group">
-                    <label>Instructions</label>
-                    <textarea placeholder="Additional instructions..."></textarea>
-                </div>
-                <div class="form-actions">
-                    <button type="button" class="btn btn-primary">Assign Task</button>
-                    <button type="button" class="btn btn-secondary">Cancel</button>
-                </div>
-            </form>
-        </div>
-    </main>
-
-    <script src="../common/navbar.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

@@ -4,46 +4,193 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task Details - FarmOps</title>
-    <link rel="stylesheet" href="../common/global.css">
+    <link rel="stylesheet" href="../global/global.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="navbar-container" data-navbar data-user-name="John Farmer" data-user-initial="J" data-active-page=""></div>
-    
-    <main class="main-content">
-        <div class="task-details-container">
-            <div class="task-header card">
-                <h1>Irrigation - Wheat Field</h1>
-                <span class="badge badge-success">Completed</span>
+    <div class="task-details-container">
+        <!-- Header -->
+        <header class="page-header">
+            <div class="header-left">
+                <button class="back-btn" onclick="window.location.href='../tasks-allotment/index.html'">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                </button>
+                <div class="header-title-row">
+                    <h1 class="page-title">Plow Field A</h1>
+                    <div class="header-badges">
+                        <span class="badge badge-in-progress">In Progress</span>
+                        <span class="badge badge-high">High</span>
+                    </div>
+                </div>
+                <p class="page-subtitle">Prepare field for wheat sowing</p>
             </div>
 
-            <div class="task-info card">
-                <div class="info-row">
-                    <span class="label">Assigned To</span>
-                    <span class="value">Ramu</span>
+        </header>
+
+        <!-- Main Content - 2 Column Layout -->
+        <div class="dashboard-body">
+            <!-- LEFT SIDE -->
+            <div class="left-column">
+                <!-- Task Overview -->
+                <div class="overview-cards">
+                    <div class="overview-card">
+                        <span class="overview-label">Area</span>
+                        <span class="overview-value">2 acre</span>
+                    </div>
+                    <div class="overview-card">
+                        <span class="overview-label">Workers</span>
+                        <span class="overview-value">3/5</span>
+                    </div>
+                    <div class="overview-card">
+                        <span class="overview-label">Deadline</span>
+                        <span class="overview-value">6:00 PM</span>
+                    </div>
                 </div>
-                <div class="info-row">
-                    <span class="label">Due Date</span>
-                    <span class="value">Mar 20, 2026</span>
+
+                <!-- Task Details Card -->
+                <div class="detail-card">
+                    <h3 class="card-title">Task Details</h3>
+                    <div class="detail-grid">
+                        <div class="detail-item">
+                            <span class="detail-label">Field Location</span>
+                            <span class="detail-value">Field A, Section 2</span>
+                        </div>
+                    </div>
+                    <div class="detail-item full-width">
+                        <span class="detail-label">Task Description</span>
+                        <p class="detail-description">Prepare the field using disc plough for wheat sowing. Ensure proper levelling and remove any debris. The field should be ready for seeding by tomorrow morning.</p>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Equipment Required</span>
+                        <div class="equipment-tags">
+                            <span class="equipment-tag">Tractor</span>
+                            <span class="equipment-tag">Disc Plow</span>
+                            <span class="equipment-tag">Leveler</span>
+                        </div>
+                    </div>
+                    <div class="progress-section">
+                        <div class="progress-header">
+                            <span class="progress-label">Task Progress</span>
+                            <span class="progress-value">60%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 60%"></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="info-row">
-                    <span class="label">Priority</span>
-                    <span class="badge badge-warning">Medium</span>
-                </div>
-                <div class="info-row">
-                    <span class="label">Description</span>
-                    <span class="value">Water the entire wheat field in section B</span>
+
+                <!-- Activity Log Card -->
+                <div class="detail-card">
+                    <h3 class="card-title">Activity Log</h3>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-avatar">RP</div>
+                            <div class="activity-content">
+                                <span class="activity-name">Ramu Pandu</span>
+                                <span class="activity-action">Started working on the task</span>
+                                <span class="activity-time">2 hours ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-avatar">SP</div>
+                            <div class="activity-content">
+                                <span class="activity-name">Suraj Patel</span>
+                                <span class="activity-action">Added equipment: Leveler</span>
+                                <span class="activity-time">5 hours ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-avatar">AG</div>
+                            <div class="activity-content">
+                                <span class="activity-name">Amit Gupta</span>
+                                <span class="activity-action">Completed field preparation</span>
+                                <span class="activity-time">1 day ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-avatar">VR</div>
+                            <div class="activity-content">
+                                <span class="activity-name">Vikram Reddy</span>
+                                <span class="activity-action">Task assigned</span>
+                                <span class="activity-time">2 days ago</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="task-actions">
-                <a href="../edit-task-farmer/index.html" class="btn btn-primary">Edit Task</a>
-                <button class="btn btn-secondary">Delete</button>
+            <!-- RIGHT SIDE -->
+            <div class="right-column">
+                <!-- Assigned Workers Card -->
+                <div class="panel-card">
+                    <h3 class="panel-title">Assigned Workers</h3>
+                    <div class="workers-list">
+                        <div class="worker-item">
+                            <div class="worker-avatar">RP</div>
+                            <div class="worker-info">
+                                <span class="worker-name">Ramu Pandu</span>
+                                <span class="worker-role">Field Worker</span>
+                            </div>
+                            <span class="status-dot active"></span>
+                        </div>
+                        <div class="worker-item">
+                            <div class="worker-avatar">AG</div>
+                            <div class="worker-info">
+                                <span class="worker-name">Amit Gupta</span>
+                                <span class="worker-role">Equipment Operator</span>
+                            </div>
+                            <span class="status-dot active"></span>
+                        </div>
+                        <div class="worker-item">
+                            <div class="worker-avatar">VR</div>
+                            <div class="worker-info">
+                                <span class="worker-name">Vikram Reddy</span>
+                                <span class="worker-role">Field Worker</span>
+                            </div>
+                            <span class="status-dot"></span>
+                        </div>
+                    </div>
+                    <button class="assign-workers-btn">+ Assign More Workers</button>
+                </div>
+
+                <!-- Information Card -->
+                <div class="panel-card">
+                    <h3 class="panel-title">Information</h3>
+                    <div class="info-list">
+                        <div class="info-item">
+                            <span class="info-label">Created Date</span>
+                            <span class="info-value">Mar 25, 2026</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Created By</span>
+                            <span class="info-value">John Farmer</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Expected Duration</span>
+                            <span class="info-value">8 hours</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Field Size</span>
+                            <span class="info-value">2 acres</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Notes Card -->
+                <div class="panel-card">
+                    <h3 class="panel-title">Notes</h3>
+                    <textarea class="notes-textarea" placeholder="Add notes about this task..."></textarea>
+                    <button class="save-note-btn">Save Note</button>
+                </div>
             </div>
         </div>
-    </main>
+    </div>
 
-    <script src="../common/navbar.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
