@@ -4,129 +4,589 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Worker Details - FarmOps</title>
-    <link rel="stylesheet" href="../common/global.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f5f6fa;
+            min-height: 100vh;
+            color: #0A0A0A;
+        }
+
+        .worker-details-page {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .header-bar {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: #FFFFFF;
+            padding: 16px 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .back-btn {
+            width: 44px;
+            height: 44px;
+            border-radius: 8px;
+            border: none;
+            background: #f5f6fa;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #64748B;
+            transition: all 0.2s;
+            flex-shrink: 0;
+        }
+
+        .back-btn:hover {
+            background: #e2e8f0;
+            color: #0A0A0A;
+        }
+
+        .profile-avatar {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: #2e7d32;
+            color: #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .profile-info {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .profile-name-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .profile-name {
+            font-size: 22px;
+            font-weight: 700;
+            color: #0A0A0A;
+        }
+
+        .status-badge {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .profile-subtitle {
+            font-size: 14px;
+            color: #64748B;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        .stat-card {
+            background: #FFFFFF;
+            border-radius: 12px;
+            padding: 16px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .stat-label {
+            font-size: 13px;
+            color: #64748B;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .stat-value {
+            font-size: 28px;
+            font-weight: 700;
+            color: #0A0A0A;
+        }
+
+        .stat-value.stat-highlight {
+            color: #2e7d32;
+        }
+
+        .dashboard-body {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 24px;
+        }
+
+        .left-column, .right-column {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .card {
+            background: #FFFFFF;
+            border-radius: 12px;
+            padding: 16px 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .card-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #0A0A0A;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .info-item {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .info-label {
+            font-size: 13px;
+            color: #64748B;
+        }
+
+        .info-value {
+            font-size: 14px;
+            font-weight: 500;
+            color: #0A0A0A;
+        }
+
+        .task-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .task-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 14px;
+            background: #f5f6fa;
+            border-radius: 8px;
+        }
+
+        .task-info {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .task-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: #0A0A0A;
+        }
+
+        .task-badges {
+            display: flex;
+            gap: 6px;
+        }
+
+        .badge {
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .badge-in-progress {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+
+        .badge-pending {
+            background: #fff8e1;
+            color: #f9a825;
+        }
+
+        .badge-high {
+            background: #ffebee;
+            color: #d32f2f;
+        }
+
+        .badge-medium {
+            background: #fff3e0;
+            color: #ef6c00;
+        }
+
+        .task-deadline {
+            font-size: 12px;
+            color: #64748B;
+            white-space: nowrap;
+        }
+
+        .activity-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .activity-item {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+
+        .activity-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #e8f5e9;
+            color: #2e7d32;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .activity-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .activity-text {
+            font-size: 13px;
+            color: #0A0A0A;
+        }
+
+        .activity-time {
+            font-size: 12px;
+            color: #94A3B8;
+        }
+
+        .panel-info-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .panel-info-item {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .panel-info-label {
+            font-size: 13px;
+            color: #64748B;
+        }
+
+        .panel-info-value {
+            font-size: 13px;
+            font-weight: 500;
+            color: #0A0A0A;
+            text-align: right;
+        }
+
+        .skills-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            padding: 6px 14px;
+            background: #FFFFFF;
+            border: 1px solid #2e7d32;
+            border-radius: 20px;
+            font-size: 12px;
+            color: #2e7d32;
+            font-weight: 500;
+        }
+
+        .emergency-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .emergency-item {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .emergency-label {
+            font-size: 13px;
+            color: #64748B;
+        }
+
+        .emergency-value {
+            font-size: 14px;
+            font-weight: 500;
+            color: #0A0A0A;
+        }
+
+        @media (max-width: 1024px) {
+            .dashboard-body {
+                grid-template-columns: 1fr;
+            }
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .worker-details-page {
+                padding: 16px;
+            }
+            .header-bar {
+                flex-wrap: wrap;
+                justify-content: center;
+                text-align: center;
+            }
+            .profile-name-row {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            .task-item {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="worker-details-page">
-        <header class="page-header">
-            <div class="header-left">
-                <button class="back-btn" onclick="window.location.href='../worker-management-farmer/index.html'">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M19 12H5M12 19l-7-7 7-7"/>
-                    </svg>
-                </button>
-                <div class="header-title-group">
-                    <h1 class="page-title">Worker Details</h1>
+        
+        <!-- HEADER -->
+        <div class="header-bar">
+            <button class="back-btn" onclick="window.location.href='../worker-management-farmer/index.html'">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+            </button>
+            <div class="profile-avatar">RP</div>
+            <div class="profile-info">
+                <div class="profile-name-row">
+                    <h1 class="profile-name">Ramu Pandu</h1>
+                    <span class="status-badge">Active</span>
                 </div>
+                <p class="profile-subtitle">Lead Worker • Joined January 15, 2024</p>
             </div>
-        </header>
+        </div>
 
-        <main class="main-content">
-            <div class="worker-profile-section">
-                <div class="profile-card">
-                    <div class="profile-avatar">RP</div>
-                    <div class="profile-info">
-                        <div class="profile-name-row">
-                            <h1 class="profile-name">Ramu Pandu</h1>
-                            <span class="status-badge">Active</span>
+        <!-- STATS -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <span class="stat-label">Tasks Active</span>
+                <span class="stat-value">1</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">Completed</span>
+                <span class="stat-value">47</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">Attendance</span>
+                <span class="stat-value stat-highlight">89%</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">Rating</span>
+                <span class="stat-value">4.8</span>
+            </div>
+        </div>
+
+        <!-- MAIN LAYOUT -->
+        <div class="dashboard-body">
+            
+            <!-- LEFT COLUMN -->
+            <div class="left-column">
+                
+                <div class="card">
+                    <h2 class="card-title">Personal Information</h2>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <span class="info-label">Phone Number</span>
+                            <span class="info-value">+91 98765 43210</span>
                         </div>
-                        <p class="profile-role">Lead Worker • Joined January 15, 2024</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <span class="stat-label">Tasks Active</span>
-                    <span class="stat-value">1</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-label">Completed</span>
-                    <span class="stat-value">47</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-label">Attendance</span>
-                    <span class="stat-value stat-highlight">89%</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-label">Rating</span>
-                    <span class="stat-value">4.8</span>
-                </div>
-            </div>
-
-            <div class="info-card">
-                <h2 class="section-title">Personal Information</h2>
-                <div class="info-grid">
-                    <div class="info-item">
-                        <span class="info-label">Phone Number</span>
-                        <span class="info-value">+91 98765 43210</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">Email Address</span>
-                        <span class="info-value">ramu.pandu@email.com</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">Date of Birth</span>
-                        <span class="info-value">March 15, 1990</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">Address</span>
-                        <span class="info-value">Village Ramapuram, District Namakkal, Tamil Nadu</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="info-card">
-                <h2 class="section-title">Employment Details</h2>
-                <div class="info-grid">
-                    <div class="info-item">
-                        <span class="info-label">Role</span>
-                        <span class="info-value">Lead Worker</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">Daily Wage</span>
-                        <span class="info-value">₹500</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">Experience</span>
-                        <span class="info-value">8 years</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">Joined Date</span>
-                        <span class="info-value">January 15, 2024</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tasks-card">
-                <h2 class="section-title">Recent Tasks</h2>
-                <div class="task-list">
-                    <div class="task-item">
-                        <div class="task-info">
-                            <span class="task-name">Irrigation - Wheat Field</span>
-                            <span class="task-date">Mar 20, 2026</span>
+                        <div class="info-item">
+                            <span class="info-label">Email Address</span>
+                            <span class="info-value">ramu.pandu@email.com</span>
                         </div>
-                        <span class="task-status status-completed">Completed</span>
-                    </div>
-                    <div class="task-item">
-                        <div class="task-info">
-                            <span class="task-name">Fertilizer Application</span>
-                            <span class="task-date">Mar 18, 2026</span>
+                        <div class="info-item">
+                            <span class="info-label">Address</span>
+                            <span class="info-value">Village Ramapuram</span>
                         </div>
-                        <span class="task-status status-completed">Completed</span>
-                    </div>
-                    <div class="task-item">
-                        <div class="task-info">
-                            <span class="task-name">Harvest Assistance - Tomatoes</span>
-                            <span class="task-date">Mar 15, 2026</span>
+                        <div class="info-item">
+                            <span class="info-label">City, State</span>
+                            <span class="info-value">Namakkal, Tamil Nadu</span>
                         </div>
-                        <span class="task-status status-completed">Completed</span>
                     </div>
                 </div>
+
+                <div class="card">
+                    <h2 class="card-title">Current Tasks</h2>
+                    <div class="task-list">
+                        <div class="task-item">
+                            <div class="task-info">
+                                <span class="task-name">Irrigation - Wheat Field</span>
+                                <div class="task-badges">
+                                    <span class="badge badge-in-progress">In Progress</span>
+                                    <span class="badge badge-medium">Medium</span>
+                                </div>
+                            </div>
+                            <span class="task-deadline">Due: Mar 25, 2026</span>
+                        </div>
+                        <div class="task-item">
+                            <div class="task-info">
+                                <span class="task-name">Fertilizer Application</span>
+                                <div class="task-badges">
+                                    <span class="badge badge-pending">Pending</span>
+                                    <span class="badge badge-high">High</span>
+                                </div>
+                            </div>
+                            <span class="task-deadline">Due: Mar 28, 2026</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2 class="card-title">Recent Activity</h2>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22 4 12 14.01 9 11.01"/>
+                                </svg>
+                            </div>
+                            <div class="activity-content">
+                                <span class="activity-text">Completed task "Harvest Assistance - Tomatoes"</span>
+                                <span class="activity-time">Mar 15, 2026 - 2:30 PM</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                            </div>
+                            <div class="activity-content">
+                                <span class="activity-text">Clocked in at 6:00 AM</span>
+                                <span class="activity-time">Mar 20, 2026 - 6:00 AM</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                </svg>
+                            </div>
+                            <div class="activity-content">
+                                <span class="activity-text">Assigned to new task "Irrigation - Wheat Field"</span>
+                                <span class="activity-time">Mar 18, 2026 - 10:15 AM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-        </main>
+
+            <!-- RIGHT COLUMN -->
+            <div class="right-column">
+                
+                <div class="card">
+                    <h2 class="card-title">Employment Details</h2>
+                    <div class="panel-info-list">
+                        <div class="panel-info-item">
+                            <span class="panel-info-label">Role</span>
+                            <span class="panel-info-value">Lead Worker</span>
+                        </div>
+                        <div class="panel-info-item">
+                            <span class="panel-info-label">Experience</span>
+                            <span class="panel-info-value">8 years</span>
+                        </div>
+                        <div class="panel-info-item">
+                            <span class="panel-info-label">Salary</span>
+                            <span class="panel-info-value">₹500/day</span>
+                        </div>
+                        <div class="panel-info-item">
+                            <span class="panel-info-label">Working Hours</span>
+                            <span class="panel-info-value">6:00 AM - 2:00 PM</span>
+                        </div>
+                        <div class="panel-info-item">
+                            <span class="panel-info-label">Location</span>
+                            <span class="panel-info-value">Main Field</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2 class="card-title">Skills & Expertise</h2>
+                    <div class="skills-tags">
+                        <span class="skill-tag">Plowing</span>
+                        <span class="skill-tag">Irrigation</span>
+                        <span class="skill-tag">Tractor Operation</span>
+                        <span class="skill-tag">Field Management</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2 class="card-title">Emergency Contact</h2>
+                    <div class="emergency-contact">
+                        <div class="emergency-item">
+                            <span class="emergency-label">Name</span>
+                            <span class="emergency-value">Lakshmi Devi</span>
+                        </div>
+                        <div class="emergency-item">
+                            <span class="emergency-label">Phone Number</span>
+                            <span class="emergency-value">+91 98765 43299</span>
+                        </div>
+                        <div class="emergency-item">
+                            <span class="emergency-label">Relationship</span>
+                            <span class="emergency-value">Spouse</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>

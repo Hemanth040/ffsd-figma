@@ -2,311 +2,239 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 body {
-    background-color: #F8FAFC;
+    background-color: #F3F4F6;
     min-height: 100vh;
-    padding: 24px;
+    padding: 20px;
 }
 
-.container {
-    max-width: 1112px;
+.chat-container {
+    max-width: 1100px;
     margin: 0 auto;
+}
+
+.chat-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 0;
+    margin-bottom: 20px;
+}
+
+.back-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: #FFFFFF;
-    border-radius: 14px;
-    box-shadow: 0 0 0 0.8px rgba(0, 0, 0, 0.1);
-    padding: 24px;
+    border: 1px solid #E5E7EB;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #101828;
+    transition: all 0.2s;
 }
 
-.header {
-    padding-bottom: 24px;
-    border-bottom: 1px solid #E5E7EB;
-    margin-bottom: 24px;
+.back-btn:hover {
+    background: #F3F4F6;
+    border-color: #7C3AED;
+    color: #7C3AED;
 }
 
-.header h1 {
+.header-content h1 {
     font-size: 16px;
     font-weight: 500;
-    color: #0A0A0A;
+    color: #101828;
 }
 
-.issues-list {
+.farmer-info {
     display: flex;
-    flex-direction: column;
-    gap: 12px;
+    align-items: center;
+    gap: 8px;
+    margin-top: 4px;
 }
 
-.issue-card {
+.farmer-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #101828;
+}
+
+.online-status {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    color: #4EAE57;
+}
+
+.online-dot {
+    width: 8px;
+    height: 8px;
+    background: #4EAE57;
+    border-radius: 50%;
+}
+
+.chat-card {
     background: #FFFFFF;
-    border-radius: 14px;
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    transition: box-shadow 0.2s ease;
+    border: 1px solid #E5E7EB;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-.issue-card:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
-.issue-card.status-open {
-    border-left: 4px solid #EF4444;
-}
-
-.issue-card.status-in-progress {
-    border-left: 4px solid #3B82F6;
-}
-
-.issue-card.status-resolved {
-    border-left: 4px solid #10B981;
-}
-
-.issue-header {
+.chat-header-line {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    gap: 16px;
+    align-items: center;
+    padding: 16px 24px;
+    border-bottom: 1px solid #E5E7EB;
 }
 
-.issue-title {
+.chat-header-line h2 {
     font-size: 18px;
     font-weight: 600;
-    color: #0A0A0A;
-    line-height: 1.56;
+    color: #101828;
 }
 
-.issue-meta {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    flex-wrap: wrap;
-}
-
-.meta-item {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    color: #4A5565;
-    font-size: 14px;
-}
-
-.meta-item svg {
-    width: 16px;
-    height: 16px;
-    color: #4A5565;
-}
-
-.badges-container {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-.badge {
-    padding: 2px 8px;
-    border-radius: 8px;
+.today-label {
     font-size: 12px;
     font-weight: 500;
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
+    color: #717182;
+    padding: 4px 12px;
+    background: #F3F4F6;
+    border-radius: 20px;
 }
 
-.badge-status {
-    color: #FFFFFF;
-}
-
-.badge-status.open {
-    background-color: #FB2C36;
-}
-
-.badge-status.in-progress {
-    background-color: #2B7FFF;
-}
-
-.badge-status.resolved {
-    background-color: #00C950;
-}
-
-.badge-priority {
-    background-color: #ECEEF2;
-    color: #030213;
-}
-
-.badge-priority.high {
-    background-color: #D4183D;
-    color: #FFFFFF;
-}
-
-.badge-category {
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    color: #0A0A0A;
-    background: #FFFFFF;
-}
-
-.issue-actions {
+.chat-messages {
+    padding: 24px;
     display: flex;
-    gap: 8px;
-}
-
-.btn {
-    padding: 6px 12px;
-    border-radius: 8px;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    border: none;
-}
-
-.btn-outline {
-    background: #FFFFFF;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    color: #0A0A0A;
-}
-
-.btn-outline:hover {
+    flex-direction: column;
+    gap: 16px;
+    min-height: 400px;
+    max-height: 500px;
+    overflow-y: auto;
     background: #F3F4F6;
 }
 
-.btn-primary {
-    background: #2E7D32;
-    color: #FFFFFF;
-}
-
-.btn-primary:hover {
-    background: #1B5E20;
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-    justify-content: center;
-    align-items: center;
-}
-
-.modal.active {
+.message {
     display: flex;
+    max-width: 80%;
 }
 
-.modal-content {
-    background: #FFFFFF;
-    border-radius: 14px;
-    padding: 24px;
-    max-width: 500px;
-    width: 90%;
-    max-height: 80vh;
-    overflow-y: auto;
+.farmer-message {
+    align-self: flex-start;
+}
+
+.you-message {
+    align-self: flex-end;
+}
+
+.message-content {
+    padding: 12px 16px;
+    border-radius: 12px;
     position: relative;
 }
 
-.close-modal {
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    font-size: 24px;
-    cursor: pointer;
-    color: #4A5565;
-    line-height: 1;
+.farmer-message .message-content {
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-bottom-left-radius: 4px;
 }
 
-.close-modal:hover {
-    color: #0A0A0A;
+.you-message .message-content {
+    background: #EDE9FE;
+    border: 1px solid #7C3AED;
+    border-bottom-right-radius: 4px;
 }
 
-.modal-content h2 {
-    font-size: 18px;
-    font-weight: 600;
-    color: #0A0A0A;
-    margin-bottom: 16px;
+.message-content p {
+    font-size: 14px;
+    color: #6A7282;
+    margin-bottom: 4px;
 }
 
-.detail-row {
+.message-text {
+    font-size: 14px;
+    color: #101828 !important;
+    margin-bottom: 0 !important;
+}
+
+.message-time {
+    font-size: 11px;
+    color: #717182;
+    display: block;
+    margin-top: 4px;
+}
+
+.chat-input {
     display: flex;
     gap: 12px;
-    margin-bottom: 12px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid #E5E7EB;
+    padding: 16px 24px;
+    border-top: 1px solid #E5E7EB;
+    background: #F3F4F6;
 }
 
-.detail-label {
-    font-weight: 500;
-    color: #0A0A0A;
-    min-width: 100px;
+.chat-input input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid #E5E7EB;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #101828;
+    background: #FFFFFF;
+    outline: none;
+    transition: border-color 0.2s;
 }
 
-.detail-value {
-    color: #4A5565;
+.chat-input input:focus {
+    border-color: #7C3AED;
 }
 
-.status-modal {
-    text-align: center;
+.chat-input input::placeholder {
+    color: #717182;
 }
 
-.status-options {
+.send-btn {
+    width: 44px;
+    height: 44px;
     display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-top: 16px;
-}
-
-.status-option {
-    padding: 12px;
-    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    background: #7C3AED;
+    border: none;
+    border-radius: 10px;
     cursor: pointer;
-    font-weight: 500;
-    transition: all 0.2s ease;
-}
-
-.status-option:hover {
-    opacity: 0.9;
-}
-
-.status-option.open {
-    background: #FB2C36;
     color: #FFFFFF;
+    transition: all 0.2s;
 }
 
-.status-option.in-progress {
-    background: #2B7FFF;
-    color: #FFFFFF;
-}
-
-.status-option.resolved {
-    background: #00C950;
-    color: #FFFFFF;
+.send-btn:hover {
+    background: #6D28D9;
 }
 
 @media (max-width: 768px) {
-    .container {
-        padding: 16px;
+    body {
+        padding: 12px;
     }
 
-    .issue-header {
-        flex-direction: column;
-    }
-
-    .issue-meta {
+    .chat-header {
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .issue-actions {
+    .message {
+        max-width: 90%;
+    }
+
+    .chat-input {
         flex-direction: column;
     }
 
-    .btn {
+    .send-btn {
         width: 100%;
-        justify-content: center;
     }
 }
